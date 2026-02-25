@@ -1,0 +1,497 @@
+[
+  {
+    "product_id": "ADIDAS-RUNNING-R001",
+    "category": "footwear",
+    "subcategory": "running",
+    "role": "best",
+    "vendor": "ADIDAS",
+    "cost": 45.99,
+    "MSRP": 129.99,
+    "MAP": 109.99,
+    "yearTarget": 8000,
+    "attributes": {
+      "size": "10",
+      "width": "D",
+      "color": "black",
+      "material": "synthetic",
+      "style": "running",
+      "closure": "lace-up",
+      "sole": "rubber"
+    },
+    "features": [
+      "Cushioned Sole",
+      "Breathable Mesh",
+      "Arch Support",
+      "Lightweight Design"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/ADIDAS-RUNNING-R001.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:37:16.966Z"
+  },
+  {
+    "product_id": "NIKE-RUNNING-AIR-ZOOM-PEGASUS",
+    "category": "footwear",
+    "subcategory": "running",
+    "role": "best",
+    "vendor": "NIKE",
+    "cost": 52.99,
+    "MSRP": 139.99,
+    "MAP": 119.99,
+    "yearTarget": 7000,
+    "attributes": {
+      "size": "9.5",
+      "width": "D",
+      "color": "white",
+      "material": "mesh",
+      "style": "running",
+      "closure": "lace-up",
+      "sole": "rubber"
+    },
+    "features": [
+      "Air Zoom Technology",
+      "Flywire Cables",
+      "Waffle Outsole",
+      "Engineered Mesh"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/NIKE-RUNNING-AIR-ZOOM-PEGASUS.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:37:21.049Z"
+  },
+  {
+    "product_id": "NEWBALANCE-RUNNING-FRESH-FOAM-1080",
+    "category": "footwear",
+    "subcategory": "running",
+    "role": "better",
+    "vendor": "NEW BALANCE",
+    "cost": 48.99,
+    "MSRP": 134.99,
+    "MAP": 114.99,
+    "yearTarget": 6500,
+    "attributes": {
+      "size": "10.5",
+      "width": "D",
+      "color": "gray",
+      "material": "synthetic",
+      "style": "running",
+      "closure": "lace-up",
+      "sole": "rubber"
+    },
+    "features": [
+      "Fresh Foam Midsole",
+      "Hypoknit Upper",
+      "Blown Rubber Outsole",
+      "Ortholite Sockliner"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/NEWBALANCE-RUNNING-FRESH-FOAM-1080.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:37:25.094Z"
+  },
+  {
+    "product_id": "ASICS-RUNNING-GEL-CONTEND",
+    "category": "footwear",
+    "subcategory": "running",
+    "role": "good",
+    "vendor": "ASICS",
+    "cost": 35.99,
+    "MSRP": 89.99,
+    "MAP": 74.99,
+    "yearTarget": 10000,
+    "attributes": {
+      "size": "9",
+      "width": "D",
+      "color": "blue",
+      "material": "synthetic",
+      "style": "running",
+      "closure": "lace-up",
+      "sole": "rubber"
+    },
+    "features": [
+      "GEL Technology",
+      "AmpliFoam Midsole",
+      "Synthetic Upper",
+      "Removable Sockliner"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/ASICS-RUNNING-GEL-CONTEND.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:37:29.173Z"
+  },
+  {
+    "product_id": "NIKE-CASUAL-C002",
+    "category": "footwear",
+    "subcategory": "casual",
+    "role": "better",
+    "vendor": "NIKE",
+    "cost": 35.99,
+    "MSRP": 89.99,
+    "MAP": 79.99,
+    "yearTarget": 12000,
+    "attributes": {
+      "size": "9.5",
+      "width": "D",
+      "color": "white",
+      "material": "leather",
+      "style": "casual",
+      "closure": "lace-up",
+      "sole": "rubber"
+    },
+    "features": [
+      "Classic Design",
+      "Durable Construction",
+      "Comfortable Fit",
+      "Versatile Style"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/NIKE-CASUAL-C002.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:37:33.191Z"
+  },
+  {
+    "product_id": "ADIDAS-CASUAL-STAN-SMITH",
+    "category": "footwear",
+    "subcategory": "casual",
+    "role": "better",
+    "vendor": "ADIDAS",
+    "cost": 38.99,
+    "MSRP": 94.99,
+    "MAP": 84.99,
+    "yearTarget": 11000,
+    "attributes": {
+      "size": "10",
+      "width": "D",
+      "color": "white",
+      "material": "leather",
+      "style": "casual",
+      "closure": "lace-up",
+      "sole": "rubber"
+    },
+    "features": [
+      "Premium Leather",
+      "Perforated 3-Stripes",
+      "Rubber Cupsole",
+      "OrthoLite Sockliner"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/ADIDAS-CASUAL-STAN-SMITH.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:39:53.309Z"
+  },
+  {
+    "product_id": "CONVERSE-CASUAL-CHUCK-TAYLOR",
+    "category": "footwear",
+    "subcategory": "casual",
+    "role": "good",
+    "vendor": "CONVERSE",
+    "cost": 28.99,
+    "MSRP": 69.99,
+    "MAP": 59.99,
+    "yearTarget": 15000,
+    "attributes": {
+      "size": "9",
+      "width": "D",
+      "color": "black",
+      "material": "canvas",
+      "style": "casual",
+      "closure": "lace-up",
+      "sole": "rubber"
+    },
+    "features": [
+      "Canvas Upper",
+      "Rubber Toe Cap",
+      "Medial Eyelets",
+      "Vulcanized Construction"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/CONVERSE-CASUAL-CHUCK-TAYLOR.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:37:38.522Z"
+  },
+  {
+    "product_id": "VANS-CASUAL-OLD-SKOOL",
+    "category": "footwear",
+    "subcategory": "casual",
+    "role": "good",
+    "vendor": "VANS",
+    "cost": 32.99,
+    "MSRP": 74.99,
+    "MAP": 64.99,
+    "yearTarget": 13000,
+    "attributes": {
+      "size": "10.5",
+      "width": "D",
+      "color": "black",
+      "material": "suede",
+      "style": "casual",
+      "closure": "lace-up",
+      "sole": "rubber"
+    },
+    "features": [
+      "Suede and Canvas Upper",
+      "Re-enforced Toe Caps",
+      "Signature Waffle Outsole",
+      "Padded Collar"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/VANS-CASUAL-OLD-SKOOL.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:37:42.521Z"
+  },
+  {
+    "product_id": "SKETCHERS-WALKING-G003",
+    "category": "footwear",
+    "subcategory": "walking",
+    "role": "good",
+    "vendor": "SKETCHERS",
+    "cost": 25.99,
+    "MSRP": 69.99,
+    "MAP": 59.99,
+    "yearTarget": 10000,
+    "attributes": {
+      "size": "8",
+      "width": "EE",
+      "color": "gray",
+      "material": "mesh",
+      "style": "athletic",
+      "closure": "slip-on",
+      "sole": "foam"
+    },
+    "features": [
+      "Memory Foam",
+      "Easy Slip-On",
+      "Flexible Sole",
+      "Machine Washable"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/SKETCHERS-WALKING-G003.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:37:46.445Z"
+  },
+  {
+    "product_id": "NEWBALANCE-WALKING-928V3",
+    "category": "footwear",
+    "subcategory": "walking",
+    "role": "better",
+    "vendor": "NEW BALANCE",
+    "cost": 42.99,
+    "MSRP": 109.99,
+    "MAP": 94.99,
+    "yearTarget": 7000,
+    "attributes": {
+      "size": "9",
+      "width": "D",
+      "color": "white",
+      "material": "leather",
+      "style": "walking",
+      "closure": "lace-up",
+      "sole": "rubber"
+    },
+    "features": [
+      "ROLLBAR Technology",
+      "ABZORB Midsole",
+      "Leather Upper",
+      "Motion Control"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/NEWBALANCE-WALKING-928V3.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:37:50.616Z"
+  },
+  {
+    "product_id": "BROOKS-WALKING-ADDICTION-WALKER",
+    "category": "footwear",
+    "subcategory": "walking",
+    "role": "best",
+    "vendor": "BROOKS",
+    "cost": 55.99,
+    "MSRP": 139.99,
+    "MAP": 119.99,
+    "yearTarget": 5000,
+    "attributes": {
+      "size": "10",
+      "width": "D",
+      "color": "black",
+      "material": "leather",
+      "style": "walking",
+      "closure": "lace-up",
+      "sole": "rubber"
+    },
+    "features": [
+      "Progressive Diagonal Rollbar",
+      "BioMoGo DNA Midsole",
+      "Full-Grain Leather",
+      "Slip Resistant"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/BROOKS-WALKING-ADDICTION-WALKER.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:37:54.700Z"
+  },
+  {
+    "product_id": "PROPET-WALKING-STABILITY-WALKER",
+    "category": "footwear",
+    "subcategory": "walking",
+    "role": "good",
+    "vendor": "PROPET",
+    "cost": 38.99,
+    "MSRP": 94.99,
+    "MAP": 79.99,
+    "yearTarget": 8000,
+    "attributes": {
+      "size": "11",
+      "width": "EE",
+      "color": "white",
+      "material": "leather",
+      "style": "walking",
+      "closure": "lace-up",
+      "sole": "rubber"
+    },
+    "features": [
+      "Medicare Approved",
+      "Removable Footbed",
+      "Extended Widths",
+      "Dual Density Midsole"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/PROPET-WALKING-STABILITY-WALKER.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:37:58.721Z"
+  },
+  {
+    "product_id": "PAYLESS-BOOTS-E004",
+    "category": "footwear",
+    "subcategory": "boots",
+    "role": "entry",
+    "vendor": "PAYLESS",
+    "cost": 15.99,
+    "MSRP": 39.99,
+    "MAP": 34.99,
+    "yearTarget": 15000,
+    "attributes": {
+      "size": "11",
+      "width": "D",
+      "color": "brown",
+      "material": "synthetic",
+      "style": "boot",
+      "closure": "lace-up",
+      "sole": "rubber"
+    },
+    "features": [
+      "Water Resistant",
+      "Padded Collar",
+      "Durable Outsole"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/PAYLESS-BOOTS-E004.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:38:03.200Z"
+  },
+  {
+    "product_id": "TIMBERLAND-BOOTS-6-INCH-PREMIUM",
+    "category": "footwear",
+    "subcategory": "boots",
+    "role": "best",
+    "vendor": "TIMBERLAND",
+    "cost": 85.99,
+    "MSRP": 189.99,
+    "MAP": 169.99,
+    "yearTarget": 4000,
+    "attributes": {
+      "size": "10",
+      "width": "D",
+      "color": "wheat",
+      "material": "nubuck",
+      "style": "boot",
+      "closure": "lace-up",
+      "sole": "rubber"
+    },
+    "features": [
+      "Premium Nubuck Leather",
+      "Seam-Sealed Waterproof",
+      "Padded Collar",
+      "Anti-Fatigue Technology"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/TIMBERLAND-BOOTS-6-INCH-PREMIUM.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:38:07.421Z"
+  },
+  {
+    "product_id": "DRMARTENS-BOOTS-1460-ORIGINAL",
+    "category": "footwear",
+    "subcategory": "boots",
+    "role": "better",
+    "vendor": "DR. MARTENS",
+    "cost": 68.99,
+    "MSRP": 149.99,
+    "MAP": 129.99,
+    "yearTarget": 6000,
+    "attributes": {
+      "size": "9",
+      "width": "D",
+      "color": "black",
+      "material": "leather",
+      "style": "boot",
+      "closure": "lace-up",
+      "sole": "rubber"
+    },
+    "features": [
+      "Smooth Leather Upper",
+      "Air-Cushioned Sole",
+      "Goodyear Welt",
+      "Heat-Sealed Seams"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/DRMARTENS-BOOTS-1460-ORIGINAL.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:38:11.600Z"
+  },
+  {
+    "product_id": "WOLVERINE-BOOTS-FLOORHAND",
+    "category": "footwear",
+    "subcategory": "boots",
+    "role": "good",
+    "vendor": "WOLVERINE",
+    "cost": 45.99,
+    "MSRP": 109.99,
+    "MAP": 94.99,
+    "yearTarget": 8000,
+    "attributes": {
+      "size": "10.5",
+      "width": "D",
+      "color": "brown",
+      "material": "leather",
+      "style": "work-boot",
+      "closure": "lace-up",
+      "sole": "rubber"
+    },
+    "features": [
+      "Steel Toe",
+      "Slip Resistant",
+      "Electrical Hazard",
+      "Moisture Wicking Lining"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/footwear/WOLVERINE-BOOTS-FLOORHAND.jpg",
+    "createdAt": "2025-12-04T22:20:03.307Z",
+    "updatedAt": "2025-12-04T22:20:03.307Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:38:15.927Z"
+  }
+]

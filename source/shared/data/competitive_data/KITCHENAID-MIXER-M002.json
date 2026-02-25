@@ -1,0 +1,42 @@
+{
+  "product_id": "KITCHENAID-MIXER-M002",
+  "data_source": "historical-fallback",
+  "analysis_timestamp": "2024-01-15T10:30:00Z",
+  "market_statistics": {
+    "lowest_market_price": 299.99,
+    "highest_market_price": 449.99,
+    "average_market_price": 368.75,
+    "median_market_price": 359.99,
+    "market_volatility": 0.12,
+    "competitor_count": 5
+  },
+  "competitive_positioning": {
+    "primary_competitor": "Cuisinart SM-50BC",
+    "competitive_relevance_score": 0.91,
+    "market_share_estimate": 0.42,
+    "price_positioning": "premium",
+    "competitive_advantages": [
+      "Iconic brand recognition and design heritage",
+      "Superior build quality with all-metal construction",
+      "Extensive attachment ecosystem (50+ attachments)",
+      "10-speed planetary mixing action",
+      "Industry-leading 5-year warranty vs competitors' 3-year"
+    ]
+  },
+  "strategic_insights": {
+    "market_position_assessment": "premium",
+    "recommended_strategy": "premium_position",
+    "strategy_rationale": "KitchenAid's brand strength and product quality justify premium positioning. Market research shows strong brand loyalty and willingness to pay premium for durability and performance in stand mixers. Professional and serious home bakers view KitchenAid as gold standard.",
+    "confidence_intervals": {
+      "price_recommendation_confidence": 0.72,
+      "market_position_confidence": 0.78,
+      "competitive_analysis_confidence": 0.71
+    }
+  },
+  "data_quality_metrics": {
+    "data_freshness_days": 35,
+    "sample_size": 89,
+    "data_completeness_score": 0.93,
+    "outliers_excluded": 1
+  }
+}

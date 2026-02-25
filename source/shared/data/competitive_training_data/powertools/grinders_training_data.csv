@@ -1,0 +1,5 @@
+product_id,category,subcategory,role,our_msrp,our_map,our_cost,features_count,market_position_score,competitor_1_name,competitor_1_price,competitor_1_features,competitor_1_market_share,competitor_1_brand_strength,competitor_2_name,competitor_2_price,competitor_2_features,competitor_2_market_share,competitor_2_brand_strength,competitor_3_name,competitor_3_price,competitor_3_features,competitor_3_market_share,competitor_3_brand_strength
+HARBOR-GRINDER-62281,powertools,grinders,entry,49.99,39.99,19.99,3,0.15,Metabo HPT G12SR4,59.99,3,0.19,0.72,DeWalt DWE402,69.99,3,0.25,0.85,Black+Decker BDEG400,44.99,2,0.12,0.60
+DEWALT-GRINDER-DWE402,powertools,grinders,good,89.99,79.99,45.99,4,0.50,Milwaukee 6117-31,94.99,4,0.22,0.82,Makita 9557PBX1,84.99,3,0.18,0.78,Bosch 1375A,99.99,4,0.15,0.80
+MILWAUKEE-GRINDER-6117-31,powertools,grinders,better,119.99,104.99,65.99,5,0.66,DeWalt DWE402,89.99,4,0.25,0.85,Makita 9557PBX1,84.99,3,0.18,0.78,Metabo HPT G12SR4,59.99,3,0.19,0.72
+MAKITA-GRINDER-9557PBX1,powertools,grinders,best,149.99,129.99,85.99,6,0.75,Milwaukee 6117-31,119.99,5,0.22,0.82,DeWalt DWE402,89.99,4,0.25,0.85,Bosch 1375A,99.99,4,0.15,0.80

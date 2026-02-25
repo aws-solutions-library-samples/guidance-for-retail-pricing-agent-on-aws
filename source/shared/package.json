@@ -1,0 +1,26 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "description": "Shared utilities and schemas for product catalog",
+  "main": "index.js",
+  "scripts": {
+    "setup": "node scripts/setup-product-data.js",
+    "validate": "node scripts/setup-product-data.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.998.0",
+    "@aws-sdk/client-dynamodb": "^3.997.0",
+    "@aws-sdk/client-s3": "^3.998.0",
+    "@aws-sdk/lib-dynamodb": "^3.997.0",
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1"
+  },
+  "keywords": [
+    "product",
+    "catalog",
+    "validation",
+    "schema"
+  ],
+  "author": "",
+  "license": "ISC"
+}

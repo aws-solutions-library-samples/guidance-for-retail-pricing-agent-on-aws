@@ -1,0 +1,42 @@
+{
+  "product_id": "DEWALT-DRILL-DCD771C2",
+  "data_source": "historical-fallback",
+  "analysis_timestamp": "2024-01-15T10:30:00Z",
+  "market_statistics": {
+    "lowest_market_price": 89.99,
+    "highest_market_price": 149.99,
+    "average_market_price": 118.75,
+    "median_market_price": 115.99,
+    "market_volatility": 0.22,
+    "competitor_count": 9
+  },
+  "competitive_positioning": {
+    "primary_competitor": "Milwaukee M18 2606-20",
+    "competitive_relevance_score": 0.89,
+    "market_share_estimate": 0.31,
+    "price_positioning": "mid-range",
+    "competitive_advantages": [
+      "Established DeWalt brand recognition in professional market",
+      "High-speed transmission provides faster drilling",
+      "Compact design 20% smaller than Milwaukee equivalent",
+      "LED work light with 20-second delay",
+      "Belt hook included (Milwaukee charges extra)"
+    ]
+  },
+  "strategic_insights": {
+    "market_position_assessment": "mid-range",
+    "recommended_strategy": "match",
+    "strategy_rationale": "Strong brand position allows us to match primary competitor pricing while maintaining margin. Market research shows DeWalt brand commands 5-8% premium over generic brands in this category, but Milwaukee has slight edge in innovation perception.",
+    "confidence_intervals": {
+      "price_recommendation_confidence": 0.72,
+      "market_position_confidence": 0.78,
+      "competitive_analysis_confidence": 0.71
+    }
+  },
+  "data_quality_metrics": {
+    "data_freshness_days": 38,
+    "sample_size": 156,
+    "data_completeness_score": 0.91,
+    "outliers_excluded": 5
+  }
+}

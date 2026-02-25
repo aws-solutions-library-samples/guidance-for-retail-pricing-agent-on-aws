@@ -1,0 +1,91 @@
+{
+  "generated_at": "2025-12-04T18:35:02.977Z",
+  "total_products": 16,
+  "files": [
+    {
+      "product_id": "DEWALT-DRILLS-DCD771C2",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/DEWALT-DRILLS-DCD771C2.json",
+      "s3_key": "demand_forecasts/DEWALT-DRILLS-DCD771C2.json"
+    },
+    {
+      "product_id": "MILWAUKEE-DRILLS-M18-2804",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/MILWAUKEE-DRILLS-M18-2804.json",
+      "s3_key": "demand_forecasts/MILWAUKEE-DRILLS-M18-2804.json"
+    },
+    {
+      "product_id": "RYOBI-DRILLS-P208",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/RYOBI-DRILLS-P208.json",
+      "s3_key": "demand_forecasts/RYOBI-DRILLS-P208.json"
+    },
+    {
+      "product_id": "BLACKDECKER-DRILLS-LDX120C",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/BLACKDECKER-DRILLS-LDX120C.json",
+      "s3_key": "demand_forecasts/BLACKDECKER-DRILLS-LDX120C.json"
+    },
+    {
+      "product_id": "CRAFTSMAN-SAWS-CMAN-SAW-PRO725",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/CRAFTSMAN-SAWS-CMAN-SAW-PRO725.json",
+      "s3_key": "demand_forecasts/CRAFTSMAN-SAWS-CMAN-SAW-PRO725.json"
+    },
+    {
+      "product_id": "DEWALT-SAWS-DCS570B",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/DEWALT-SAWS-DCS570B.json",
+      "s3_key": "demand_forecasts/DEWALT-SAWS-DCS570B.json"
+    },
+    {
+      "product_id": "SKIL-SAWS-5280-01",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/SKIL-SAWS-5280-01.json",
+      "s3_key": "demand_forecasts/SKIL-SAWS-5280-01.json"
+    },
+    {
+      "product_id": "HARBORFREIGHT-SAWS-CHICAGO-63290",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/HARBORFREIGHT-SAWS-CHICAGO-63290.json",
+      "s3_key": "demand_forecasts/HARBORFREIGHT-SAWS-CHICAGO-63290.json"
+    },
+    {
+      "product_id": "RYOBI-SANDERS-P411",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/RYOBI-SANDERS-P411.json",
+      "s3_key": "demand_forecasts/RYOBI-SANDERS-P411.json"
+    },
+    {
+      "product_id": "DEWALT-SANDERS-DWE6423K",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/DEWALT-SANDERS-DWE6423K.json",
+      "s3_key": "demand_forecasts/DEWALT-SANDERS-DWE6423K.json"
+    },
+    {
+      "product_id": "BOSCH-SANDERS-ROS20VSC",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/BOSCH-SANDERS-ROS20VSC.json",
+      "s3_key": "demand_forecasts/BOSCH-SANDERS-ROS20VSC.json"
+    },
+    {
+      "product_id": "BLACKDECKER-SANDERS-BDERO100",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/BLACKDECKER-SANDERS-BDERO100.json",
+      "s3_key": "demand_forecasts/BLACKDECKER-SANDERS-BDERO100.json"
+    },
+    {
+      "product_id": "HARBORFREIGHT-GRINDERS-62281",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/HARBORFREIGHT-GRINDERS-62281.json",
+      "s3_key": "demand_forecasts/HARBORFREIGHT-GRINDERS-62281.json"
+    },
+    {
+      "product_id": "DEWALT-GRINDERS-DWE402",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/DEWALT-GRINDERS-DWE402.json",
+      "s3_key": "demand_forecasts/DEWALT-GRINDERS-DWE402.json"
+    },
+    {
+      "product_id": "MILWAUKEE-GRINDERS-6117-31",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/MILWAUKEE-GRINDERS-6117-31.json",
+      "s3_key": "demand_forecasts/MILWAUKEE-GRINDERS-6117-31.json"
+    },
+    {
+      "product_id": "METABO-GRINDERS-WEV15-125",
+      "file": "/Users/stryew/Documents/source/aws_gitlab/retail-pricing-generator/src/shared/data/demand-forecasts/METABO-GRINDERS-WEV15-125.json",
+      "s3_key": "demand_forecasts/METABO-GRINDERS-WEV15-125.json"
+    }
+  ],
+  "s3_upload_instructions": {
+    "bucket": "TRAINING_DATA_BUCKET (from environment)",
+    "prefix": "demand_forecasts/",
+    "command": "aws s3 sync src/shared/data/demand-forecasts/ s3://$TRAINING_DATA_BUCKET/demand_forecasts/ --exclude \"_summary.json\""
+  }
+}

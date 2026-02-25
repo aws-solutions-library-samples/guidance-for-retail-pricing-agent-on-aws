@@ -1,0 +1,255 @@
+{
+  "product_id": "MILWAUKEE-DRILLS-M18-2804",
+  "category": "powertools",
+  "subcategory": "drills",
+  "vendor": "MILWAUKEE",
+  "historical_performance": {
+    "ytd_sales": 6216,
+    "year_target": 6000,
+    "ytd_target": 6000,
+    "performance_ratio": 1.04,
+    "trend": "stable",
+    "seasonality_detected": true,
+    "volatility_index": 0.15,
+    "months_of_data": 24
+  },
+  "historical_monthly_data": [
+    {
+      "month": "2024-01",
+      "sales": 389,
+      "target": 400,
+      "seasonalFactor": 0.8
+    },
+    {
+      "month": "2024-02",
+      "sales": 459,
+      "target": 425,
+      "seasonalFactor": 0.85
+    },
+    {
+      "month": "2024-03",
+      "sales": 470,
+      "target": 475,
+      "seasonalFactor": 0.95
+    },
+    {
+      "month": "2024-04",
+      "sales": 543,
+      "target": 550,
+      "seasonalFactor": 1.1
+    },
+    {
+      "month": "2024-05",
+      "sales": 667,
+      "target": 600,
+      "seasonalFactor": 1.2
+    },
+    {
+      "month": "2024-06",
+      "sales": 582,
+      "target": 625,
+      "seasonalFactor": 1.25
+    },
+    {
+      "month": "2024-07",
+      "sales": 653,
+      "target": 575,
+      "seasonalFactor": 1.15
+    },
+    {
+      "month": "2024-08",
+      "sales": 625,
+      "target": 550,
+      "seasonalFactor": 1.1
+    },
+    {
+      "month": "2024-09",
+      "sales": 423,
+      "target": 500,
+      "seasonalFactor": 1
+    },
+    {
+      "month": "2024-10",
+      "sales": 509,
+      "target": 475,
+      "seasonalFactor": 0.95
+    },
+    {
+      "month": "2024-11",
+      "sales": 670,
+      "target": 575,
+      "seasonalFactor": 1.15
+    },
+    {
+      "month": "2024-12",
+      "sales": 574,
+      "target": 650,
+      "seasonalFactor": 1.3
+    },
+    {
+      "month": "2025-01",
+      "sales": 349,
+      "target": 400,
+      "seasonalFactor": 0.8
+    },
+    {
+      "month": "2025-02",
+      "sales": 487,
+      "target": 425,
+      "seasonalFactor": 0.85
+    },
+    {
+      "month": "2025-03",
+      "sales": 383,
+      "target": 475,
+      "seasonalFactor": 0.95
+    },
+    {
+      "month": "2025-04",
+      "sales": 455,
+      "target": 550,
+      "seasonalFactor": 1.1
+    },
+    {
+      "month": "2025-05",
+      "sales": 537,
+      "target": 600,
+      "seasonalFactor": 1.2
+    },
+    {
+      "month": "2025-06",
+      "sales": 790,
+      "target": 625,
+      "seasonalFactor": 1.25
+    },
+    {
+      "month": "2025-07",
+      "sales": 681,
+      "target": 575,
+      "seasonalFactor": 1.15
+    },
+    {
+      "month": "2025-08",
+      "sales": 541,
+      "target": 550,
+      "seasonalFactor": 1.1
+    },
+    {
+      "month": "2025-09",
+      "sales": 583,
+      "target": 500,
+      "seasonalFactor": 1
+    },
+    {
+      "month": "2025-10",
+      "sales": 437,
+      "target": 475,
+      "seasonalFactor": 0.95
+    },
+    {
+      "month": "2025-11",
+      "sales": 484,
+      "target": 575,
+      "seasonalFactor": 1.15
+    },
+    {
+      "month": "2025-12",
+      "sales": 489,
+      "target": 650,
+      "seasonalFactor": 1.3
+    }
+  ],
+  "forecast_values": [
+    {
+      "month": "2026-01",
+      "p10": 355,
+      "p50": 418,
+      "p90": 481
+    },
+    {
+      "month": "2026-02",
+      "p10": 377,
+      "p50": 444,
+      "p90": 511
+    },
+    {
+      "month": "2026-03",
+      "p10": 422,
+      "p50": 496,
+      "p90": 570
+    },
+    {
+      "month": "2026-04",
+      "p10": 489,
+      "p50": 575,
+      "p90": 661
+    },
+    {
+      "month": "2026-05",
+      "p10": 533,
+      "p50": 627,
+      "p90": 721
+    },
+    {
+      "month": "2026-06",
+      "p10": 555,
+      "p50": 653,
+      "p90": 751
+    },
+    {
+      "month": "2026-07",
+      "p10": 511,
+      "p50": 601,
+      "p90": 691
+    },
+    {
+      "month": "2026-08",
+      "p10": 489,
+      "p50": 575,
+      "p90": 661
+    },
+    {
+      "month": "2026-09",
+      "p10": 445,
+      "p50": 523,
+      "p90": 601
+    },
+    {
+      "month": "2026-10",
+      "p10": 422,
+      "p50": 496,
+      "p90": 570
+    },
+    {
+      "month": "2026-11",
+      "p10": 511,
+      "p50": 601,
+      "p90": 691
+    },
+    {
+      "month": "2026-12",
+      "p10": 577,
+      "p50": 679,
+      "p90": 781
+    }
+  ],
+  "confidence_intervals": {
+    "overall_confidence": 0.9,
+    "data_quality_score": 0.94,
+    "model_performance": 0.87
+  },
+  "pricing_context": {
+    "cost": 89.99,
+    "MSRP": 179.99,
+    "MAP": 159.99,
+    "margin_at_msrp": 0.5,
+    "margin_at_map": 0.44
+  },
+  "metadata": {
+    "generated_at": "2025-12-04T18:35:02.963Z",
+    "data_source": "synthetic_historical",
+    "generator_version": "1.0.0",
+    "role": "best",
+    "notes": "Generated from product metadata with realistic seasonal patterns for power tools retail."
+  }
+}

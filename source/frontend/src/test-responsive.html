@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design Test - Pricing Dashboard</title>
+  <link rel="stylesheet" href="./styles/responsive.css">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    
+    .test-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .test-section {
+      margin-bottom: 40px;
+      padding: 20px;
+      border: 2px solid #e9ecef;
+      border-radius: 8px;
+    }
+    
+    .test-item {
+      background: #f9f9f9;
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border: 1px solid #dee2e6;
+    }
+    
+    .breakpoint-indicator {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 10px 20px;
+      background: #0972d3;
+      color: white;
+      border-radius: 4px;
+      font-weight: bold;
+      z-index: 1000;
+    }
+    
+    h1, h2, h3 {
+      color: #000716;
+    }
+    
+    .grid-demo {
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="breakpoint-indicator" id="breakpoint">
+    Desktop (≥1200px)
+  </div>
+
+  <div class="test-container">
+    <h1>Responsive Design Test - Pricing Dashboard</h1>
+    <p>Resize your browser window to test different breakpoints:</p>
+    <ul>
+      <li><strong>Desktop:</strong> ≥1200px (multi-column layout)</li>
+      <li><strong>Tablet:</strong> 768px-1199px (two-column layout)</li>
+      <li><strong>Mobile:</strong> <768px (single-column stacked layout)</li>
+    </ul>
+
+    <!-- Test: Dashboard Grid -->
+    <div class="test-section">
+      <h2>Dashboard Grid Layout</h2>
+      <p>Desktop: 3 columns | Tablet: 2 columns | Mobile: 1 column</p>
+      
+      <div class="dashboard-grid">
+        <div class="test-item grid-demo">Item 1</div>
+        <div class="test-item grid-demo">Item 2</div>
+        <div class="test-item grid-demo">Item 3</div>
+      </div>
+    </div>
+
+    <!-- Test: Analysis Panels Grid -->
+    <div class="test-section">
+      <h2>Analysis Panels Grid</h2>
+      <p>Desktop: 3 columns side-by-side | Tablet: 2 columns | Mobile: 1 column</p>
+      
+      <div class="analysis-panels-grid">
+        <div class="test-item grid-demo">Demand Analysis</div>
+        <div class="test-item grid-demo">Competitive Analysis</div>
+        <div class="test-item grid-demo">Margin Analysis</div>
+      </div>
+    </div>
+
+    <!-- Test: Workflow and Chat Grid -->
+    <div class="test-section">
+      <h2>Workflow and Chat Grid</h2>
+      <p>Desktop: 2 columns side-by-side | Tablet: 2 columns | Mobile: 1 column</p>
+      
+      <div class="workflow-chat-grid">
+        <div class="test-item grid-demo">Workflow Visualization</div>
+        <div class="test-item grid-demo">Agent Chat Panel</div>
+      </div>
+    </div>
+
+    <!-- Test: Product Image -->
+    <div class="test-section">
+      <h2>Product Image Container</h2>
+      <p>Desktop: 300px | Tablet: 250px | Mobile: 200px</p>
+      
+      <div class="product-image-container">
+        <div style="background: #6c757d; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">
+          Product Image
+        </div>
+      </div>
+    </div>
+
+    <!-- Test: Confidence Gauge -->
+    <div class="test-section">
+      <h2>Confidence Gauge</h2>
+      <p>Desktop: 160px | Mobile: 120px</p>
+      
+      <div class="confidence-gauge-container">
+        <div class="confidence-gauge" style="background: #e9ecef; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+          <div style="text-align: center;">
+            <div class="confidence-gauge-value" style="font-size: 36px; font-weight: bold;">85%</div>
+            <div class="confidence-gauge-label" style="font-size: 14px;">High</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Test: Price Range Bar -->
+    <div class="test-section">
+      <h2>Price Range Bar</h2>
+      <p>Desktop: 40px height | Mobile: 32px height</p>
+      
+      <div class="price-range-container">
+        <div class="price-range-bar">
+          <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #0972d3; color: white; padding: 4px 12px; border-radius: 4px; font-weight: bold;" class="price-range-label">
+            $89.99
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Test: Responsive Typography -->
+    <div class="test-section">
+      <h2>Responsive Typography</h2>
+      <div class="responsive-heading-1">Heading 1 - Responsive</div>
+      <div class="responsive-heading-2">Heading 2 - Responsive</div>
+      <div class="responsive-heading-3">Heading 3 - Responsive</div>
+      <div class="responsive-body">Body text - Responsive. This text will adjust its size based on the screen size to ensure optimal readability across all devices.</div>
+    </div>
+
+    <!-- Test: Responsive Spacing -->
+    <div class="test-section">
+      <h2>Responsive Spacing</h2>
+      <div class="test-item responsive-spacing-large">Large Spacing</div>
+      <div class="test-item responsive-spacing-medium">Medium Spacing</div>
+      <div class="test-item responsive-spacing-small">Small Spacing</div>
+    </div>
+
+    <!-- Test: Header Actions -->
+    <div class="test-section">
+      <h2>Header Actions</h2>
+      <p>Desktop: Horizontal | Mobile: Vertical (full width)</p>
+      
+      <div class="dashboard-header-actions">
+        <button style="padding: 10px 20px; background: #0972d3; color: white; border: none; border-radius: 4px; cursor: pointer;">Export PDF</button>
+        <button style="padding: 10px 20px; background: #6c757d; color: white; border: none; border-radius: 4px; cursor: pointer;">Back to Products</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Update breakpoint indicator
+    function updateBreakpoint() {
+      const width = window.innerWidth;
+      const indicator = document.getElementById('breakpoint');
+      
+      if (width >= 1200) {
+        indicator.textContent = `Desktop (${width}px)`;
+        indicator.style.background = '#037f0c';
+      } else if (width >= 768) {
+        indicator.textContent = `Tablet (${width}px)`;
+        indicator.style.background = '#f89406';
+      } else {
+        indicator.textContent = `Mobile (${width}px)`;
+        indicator.style.background = '#d13212';
+      }
+    }
+    
+    updateBreakpoint();
+    window.addEventListener('resize', updateBreakpoint);
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+## VTL response mapping for listChatMessagesByAgent query
+## Returns paginated list of chat messages by agent
+## Requirements: 8.7
+
+{
+  "items": $util.toJson($ctx.result.items),
+  #if($ctx.result.nextToken)
+  "nextToken": "$ctx.result.nextToken"
+  #end
+}

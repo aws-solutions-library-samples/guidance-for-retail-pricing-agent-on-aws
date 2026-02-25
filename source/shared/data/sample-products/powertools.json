@@ -1,0 +1,462 @@
+[
+  {
+    "product_id": "DEWALT-DRILLS-DCD771C2",
+    "category": "powertools",
+    "subcategory": "drills",
+    "role": "better",
+    "vendor": "DEWALT",
+    "cost": 65.99,
+    "MSRP": 129.99,
+    "MAP": 109.99,
+    "yearTarget": 8000,
+    "attributes": {
+      "powerType": "cordless",
+      "batteryVoltage": "20V MAX",
+      "motorType": "brushed",
+      "color": "yellow",
+      "size": 0.5
+    },
+    "features": [
+      "High Speed Transmission",
+      "Compact Design",
+      "LED Work Light",
+      "Belt Hook"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/DEWALT-DRILLS-DCD771C2.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:34:59.717Z"
+  },
+  {
+    "product_id": "MILWAUKEE-DRILLS-M18-2804",
+    "category": "powertools",
+    "subcategory": "drills",
+    "role": "best",
+    "vendor": "MILWAUKEE",
+    "cost": 89.99,
+    "MSRP": 179.99,
+    "MAP": 159.99,
+    "yearTarget": 6000,
+    "attributes": {
+      "powerType": "cordless",
+      "batteryVoltage": "18V",
+      "motorType": "brushless",
+      "color": "red",
+      "size": 0.5
+    },
+    "features": [
+      "Brushless Motor",
+      "REDLINK Intelligence",
+      "All-Metal Chuck",
+      "LED Light"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/MILWAUKEE-DRILLS-M18-2804.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:35:04.346Z"
+  },
+  {
+    "product_id": "RYOBI-DRILLS-P208",
+    "category": "powertools",
+    "subcategory": "drills",
+    "role": "good",
+    "vendor": "RYOBI",
+    "cost": 45.99,
+    "MSRP": 99.99,
+    "MAP": 79.99,
+    "yearTarget": 10000,
+    "attributes": {
+      "powerType": "cordless",
+      "batteryVoltage": "18V",
+      "motorType": "brushed",
+      "color": "green",
+      "size": 0.5
+    },
+    "features": [
+      "Magnetic Bit Holder",
+      "Belt Clip",
+      "Keyless Chuck",
+      "Compact Design"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/RYOBI-DRILLS-P208.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:35:08.997Z"
+  },
+  {
+    "product_id": "BLACKDECKER-DRILLS-LDX120C",
+    "category": "powertools",
+    "subcategory": "drills",
+    "role": "entry",
+    "vendor": "BLACK+DECKER",
+    "cost": 29.99,
+    "MSRP": 69.99,
+    "MAP": 59.99,
+    "yearTarget": 15000,
+    "attributes": {
+      "powerType": "cordless",
+      "batteryVoltage": "20V MAX",
+      "motorType": "brushed",
+      "color": "orange",
+      "size": 0.5
+    },
+    "features": [
+      "Lightweight",
+      "Easy Bit Changes",
+      "Comfortable Grip",
+      "LED Work Light"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/BLACKDECKER-DRILLS-LDX120C.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:35:13.376Z"
+  },
+  {
+    "product_id": "CRAFTSMAN-SAWS-CMAN-SAW-PRO725",
+    "category": "powertools",
+    "subcategory": "saws",
+    "role": "best",
+    "vendor": "CRAFTSMAN",
+    "cost": 89.99,
+    "MSRP": 179.99,
+    "MAP": 149.99,
+    "yearTarget": 5000,
+    "attributes": {
+      "powerType": "cordless",
+      "batteryVoltage": "60V MAX",
+      "motorType": "brushless",
+      "bladeSpeed": "5,200 RPM",
+      "cuttingDepth": "2.5 inches",
+      "bevelCapacity": "50 degrees",
+      "color": "red",
+      "size": 7.25
+    },
+    "features": [
+      "Brushless Motor",
+      "LED Light",
+      "Dust Blower",
+      "Electric Brake"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/CRAFTSMAN-SAWS-CMAN-SAW-PRO725.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:35:17.821Z"
+  },
+  {
+    "product_id": "DEWALT-SAWS-DCS570B",
+    "category": "powertools",
+    "subcategory": "saws",
+    "role": "better",
+    "vendor": "DEWALT",
+    "cost": 75.99,
+    "MSRP": 149.99,
+    "MAP": 129.99,
+    "yearTarget": 7000,
+    "attributes": {
+      "powerType": "cordless",
+      "batteryVoltage": "20V MAX",
+      "motorType": "brushless",
+      "bladeSpeed": "5,500 RPM",
+      "cuttingDepth": "2.25 inches",
+      "color": "yellow",
+      "size": 7.25
+    },
+    "features": [
+      "Brushless Motor",
+      "Bevel Capacity",
+      "Dust Port",
+      "Rafter Hook"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/DEWALT-SAWS-DCS570B.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:35:22.127Z"
+  },
+  {
+    "product_id": "SKIL-SAWS-5280-01",
+    "category": "powertools",
+    "subcategory": "saws",
+    "role": "good",
+    "vendor": "SKIL",
+    "cost": 55.99,
+    "MSRP": 119.99,
+    "MAP": 99.99,
+    "yearTarget": 9000,
+    "attributes": {
+      "powerType": "corded",
+      "motorType": "brushed",
+      "bladeSpeed": "5,300 RPM",
+      "cuttingDepth": "2.5 inches",
+      "color": "gray",
+      "size": 7.25
+    },
+    "features": [
+      "Laser Guide",
+      "Dust Blower",
+      "Bevel Stops",
+      "Carbide Blade"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/SKIL-SAWS-5280-01.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:35:26.289Z"
+  },
+  {
+    "product_id": "HARBORFREIGHT-SAWS-CHICAGO-63290",
+    "category": "powertools",
+    "subcategory": "saws",
+    "role": "entry",
+    "vendor": "HARBOR FREIGHT",
+    "cost": 35.99,
+    "MSRP": 79.99,
+    "MAP": 69.99,
+    "yearTarget": 12000,
+    "attributes": {
+      "powerType": "corded",
+      "motorType": "brushed",
+      "bladeSpeed": "5,000 RPM",
+      "cuttingDepth": "2.25 inches",
+      "color": "blue",
+      "size": 7.25
+    },
+    "features": [
+      "Adjustable Base",
+      "Dust Port",
+      "Safety Guard",
+      "Carbide Blade"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/HARBORFREIGHT-SAWS-CHICAGO-63290.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:35:30.467Z"
+  },
+  {
+    "product_id": "RYOBI-SANDERS-P411",
+    "category": "powertools",
+    "subcategory": "sanders",
+    "role": "good",
+    "vendor": "RYOBI",
+    "cost": 35.99,
+    "MSRP": 79.99,
+    "MAP": 69.99,
+    "yearTarget": 6000,
+    "attributes": {
+      "powerType": "cordless",
+      "batteryVoltage": "18V",
+      "color": "green",
+      "size": 5
+    },
+    "features": [
+      "Dust Collection",
+      "Variable Speed",
+      "Ergonomic Grip"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/RYOBI-SANDERS-P411.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:35:34.576Z"
+  },
+  {
+    "product_id": "DEWALT-SANDERS-DWE6423K",
+    "category": "powertools",
+    "subcategory": "sanders",
+    "role": "better",
+    "vendor": "DEWALT",
+    "cost": 65.99,
+    "MSRP": 129.99,
+    "MAP": 109.99,
+    "yearTarget": 5000,
+    "attributes": {
+      "powerType": "corded",
+      "motorType": "brushed",
+      "color": "yellow",
+      "size": 5
+    },
+    "features": [
+      "Variable Speed",
+      "Dust Sealed Switch",
+      "Rubber Overmold",
+      "Hook & Loop"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/DEWALT-SANDERS-DWE6423K.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:35:38.848Z"
+  },
+  {
+    "product_id": "BOSCH-SANDERS-ROS20VSC",
+    "category": "powertools",
+    "subcategory": "sanders",
+    "role": "best",
+    "vendor": "BOSCH",
+    "cost": 85.99,
+    "MSRP": 169.99,
+    "MAP": 149.99,
+    "yearTarget": 4000,
+    "attributes": {
+      "powerType": "corded",
+      "motorType": "brushed",
+      "color": "blue",
+      "size": 5
+    },
+    "features": [
+      "Variable Speed",
+      "Microfilter System",
+      "Soft Start",
+      "Constant Response"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/BOSCH-SANDERS-ROS20VSC.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:39:42.586Z"
+  },
+  {
+    "product_id": "BLACKDECKER-SANDERS-BDERO100",
+    "category": "powertools",
+    "subcategory": "sanders",
+    "role": "entry",
+    "vendor": "BLACK+DECKER",
+    "cost": 25.99,
+    "MSRP": 59.99,
+    "MAP": 49.99,
+    "yearTarget": 10000,
+    "attributes": {
+      "powerType": "corded",
+      "motorType": "brushed",
+      "color": "orange",
+      "size": 5
+    },
+    "features": [
+      "Compact Design",
+      "Dust Collection",
+      "Easy Paper Change",
+      "Comfortable Grip"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/BLACKDECKER-SANDERS-BDERO100.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:39:46.813Z"
+  },
+  {
+    "product_id": "HARBORFREIGHT-GRINDERS-62281",
+    "category": "powertools",
+    "subcategory": "grinders",
+    "role": "entry",
+    "vendor": "HARBOR FREIGHT",
+    "cost": 19.99,
+    "MSRP": 49.99,
+    "MAP": 39.99,
+    "yearTarget": 12000,
+    "attributes": {
+      "powerType": "corded",
+      "color": "blue",
+      "size": 4.5
+    },
+    "features": [
+      "Side Handle",
+      "Spindle Lock",
+      "Tool-Free Guard"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/HARBORFREIGHT-GRINDERS-62281.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:35:45.887Z"
+  },
+  {
+    "product_id": "DEWALT-GRINDERS-DWE402",
+    "category": "powertools",
+    "subcategory": "grinders",
+    "role": "good",
+    "vendor": "DEWALT",
+    "cost": 45.99,
+    "MSRP": 99.99,
+    "MAP": 79.99,
+    "yearTarget": 8000,
+    "attributes": {
+      "powerType": "corded",
+      "motorType": "brushed",
+      "color": "yellow",
+      "size": 4.5
+    },
+    "features": [
+      "Dust Ejection System",
+      "One-Touch Guard",
+      "Keyless Adjustable Guard",
+      "AC/DC Switch"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/DEWALT-GRINDERS-DWE402.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:35:49.954Z"
+  },
+  {
+    "product_id": "MILWAUKEE-GRINDERS-6117-31",
+    "category": "powertools",
+    "subcategory": "grinders",
+    "role": "better",
+    "vendor": "MILWAUKEE",
+    "cost": 75.99,
+    "MSRP": 149.99,
+    "MAP": 129.99,
+    "yearTarget": 6000,
+    "attributes": {
+      "powerType": "corded",
+      "motorType": "brushed",
+      "color": "red",
+      "size": 4.5
+    },
+    "features": [
+      "Dial Speed Control",
+      "Burst Resistant Guards",
+      "Slide Switch",
+      "Lock-On Button"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/MILWAUKEE-GRINDERS-6117-31.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:35:54.182Z"
+  },
+  {
+    "product_id": "METABO-GRINDERS-WEV15-125",
+    "category": "powertools",
+    "subcategory": "grinders",
+    "role": "best",
+    "vendor": "METABO",
+    "cost": 95.99,
+    "MSRP": 189.99,
+    "MAP": 169.99,
+    "yearTarget": 4000,
+    "attributes": {
+      "powerType": "corded",
+      "motorType": "brushed",
+      "color": "green",
+      "size": 5
+    },
+    "features": [
+      "Variable Speed",
+      "Restart Protection",
+      "Vibration Dampening",
+      "Auto-Balancer"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/powertools/METABO-GRINDERS-WEV15-125.jpg",
+    "createdAt": "2025-12-04T22:20:03.304Z",
+    "updatedAt": "2025-12-04T22:20:03.304Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:35:58.077Z"
+  }
+]

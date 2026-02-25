@@ -1,0 +1,197 @@
+{
+  "$scle": "Historical Competitive Analysis Data Schema",
+  "description": "Schema for historical competitive analysis data used as fallback when SageMaker Canvas models are unavailable",
+  "type": "object",
+  "required": [
+    "product_id",
+    "data_source",
+    "analysis_timestamp",
+    "market_statistics",
+    "competitive_positioning",
+    "strategic_insights",
+    "data_quality_metrics"
+  ],
+  "properties": {
+    "product_id": {
+      "type": "string",
+      "description": "Product identifier matching the main product catalog",
+      "pattern": "^[A-Z0-9-]+$"
+    },
+    "data_source": {
+      "type": "string",
+      "enum": ["historical-fallback"],
+      "description": "Source of the competitive data"
+    },
+    "analysis_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO timestamp when this analysis was last updated"
+    },
+    "market_statistics": {
+      "type": "object",
+      "required": [
+        "lowest_market_price",
+        "highest_market_price",
+        "average_market_price",
+        "median_market_price",
+        "market_volatility",
+        "competitor_count"
+      ],
+      "properties": {
+        "lowest_market_price": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Minimum competitor price in the market"
+        },
+        "highest_market_price": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum competitor price in the market"
+        },
+        "average_market_price": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Mean market price across all competitors"
+        },
+        "median_market_price": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Median market price across all competitors"
+        },
+        "market_volatility": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Price volatility index (0-1, where 1 is highly volatile)"
+        },
+        "competitor_count": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of competitors analyzed"
+        }
+      }
+    },
+    "competitive_positioning": {
+      "type": "object",
+      "required": [
+        "primary_competitor",
+        "competitive_relevance_score",
+        "market_share_estimate",
+        "price_positioning"
+      ],
+      "properties": {
+        "primary_competitor": {
+          "type": "string",
+          "description": "Name of the primary competitor"
+        },
+        "competitive_relevance_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Relevance score for competitive comparison (0-1)"
+        },
+        "market_share_estimate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Estimated market share of primary competitor (0-1)"
+        },
+        "price_positioning": {
+          "type": "string",
+          "enum": ["premium", "mid-premium", "mid-range", "value"],
+          "description": "Primary competitor's price positioning in market"
+        },
+        "competitive_advantages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of our competitive advantages over primary competitor"
+        }
+      }
+    },
+    "strategic_insights": {
+      "type": "object",
+      "required": [
+        "market_position_assessment",
+        "recommended_strategy",
+        "confidence_intervals"
+      ],
+      "properties": {
+        "market_position_assessment": {
+          "type": "string",
+          "enum": ["premium", "mid-premium", "mid-range", "value"],
+          "description": "Our assessed position in the market"
+        },
+        "recommended_strategy": {
+          "type": "string",
+          "enum": ["undercut", "match", "premium_position", "value_leader"],
+          "description": "Recommended pricing strategy based on competitive analysis"
+        },
+        "strategy_rationale": {
+          "type": "string",
+          "description": "Explanation for the recommended pricing strategy"
+        },
+        "confidence_intervals": {
+          "type": "object",
+          "required": [
+            "price_recommendation_confidence",
+            "market_position_confidence",
+            "competitive_analysis_confidence"
+          ],
+          "properties": {
+            "price_recommendation_confidence": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence in pricing recommendation (0-1, reduced for historical data)"
+            },
+            "market_position_confidence": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Confidence in market position assessment (0-1)"
+            },
+            "competitive_analysis_confidence": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Overall confidence in competitive analysis (0-1)"
+            }
+          }
+        }
+      }
+    },
+    "data_quality_metrics": {
+      "type": "object",
+      "required": [
+        "data_freshness_days",
+        "sample_size",
+        "data_completeness_score"
+      ],
+      "properties": {
+        "data_freshness_days": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Age of the competitive data in days"
+        },
+        "sample_size": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of data points used in analysis"
+        },
+        "data_completeness_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Completeness score of the competitive data (0-1)"
+        },
+        "outliers_excluded": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of outlier data points excluded from analysis"
+        }
+      }
+    }
+  }
+}

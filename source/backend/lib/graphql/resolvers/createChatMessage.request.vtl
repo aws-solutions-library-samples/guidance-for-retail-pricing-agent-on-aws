@@ -1,0 +1,36 @@
+## VTL resolver for createChatMessage mutation
+## Creates a new chat message in SessionChat table with composite sort key
+## Requirements: 8.1, 8.2, 8.3
+
+## Generate timestamp
+#set($timestamp = $util.time.nowISO8601())
+
+## Create composite sort key: agentId#timestamp
+#set($compositeSortKey = "${ctx.args.agentId}#${timestamp}")
+
+## Generate unique message ID
+#set($messageId = $util.autoId())
+
+## Calculate TTL (30 days from now)
+#set($ttl = $util.time.nowEpochSeconds() + 2592000)
+
+{
+  "version": "2018-05-29",
+  "operation": "PutItem",
+  "key": {
+    "sessionId": $util.dynamodb.toDynamoDBJson($ctx.args.sessionId),
+    "agentId_timestamp": $util.dynamodb.toDynamoDBJson($compositeSortKey)
+  },
+  "attributeValues": {
+    "id": $util.dynamodb.toDynamoDBJson($messageId),
+    "agentId": $util.dynamodb.toDynamoDBJson($ctx.args.agentId),
+    "agentName": $util.dynamodb.toDynamoDBJson($ctx.args.agentName),
+    "timestamp": $util.dynamodb.toDynamoDBJson($timestamp),
+    "message": $util.dynamodb.toDynamoDBJson($ctx.args.message),
+    "senderType": $util.dynamodb.toDynamoDBJson($util.defaultIfNull($ctx.args.senderType, "agent")),
+    #if($ctx.args.metadata)
+    "metadata": $util.dynamodb.toDynamoDBJson($ctx.args.metadata),
+    #end
+    "ttl": $util.dynamodb.toDynamoDBJson($ttl)
+  }
+}

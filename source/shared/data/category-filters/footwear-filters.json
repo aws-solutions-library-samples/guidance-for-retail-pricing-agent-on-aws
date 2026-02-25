@@ -1,0 +1,13 @@
+{
+  "categoryId": "footwear",
+  "availableFilters": {
+    "roles": ["best", "better", "good", "entry"],
+    "subcategories": ["running", "casual", "walking", "boots"],
+    "sizes": ["6", "6.5", "7", "7.5", "8", "8.5", "9", "9.5", "10", "10.5", "11", "11.5", "12"],
+    "widths": ["B", "D", "E", "EE", "EEE"],
+    "colors": ["black", "white", "brown", "gray", "blue", "red"],
+    "materials": ["leather", "synthetic", "canvas", "mesh", "suede"],
+    "styles": ["running", "casual", "dress", "athletic", "boot", "sandal"]
+  },
+  "lastUpdated": "2024-01-15T10:30:00Z"
+}

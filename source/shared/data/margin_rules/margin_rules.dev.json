@@ -1,0 +1,145 @@
+{
+  "version": "1.0",
+  "last_updated": "2024-01-15T10:30:00Z",
+  "description": "Development environment margin rules configuration with relaxed constraints for testing",
+  "metadata": {
+    "created_by": "pricing_system",
+    "environment": "development",
+    "schema_version": "1.0"
+  },
+  "role_based": {
+    "Best": {
+      "target_margin": 0.45,
+      "min_margin": 0.35,
+      "max_margin": 0.60,
+      "promo_floor": 0.30,
+      "max_volume_discount": 0.15,
+      "description": "Premium tier products with highest margin requirements (dev: relaxed constraints)"
+    },
+    "Better": {
+      "target_margin": 0.40,
+      "min_margin": 0.30,
+      "max_margin": 0.55,
+      "promo_floor": 0.25,
+      "max_volume_discount": 0.17,
+      "description": "High-quality products with strong margin requirements (dev: relaxed constraints)"
+    },
+    "Good": {
+      "target_margin": 0.35,
+      "min_margin": 0.25,
+      "max_margin": 0.50,
+      "promo_floor": 0.20,
+      "max_volume_discount": 0.20,
+      "description": "Standard quality products with moderate margin requirements (dev: relaxed constraints)"
+    },
+    "Entry": {
+      "target_margin": 0.30,
+      "min_margin": 0.20,
+      "max_margin": 0.45,
+      "promo_floor": 0.15,
+      "max_volume_discount": 0.23,
+      "description": "Entry-level products with competitive margin requirements (dev: relaxed constraints)"
+    }
+  },
+  "feature_adjustments": {
+    "battery": {
+      "60V_MAX": {
+        "adjustment": 0.05,
+        "description": "Premium 60V MAX battery technology"
+      },
+      "40V_MAX": {
+        "adjustment": 0.03,
+        "description": "High-performance 40V MAX battery"
+      },
+      "20V_MAX": {
+        "adjustment": 0.00,
+        "description": "Standard 20V MAX battery"
+      },
+      "20V": {
+        "adjustment": -0.02,
+        "description": "Basic 20V battery technology"
+      }
+    },
+    "features": {
+      "metal_blade_guard": {
+        "adjustment": 0.02,
+        "description": "Premium metal blade guard for enhanced safety"
+      },
+      "premium_case": {
+        "adjustment": 0.015,
+        "description": "High-quality carrying case included"
+      },
+      "LED_light": {
+        "adjustment": 0.005,
+        "description": "Built-in LED work light"
+      },
+      "electric_brake": {
+        "adjustment": 0.01,
+        "description": "Electric brake safety feature"
+      }
+    }
+  },
+  "volume_adjustments": {
+    "high_volume": {
+      "threshold": 30000,
+      "adjustment": -0.04,
+      "description": "High volume discount for products with >30k annual target (dev: lower threshold)"
+    },
+    "medium_volume": {
+      "threshold": 20000,
+      "adjustment": -0.02,
+      "description": "Medium volume discount for products with 20k-30k annual target (dev: lower threshold)"
+    },
+    "low_volume": {
+      "threshold": 0,
+      "adjustment": 0.00,
+      "description": "No volume adjustment for products with <20k annual target"
+    }
+  },
+  "seasonal_adjustments": {
+    "peak": {
+      "adjustment": 0.03,
+      "description": "Peak season margin increase (dev: higher adjustment for testing)"
+    },
+    "off_season": {
+      "adjustment": -0.03,
+      "description": "Off-season margin reduction (dev: higher adjustment for testing)"
+    },
+    "holiday": {
+      "adjustment": "dynamic",
+      "description": "Dynamic adjustment based on holiday demand patterns",
+      "calculation_method": "demand_based",
+      "min_adjustment": -0.02,
+      "max_adjustment": 0.04
+    },
+    "back_to_school": {
+      "adjustment": 0.015,
+      "description": "Back-to-school season moderate increase"
+    },
+    "end_of_year": {
+      "adjustment": -0.025,
+      "description": "End-of-year clearance adjustment (dev: higher discount)"
+    }
+  },
+  "compliance_rules": {
+    "map_enforcement": {
+      "enabled": false,
+      "description": "MAP enforcement disabled for development testing"
+    },
+    "margin_floor_enforcement": {
+      "enabled": true,
+      "description": "Minimum margin requirements enforcement (relaxed thresholds)"
+    },
+    "review_thresholds": {
+      "low_margin_review": 0.15,
+      "high_margin_review": 0.70,
+      "description": "Margin thresholds requiring manual review (dev: wider range)"
+    }
+  },
+  "calculation_rules": {
+    "margin_formula": "(price - cost) / price",
+    "rounding_precision": 2,
+    "currency": "USD",
+    "price_increment": 0.01
+  }
+}

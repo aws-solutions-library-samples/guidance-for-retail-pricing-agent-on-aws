@@ -1,0 +1,58 @@
+[
+  {
+    "categoryId": "powertools",
+    "categoryName": "Power Tools",
+    "description": "Professional and consumer power tools for construction and DIY projects",
+    "icon": "drill",
+    "productCount": 16,
+    "subcategories": [
+      "saws",
+      "drills",
+      "sanders",
+      "grinders"
+    ],
+    "lastUpdated": "2025-12-04T22:20:03.306Z"
+  },
+  {
+    "categoryId": "apparel",
+    "categoryName": "Apparel",
+    "description": "Clothing and garments for men, women, and children",
+    "icon": "shirt",
+    "productCount": 16,
+    "subcategories": [
+      "shirts",
+      "hoodies",
+      "t-shirts",
+      "polo-shirts"
+    ],
+    "lastUpdated": "2025-12-04T22:20:03.307Z"
+  },
+  {
+    "categoryId": "footwear",
+    "categoryName": "Footwear",
+    "description": "Shoes, boots, and athletic footwear for all occasions",
+    "icon": "shoe",
+    "productCount": 16,
+    "subcategories": [
+      "running",
+      "casual",
+      "walking",
+      "boots"
+    ],
+    "lastUpdated": "2025-12-04T22:20:03.307Z"
+  },
+  {
+    "categoryId": "kitchen",
+    "categoryName": "Kitchen Appliances",
+    "description": "Small kitchen appliances and cooking equipment",
+    "icon": "blender",
+    "productCount": 16,
+    "subcategories": [
+      "blenders",
+      "mixers",
+      "coffee-makers",
+      "toasters"
+    ],
+    "lastUpdated": "2025-12-04T22:20:03.308Z"
+  }
+]

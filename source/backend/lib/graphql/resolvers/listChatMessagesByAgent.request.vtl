@@ -1,0 +1,20 @@
+## VTL resolver for listChatMessagesByAgent query
+## Lists chat messages by agent across all sessions using GSI
+## Requirements: 8.7
+
+{
+  "version": "2018-05-29",
+  "operation": "Query",
+  "index": "AgentIndex",
+  "query": {
+    "expression": "agentId = :agentId",
+    "expressionValues": {
+      ":agentId": $util.dynamodb.toDynamoDBJson($ctx.args.agentId)
+    }
+  },
+  "limit": $util.defaultIfNull($ctx.args.limit, 50),
+  #if($ctx.args.nextToken)
+  "nextToken": "$ctx.args.nextToken",
+  #end
+  "scanIndexForward": false
+}

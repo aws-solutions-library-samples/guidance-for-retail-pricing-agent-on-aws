@@ -1,0 +1,72 @@
+{
+  "name": "retail-pricing-frontend",
+  "version": "1.0.0",
+  "description": "React TypeScript frontend for Retail Pricing Agent Orchestrator",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "jest --run",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --run --coverage",
+    "test:integration": "jest --run --testPathPattern=integration",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "type-check": "tsc --noEmit",
+
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+
+    "sync:frontend:local": "node scripts/sync-frontend-config.cjs local",
+    "sync:frontend:dev": "node scripts/sync-frontend-config.cjs dev",
+    "sync:frontend:prod": "node scripts/sync-frontend-config.cjs prod",
+
+    "setup:amplify:local": "bash scripts/setup-amplify.sh local",
+    "setup:amplify:dev": "bash scripts/setup-amplify.sh dev",
+    "setup:amplify:prod": "bash scripts/setup-amplify.sh prod",
+
+    "verify:amplify": "bash scripts/verify-amplify-setup.sh",
+
+    "deploy:frontend:local": "bash scripts/deploy-to-amplify.sh local",
+    "deploy:frontend:dev": "bash scripts/deploy-to-amplify.sh dev",
+    "deploy:frontend:prod": "bash scripts/deploy-to-amplify.sh prod"
+  },
+  "dependencies": {
+    "@aws-amplify/ui-react": "^6.0.0",
+    "@aws-sdk/client-cognito-identity-provider": "^3.0.0",
+    "@aws-sdk/client-s3": "^3.0.0",
+    "@cloudscape-design/components": "^3.0.0",
+    "@cloudscape-design/global-styles": "^1.0.0",
+    "@react-pdf/renderer": "^4.3.1",
+    "@tanstack/react-query": "^5.0.0",
+    "@xyflow/react": "^12.9.2",
+    "aws-amplify": "^6.0.0",
+    "date-fns": "^4.1.0",
+    "jotai": "^2.15.0",
+    "jspdf": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.9.4",
+    "react-window": "^2.2.3"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^14.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/react-window": "^1.8.8",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "jest": "^29.0.0",
+    "jest-axe": "^10.0.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}

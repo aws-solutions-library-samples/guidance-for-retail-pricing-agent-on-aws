@@ -1,0 +1,11 @@
+{
+  "categoryId": "kitchen",
+  "availableFilters": {
+    "roles": ["best", "better", "good", "entry"],
+    "subcategories": ["blenders", "mixers", "coffee-makers", "toasters"],
+    "capacities": ["2 slices", "4 slices", "12 cups", "5qt", "64oz"],
+    "materials": ["stainless steel", "plastic", "glass", "ceramic", "aluminum"],
+    "colors": ["silver", "black", "white", "red", "blue"]
+  },
+  "lastUpdated": "2024-01-15T10:30:00Z"
+}

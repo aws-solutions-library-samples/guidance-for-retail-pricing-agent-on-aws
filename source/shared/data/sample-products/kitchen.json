@@ -1,0 +1,497 @@
+[
+  {
+    "product_id": "CUISINART-BLENDERS-B001",
+    "category": "kitchen",
+    "subcategory": "blenders",
+    "role": "good",
+    "vendor": "CUISINART",
+    "cost": 35.99,
+    "MSRP": 79.99,
+    "MAP": 69.99,
+    "yearTarget": 6000,
+    "attributes": {
+      "capacity": "64oz",
+      "power": "1,000W",
+      "material": "stainless steel",
+      "color": "silver",
+      "dimensions": "8.5x7.5x15.5",
+      "weight": "8.2lbs",
+      "speeds": "10"
+    },
+    "features": [
+      "Variable Speed Control",
+      "Pulse Function",
+      "Dishwasher Safe",
+      "BPA-Free Jar"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/CUISINART-BLENDERS-B001.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:39:58.642Z"
+  },
+  {
+    "product_id": "VITAMIX-BLENDERS-E310",
+    "category": "kitchen",
+    "subcategory": "blenders",
+    "role": "best",
+    "vendor": "VITAMIX",
+    "cost": 189.99,
+    "MSRP": 349.99,
+    "MAP": 299.99,
+    "yearTarget": 2000,
+    "attributes": {
+      "capacity": "48oz",
+      "power": "1492W",
+      "material": "stainless steel",
+      "color": "black",
+      "dimensions": "11x8x18",
+      "weight": "10.5lbs",
+      "speeds": "10"
+    },
+    "features": [
+      "Aircraft-Grade Blades",
+      "Variable Speed Control",
+      "Pulse Feature",
+      "5-Year Warranty"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/VITAMIX-BLENDERS-E310.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:38:21.764Z"
+  },
+  {
+    "product_id": "NINJA-BLENDERS-BL610",
+    "category": "kitchen",
+    "subcategory": "blenders",
+    "role": "better",
+    "vendor": "NINJA",
+    "cost": 45.99,
+    "MSRP": 99.99,
+    "MAP": 84.99,
+    "yearTarget": 8000,
+    "attributes": {
+      "capacity": "72oz",
+      "power": "1,000W",
+      "material": "plastic",
+      "color": "black",
+      "dimensions": "9x7x16",
+      "weight": "7.8lbs",
+      "speeds": "3"
+    },
+    "features": [
+      "Total Crushing Blades",
+      "XL Pitcher",
+      "BPA Free",
+      "Dishwasher Safe"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/NINJA-BLENDERS-BL610.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:38:26.222Z"
+  },
+  {
+    "product_id": "OSTER-BLENDERS-BEEHIVE",
+    "category": "kitchen",
+    "subcategory": "blenders",
+    "role": "entry",
+    "vendor": "OSTER",
+    "cost": 22.99,
+    "MSRP": 54.99,
+    "MAP": 44.99,
+    "yearTarget": 12000,
+    "attributes": {
+      "capacity": "50oz",
+      "power": "600W",
+      "material": "glass",
+      "color": "chrome",
+      "dimensions": "7x8x14",
+      "weight": "6.5lbs",
+      "speeds": "7"
+    },
+    "features": [
+      "Beehive Design",
+      "All Metal Drive",
+      "Borosilicate Glass Jar",
+      "Dual Direction Blade"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/OSTER-BLENDERS-BEEHIVE.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:38:30.802Z"
+  },
+  {
+    "product_id": "KITCHENAID-MIXERS-M002",
+    "category": "kitchen",
+    "subcategory": "mixers",
+    "role": "best",
+    "vendor": "KITCHENAID",
+    "cost": 189.99,
+    "MSRP": 399.99,
+    "MAP": 349.99,
+    "yearTarget": 3000,
+    "attributes": {
+      "capacity": "5qt",
+      "power": "325W",
+      "material": "stainless steel",
+      "color": "red",
+      "dimensions": "14.1x8.7x14.0",
+      "weight": "22lbs",
+      "speeds": "10"
+    },
+    "features": [
+      "Tilt-Head Design",
+      "Planetary Mixing",
+      "Multiple Attachments",
+      "Durable Motor"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/KITCHENAID-MIXERS-M002.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:38:34.993Z"
+  },
+  {
+    "product_id": "CUISINART-MIXERS-SM-50BC",
+    "category": "kitchen",
+    "subcategory": "mixers",
+    "role": "better",
+    "vendor": "CUISINART",
+    "cost": 85.99,
+    "MSRP": 179.99,
+    "MAP": 154.99,
+    "yearTarget": 5000,
+    "attributes": {
+      "capacity": "5.5qt",
+      "power": "500W",
+      "material": "stainless steel",
+      "color": "brushed chrome",
+      "dimensions": "15.5x10.5x14.5",
+      "weight": "17lbs",
+      "speeds": "12"
+    },
+    "features": [
+      "Die-Cast Metal Construction",
+      "Tilt-Back Head",
+      "Splash Guard",
+      "Power Outlet"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/CUISINART-MIXERS-SM-50BC.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:38:39.103Z"
+  },
+  {
+    "product_id": "HAMILTONBEACH-MIXERS-ECLECTRICS",
+    "category": "kitchen",
+    "subcategory": "mixers",
+    "role": "good",
+    "vendor": "HAMILTON BEACH",
+    "cost": 55.99,
+    "MSRP": 129.99,
+    "MAP": 109.99,
+    "yearTarget": 7000,
+    "attributes": {
+      "capacity": "4qt",
+      "power": "300W",
+      "material": "stainless steel",
+      "color": "sterling",
+      "dimensions": "13x9x13",
+      "weight": "14lbs",
+      "speeds": "12"
+    },
+    "features": [
+      "Planetary Mixing Action",
+      "Tilt-Up Head",
+      "Non-Slip Base",
+      "Splash Guard"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/HAMILTONBEACH-MIXERS-ECLECTRICS.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:38:43.364Z"
+  },
+  {
+    "product_id": "SUNBEAM-MIXERS-MIXMASTER",
+    "category": "kitchen",
+    "subcategory": "mixers",
+    "role": "entry",
+    "vendor": "SUNBEAM",
+    "cost": 35.99,
+    "MSRP": 79.99,
+    "MAP": 69.99,
+    "yearTarget": 10000,
+    "attributes": {
+      "capacity": "4qt",
+      "power": "250W",
+      "material": "stainless steel",
+      "color": "white",
+      "dimensions": "12x8x12",
+      "weight": "11lbs",
+      "speeds": "12"
+    },
+    "features": [
+      "Burst of Power",
+      "Soft Start Feature",
+      "Bowl Rest",
+      "Heel Rest"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/SUNBEAM-MIXERS-MIXMASTER.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:38:47.552Z"
+  },
+  {
+    "product_id": "HAMILTONBEACH-COFFEE-MAKERS-C003",
+    "category": "kitchen",
+    "subcategory": "coffee-makers",
+    "role": "better",
+    "vendor": "HAMILTON BEACH",
+    "cost": 25.99,
+    "MSRP": 59.99,
+    "MAP": 49.99,
+    "yearTarget": 8000,
+    "attributes": {
+      "capacity": "12 cups",
+      "power": "900W",
+      "material": "plastic",
+      "color": "black",
+      "dimensions": "11.8x8.2x13.4",
+      "weight": "4.5lbs",
+      "speeds": "1"
+    },
+    "features": [
+      "Programmable Timer",
+      "Auto Shut-Off",
+      "Pause & Serve",
+      "Water Window"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/HAMILTONBEACH-COFFEE-MAKERS-C003.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:38:51.523Z"
+  },
+  {
+    "product_id": "CUISINART-COFFEE-MAKERS-DCC-3200P1",
+    "category": "kitchen",
+    "subcategory": "coffee-makers",
+    "role": "best",
+    "vendor": "CUISINART",
+    "cost": 45.99,
+    "MSRP": 99.99,
+    "MAP": 84.99,
+    "yearTarget": 6000,
+    "attributes": {
+      "capacity": "14 cups",
+      "power": "1050W",
+      "material": "stainless steel",
+      "color": "stainless",
+      "dimensions": "9.25x7.75x14",
+      "weight": "6.2lbs",
+      "speeds": "1"
+    },
+    "features": [
+      "Brew Strength Control",
+      "Self Clean",
+      "Auto Shut-Off",
+      "Gold Tone Filter"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/CUISINART-COFFEE-MAKERS-DCC-3200P1.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:38:55.534Z"
+  },
+  {
+    "product_id": "KEURIG-COFFEE-MAKERS-K-CLASSIC",
+    "category": "kitchen",
+    "subcategory": "coffee-makers",
+    "role": "better",
+    "vendor": "KEURIG",
+    "cost": 55.99,
+    "MSRP": 119.99,
+    "MAP": 99.99,
+    "yearTarget": 7000,
+    "attributes": {
+      "capacity": "48oz",
+      "power": "1470W",
+      "material": "plastic",
+      "color": "black",
+      "dimensions": "13x9.8x13.3",
+      "weight": "11.6lbs",
+      "speeds": "3"
+    },
+    "features": [
+      "K-Cup Pod Brewing",
+      "3 Brew Sizes",
+      "Auto Off",
+      "Removable Reservoir"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/KEURIG-COFFEE-MAKERS-K-CLASSIC.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:38:59.569Z"
+  },
+  {
+    "product_id": "MRCOFFEE-COFFEE-MAKERS-SIMPLE-BREW",
+    "category": "kitchen",
+    "subcategory": "coffee-makers",
+    "role": "entry",
+    "vendor": "MR. COFFEE",
+    "cost": 18.99,
+    "MSRP": 44.99,
+    "MAP": 37.99,
+    "yearTarget": 12000,
+    "attributes": {
+      "capacity": "12 cups",
+      "power": "900W",
+      "material": "plastic",
+      "color": "black",
+      "dimensions": "11.5x8x12.5",
+      "weight": "3.8lbs",
+      "speeds": "1"
+    },
+    "features": [
+      "Grab-A-Cup Auto Pause",
+      "On/Off Indicator",
+      "Dual Water Window",
+      "Removable Filter Basket"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/MRCOFFEE-COFFEE-MAKERS-SIMPLE-BREW.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:39:03.605Z"
+  },
+  {
+    "product_id": "PROCTORSILEX-TOASTERS-T004",
+    "category": "kitchen",
+    "subcategory": "toasters",
+    "role": "entry",
+    "vendor": "PROCTOR SILEX",
+    "cost": 12.99,
+    "MSRP": 29.99,
+    "MAP": 24.99,
+    "yearTarget": 12000,
+    "attributes": {
+      "capacity": "2 slices",
+      "power": "750W",
+      "material": "plastic",
+      "color": "white",
+      "dimensions": "10.2x6.1x7.8",
+      "weight": "3.1lbs",
+      "speeds": "variable"
+    },
+    "features": [
+      "Adjustable Browning",
+      "Cancel Button",
+      "Slide-Out Crumb Tray"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/PROCTORSILEX-TOASTERS-T004.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:39:11.116Z"
+  },
+  {
+    "product_id": "CUISINART-TOASTERS-CPT-122",
+    "category": "kitchen",
+    "subcategory": "toasters",
+    "role": "good",
+    "vendor": "CUISINART",
+    "cost": 28.99,
+    "MSRP": 64.99,
+    "MAP": 54.99,
+    "yearTarget": 8000,
+    "attributes": {
+      "capacity": "2 slices",
+      "power": "1400W",
+      "material": "stainless steel",
+      "color": "brushed stainless",
+      "dimensions": "11x7.5x8.5",
+      "weight": "4.2lbs",
+      "speeds": "6"
+    },
+    "features": [
+      "6 Browning Settings",
+      "Bagel Function",
+      "Defrost Function",
+      "Reheat Function"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/CUISINART-TOASTERS-CPT-122.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:39:15.482Z"
+  },
+  {
+    "product_id": "BREVILLE-TOASTERS-BTA720XL",
+    "category": "kitchen",
+    "subcategory": "toasters",
+    "role": "best",
+    "vendor": "BREVILLE",
+    "cost": 65.99,
+    "MSRP": 139.99,
+    "MAP": 119.99,
+    "yearTarget": 4000,
+    "attributes": {
+      "capacity": "2 slices",
+      "power": "1800W",
+      "material": "stainless steel",
+      "color": "brushed stainless",
+      "dimensions": "11x8x9",
+      "weight": "6.5lbs",
+      "speeds": "5"
+    },
+    "features": [
+      "Bit More Button",
+      "Lift & Look",
+      "LED Progress Indicator",
+      "Auto Lowering"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/BREVILLE-TOASTERS-BTA720XL.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:39:19.723Z"
+  },
+  {
+    "product_id": "BLACKDECKER-TOASTERS-T2569B",
+    "category": "kitchen",
+    "subcategory": "toasters",
+    "role": "entry",
+    "vendor": "BLACK+DECKER",
+    "cost": 16.99,
+    "MSRP": 39.99,
+    "MAP": 32.99,
+    "yearTarget": 10000,
+    "attributes": {
+      "capacity": "2 slices",
+      "power": "850W",
+      "material": "plastic",
+      "color": "black",
+      "dimensions": "10.5x6.5x8",
+      "weight": "3.5lbs",
+      "speeds": "7"
+    },
+    "features": [
+      "7 Browning Settings",
+      "Toast Boost",
+      "Easy Clean Crumb Tray",
+      "Cancel Function"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/kitchen/BLACKDECKER-TOASTERS-T2569B.jpg",
+    "createdAt": "2025-12-04T22:20:03.308Z",
+    "updatedAt": "2025-12-04T22:20:03.308Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:39:24.197Z"
+  }
+]

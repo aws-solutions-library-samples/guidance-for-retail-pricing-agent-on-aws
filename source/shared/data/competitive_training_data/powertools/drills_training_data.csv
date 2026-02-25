@@ -1,0 +1,5 @@
+product_id,category,subcategory,role,our_msrp,our_map,our_cost,features_count,market_position_score,competitor_1_name,competitor_1_price,competitor_1_features,competitor_1_market_share,competitor_1_brand_strength,competitor_2_name,competitor_2_price,competitor_2_features,competitor_2_market_share,competitor_2_brand_strength,competitor_3_name,competitor_3_price,competitor_3_features,competitor_3_market_share,competitor_3_brand_strength
+DEWALT-DRILL-DCD771C2,powertools,drills,better,129.99,109.99,65.99,4,0.50,Milwaukee M18 2606-20,115.99,4,0.31,0.82,Makita XFD131,139.99,4,0.18,0.78,Ryobi P1813,89.99,3,0.12,0.65
+MILWAUKEE-DRILL-2804-20,powertools,drills,best,159.99,139.99,85.99,5,0.75,DeWalt DCD800B,149.99,4,0.28,0.85,Makita XFD12Z,169.99,5,0.18,0.78,Bosch GSR18V-190B22,179.99,5,0.15,0.80
+RYOBI-DRILL-P1813,powertools,drills,good,89.99,79.99,45.99,3,0.33,Black+Decker LDX120C,69.99,2,0.14,0.60,Craftsman CMCD700C1,99.99,3,0.08,0.70,Kobalt KDD 524B-03,84.99,3,0.05,0.58
+HARBOR-DRILL-62868,powertools,drills,entry,59.99,49.99,25.99,2,0.15,Chicago Electric 68239,44.99,1,0.08,0.45,Warrior 63531,54.99,2,0.04,0.42,Genesis GDR18,49.99,1,0.03,0.40

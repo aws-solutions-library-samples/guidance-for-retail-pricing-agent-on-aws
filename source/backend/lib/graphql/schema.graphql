@@ -1,0 +1,509 @@
+# GraphQL schema for product catalog with cursor-based pagination
+
+type Product {
+  id: ID!
+  product_id: String!
+  category: ProductCategory!
+  subcategory: String!
+  role: ProductRole!
+  vendor: String!
+  cost: Float!
+  MSRP: Float!
+  MAP: Float!
+  yearTarget: Int!
+  attributes: AWSJSON!
+  features: [String!]!
+  imageUrl: String!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+enum ProductCategory {
+  powertools
+  apparel
+  footwear
+  kitchen
+}
+
+enum ProductRole {
+  best
+  better
+  good
+  entry
+}
+
+input ProductFilter {
+  roles: [ProductRole!]
+  subcategories: [String!]
+  priceRange: PriceRangeInput
+  vendors: [String!]
+  attributes: AWSJSON
+  
+  # Category-specific filters for kitchen products
+  capacities: [String!]
+  materials: [String!]
+  colors: [String!]
+  powers: [String!]
+  speeds: [String!]
+  
+  # Category-specific filters for apparel products
+  sizes: [String!]
+  genders: [String!]
+  seasons: [String!]
+  fits: [String!]
+  sleeves: [String!]
+  
+  # Category-specific filters for footwear products
+  widths: [String!]
+  styles: [String!]
+  closures: [String!]
+  soles: [String!]
+  
+  # Category-specific filters for powertools products
+  powerTypes: [String!]
+  batteryVoltages: [String!]
+  motorTypes: [String!]
+  
+  # Common filters that can apply to multiple categories
+  dimensions: [String!]
+  weights: [String!]
+}
+
+input PriceRangeInput {
+  min: Float
+  max: Float
+}
+
+type ProductConnection {
+  edges: [ProductEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type ProductEdge {
+  node: Product!
+  cursor: String!
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
+
+type CategoryStats {
+  category: ProductCategory!
+  totalProducts: Int!
+  productsByRole: [RoleCount!]!
+  productsBySubcategory: [SubcategoryCount!]!
+  priceRange: PriceRange!
+}
+
+type RoleCount {
+  role: ProductRole!
+  count: Int!
+}
+
+type SubcategoryCount {
+  subcategory: String!
+  count: Int!
+}
+
+type PriceRange {
+  min: Float!
+  max: Float!
+  average: Float!
+}
+
+enum ProductSortField {
+  UPDATED_AT
+  CREATED_AT
+  PRICE
+  NAME
+  VENDOR
+}
+
+enum SortDirection {
+  ASC
+  DESC
+}
+
+type CategoryFilterOptions {
+  category: ProductCategory!
+  availableRoles: [ProductRole!]!
+  availableSubcategories: [String!]!
+  availableVendors: [String!]!
+  priceRange: PriceRange!
+  categorySpecificFilters: AWSJSON!
+}
+
+# Error details type for error responses
+# @aws_iam allows AgentCore agents to access this type via IAM authentication
+# @aws_cognito_user_pools allows frontend users to access via Cognito
+type ErrorDetails
+  @aws_iam
+  @aws_cognito_user_pools {
+  message: String!
+  code: String!
+  timestamp: AWSDateTime!
+}
+
+# Bot message type for agent conversations
+# @aws_iam allows AgentCore agents to access this type via IAM authentication
+# @aws_cognito_user_pools allows frontend users to access via Cognito
+type BotMessage
+  @aws_iam
+  @aws_cognito_user_pools {
+  agentId: String!
+  agentName: String!
+  message: String!
+  timestamp: AWSDateTime!
+}
+
+# Analysis data type for agent results
+# @aws_iam allows AgentCore agents to access this type via IAM authentication
+# @aws_cognito_user_pools allows frontend users to access via Cognito
+type AnalysisData
+  @aws_iam
+  @aws_cognito_user_pools {
+  demandForecast: AWSJSON
+  competitiveAnalysis: AWSJSON
+  marginAnalysis: AWSJSON
+  supervisorResults: AWSJSON
+}
+
+# Pricing session types
+# @aws_iam allows AgentCore agents to access this type via IAM authentication
+# @aws_cognito_user_pools allows frontend users to access via Cognito
+type PricingSession
+  @aws_iam
+  @aws_cognito_user_pools {
+  id: ID!
+  sessionId: String!
+  userId: String!
+  productId: String!
+  product: AWSJSON!
+  status: PricingStatus!
+  analysisData: AnalysisData
+  botResponses: [BotMessage!]
+  currentAgent: String
+  agentStatus: AWSJSON
+  error: ErrorDetails
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+enum PricingStatus {
+  initiated
+  in_progress
+  completed
+  demand_analysis_complete
+  competitive_analysis_complete
+  margin_analysis_complete
+  success
+  error
+}
+
+# Status enum for PRICING# record analysis progression
+enum PricingAnalysisStatus {
+  initiated
+  demand_analysis_complete
+  competitive_analysis_complete
+  margin_analysis_complete
+  completed
+  failed
+}
+
+# Type for PRICING# records (analysis results from agents)
+# @aws_iam allows AgentCore agents to access this type via IAM authentication
+# @aws_cognito_user_pools allows frontend users to access via Cognito
+type PricingAnalysis
+  @aws_iam
+  @aws_cognito_user_pools {
+  id: ID!
+  sessionId: String!
+  userId: String!
+  productId: String!
+  product: AWSJSON!
+  status: PricingAnalysisStatus!
+  demandForecast: AWSJSON
+  competitiveAnalysis: AWSJSON
+  marginAnalysis: AWSJSON
+  finalRecommendation: AWSJSON
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+# Input for updating PRICING# records
+input UpdatePricingAnalysisInput {
+  id: ID!
+  demandForecast: AWSJSON
+  competitiveAnalysis: AWSJSON
+  marginAnalysis: AWSJSON
+  finalRecommendation: AWSJSON
+  status: PricingAnalysisStatus
+}
+
+input ProductInput {
+  product_id: String!
+  category: ProductCategory!
+  subcategory: String!
+  role: ProductRole!
+  vendor: String!
+  cost: Float!
+  MSRP: Float!
+  MAP: Float!
+  yearTarget: Int!
+  attributes: AWSJSON!
+  features: [String!]!
+  imageUrl: String!
+}
+
+input CreatePricingInput {
+  product: AWSJSON!
+}
+
+type PricingAnalysisResponse {
+  status: String!
+  sessionId: String!
+  message: String!
+  statusCode: Int!
+  executionArn: String
+}
+
+type CreatePricingResponse {
+  id: ID!
+  userId: String!
+  product: AWSJSON!
+  status: PricingStatus!
+  createdAt: AWSDateTime!
+}
+
+type PricingConnection {
+  items: [PricingSession!]!
+  nextToken: String
+}
+
+type ResolverResponse {
+  status: String!
+  message: String!
+  executionArn: String
+  sessionId: String
+}
+
+type ResetDemoResponse {
+  success: Boolean!
+  message: String!
+  deletedCount: Int!
+  timestamp: AWSDateTime!
+}
+
+type Query {
+  # List products with cursor-based pagination
+  listProducts(
+    category: ProductCategory!
+    filter: ProductFilter
+    first: Int = 20
+    after: String
+    sortBy: ProductSortField = UPDATED_AT
+    sortDirection: SortDirection = DESC
+  ): ProductConnection!
+  
+  # Search products with full-text search
+  searchProducts(
+    category: ProductCategory!
+    query: String!
+    filter: ProductFilter
+    first: Int = 20
+    after: String
+  ): ProductConnection!
+  
+  # Get single product by ID
+  getProduct(id: ID!): Product
+  
+  # Get category statistics (for updating bundled category counts)
+  getCategoryStats(category: ProductCategory!): CategoryStats!
+  
+  # Get available filter options for a category
+  getCategoryFilters(category: ProductCategory!): CategoryFilterOptions!
+  
+  # Get pricing sessions by user ID
+  pricingByUserId(userId: ID!, limit: Int = 20, nextToken: String): PricingConnection!
+  
+  # Get pricing analysis by session ID (PRICING# records)
+  # @aws_iam allows AgentCore agents to query via IAM authentication
+  getPricingAnalysis(sessionId: ID!): PricingAnalysis
+    @aws_iam
+    @aws_cognito_user_pools
+  
+  # List all chat messages for a session in chronological order
+  # For filtering by specific agent, use listChatMessagesByAgent instead
+  # @aws_iam allows AgentCore agents to query via IAM authentication
+  # @aws_cognito_user_pools allows frontend users to query via Cognito
+  listChatMessages(
+    sessionId: ID!
+    limit: Int = 50
+    nextToken: String
+    sortDirection: String = "ASC"
+  ): ChatMessageConnection!
+    @aws_iam
+    @aws_cognito_user_pools
+  
+  # List chat messages by agent across all sessions (requires GSI)
+  # @aws_iam allows AgentCore agents to query via IAM authentication
+  # @aws_cognito_user_pools allows frontend users to query via Cognito
+  listChatMessagesByAgent(
+    agentId: String!
+    limit: Int = 50
+    nextToken: String
+  ): ChatMessageConnection!
+    @aws_iam
+    @aws_cognito_user_pools
+}
+
+input CreateProductInput {
+  product_id: String!
+  category: ProductCategory!
+  subcategory: String!
+  role: ProductRole!
+  vendor: String!
+  cost: Float!
+  MSRP: Float!
+  MAP: Float!
+  yearTarget: Int!
+  attributes: AWSJSON!
+  features: [String!]!
+  imageUrl: String!
+}
+
+input UpdateProductInput {
+  id: ID!
+  product_id: String
+  category: ProductCategory
+  subcategory: String
+  role: ProductRole
+  vendor: String
+  cost: Float
+  MSRP: Float
+  MAP: Float
+  yearTarget: Int
+  attributes: AWSJSON
+  features: [String!]
+  imageUrl: String
+}
+
+input UpdatePricingSessionInput {
+  id: ID!
+  demandForecast: AWSJSON
+  webScrap: AWSJSON
+  competitiveAnalysis: AWSJSON
+  marginAnalysis: AWSJSON
+  botResponses: AWSJSON
+  status: PricingStatus
+  currentAgent: String
+  agentStatus: AWSJSON
+  analysisData: AWSJSON
+  errorDetails: AWSJSON
+}
+
+type Mutation {
+  # Product management mutations
+  createProduct(input: CreateProductInput!): Product!
+  updateProduct(input: UpdateProductInput!): Product!
+  deleteProduct(id: ID!): Product!
+  
+  # Create a new pricing session
+  createPricing(input: CreatePricingInput!): CreatePricingResponse!
+  
+  # Update pricing session - triggers subscription
+  # @aws_iam allows AgentCore agents to invoke this mutation via IAM authentication
+  updatePricingSession(input: UpdatePricingSessionInput!): PricingSession!
+    @aws_iam
+    @aws_cognito_user_pools
+  
+  # Create a new chat message (triggers onChatMessageBySession subscription)
+  # @aws_iam allows AgentCore agents to invoke this mutation via IAM authentication
+  createChatMessage(
+    sessionId: ID!
+    agentId: String!
+    agentName: String!
+    message: String!
+    senderType: String = "agent"
+    metadata: AWSJSON
+  ): ChatMessage!
+    @aws_iam
+    @aws_cognito_user_pools
+  
+  # Invoke Lambda resolver for multi-agent orchestration
+  resolverLambda(
+    userID: String!
+    product: ProductInput!
+  ): PricingAnalysisResponse!
+  
+  # Legacy resolver for backward compatibility
+  appsyncResolver(
+    userID: String!
+    sessionID: String!
+    product: AWSJSON!
+  ): ResolverResponse!
+  
+  # Reset demo data - deletes all pricing sessions
+  resetDemo: ResetDemoResponse!
+  
+  # Update pricing analysis results (PRICING# records)
+  # @aws_iam allows AgentCore agents to invoke via IAM authentication
+  # This mutation triggers the onPricingAnalysisById subscription
+  updatePricingAnalysis(input: UpdatePricingAnalysisInput!): PricingAnalysis!
+    @aws_iam
+    @aws_cognito_user_pools
+}
+
+# Chat message type for agent conversations
+# @aws_iam allows AgentCore agents to access this type via IAM authentication
+# @aws_cognito_user_pools allows frontend users to access via Cognito
+type ChatMessage
+  @aws_iam
+  @aws_cognito_user_pools {
+  id: ID!
+  sessionId: ID!
+  timestamp: AWSDateTime!
+  agentId: String!
+  agentName: String!
+  message: String!
+  senderType: String!
+  metadata: AWSJSON
+}
+
+# Connection type for paginated chat messages
+# @aws_iam allows AgentCore agents to access this type via IAM authentication
+# @aws_cognito_user_pools allows frontend users to access via Cognito
+type ChatMessageConnection
+  @aws_iam
+  @aws_cognito_user_pools {
+  items: [ChatMessage!]!
+  nextToken: String
+}
+
+type Subscription {
+  # Real-time product updates - triggered when products are created or updated
+  productUpdated(category: ProductCategory!): Product
+    @aws_subscribe(mutations: ["updateProduct", "createProduct"])
+  
+  # Product deletion updates - triggered when products are deleted
+  productDeleted(category: ProductCategory!): Product
+    @aws_subscribe(mutations: ["deleteProduct"])
+  
+  # Real-time pricing updates - triggered when pricing analysis progresses
+  onPricingById(sessionId: String!): PricingSession
+    @aws_subscribe(mutations: ["updatePricingSession"])
+  
+  # Subscribe to chat messages for a session
+  onChatMessageBySession(sessionId: ID!): ChatMessage
+    @aws_subscribe(mutations: ["createChatMessage"])
+  
+  # Subscribe to pricing analysis updates (PRICING# records)
+  # Triggered when agents update analysis results via updatePricingAnalysis
+  onPricingAnalysisById(sessionId: String!): PricingAnalysis
+    @aws_subscribe(mutations: ["updatePricingAnalysis"])
+}

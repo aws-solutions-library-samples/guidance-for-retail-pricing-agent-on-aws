@@ -1,0 +1,17 @@
+{
+  "name": "product-resolvers",
+  "version": "1.0.0",
+  "description": "Lambda resolvers for product catalog GraphQL API",
+  "main": "index.js",
+  "dependencies": {},
+  "keywords": [
+    "aws",
+    "lambda",
+    "graphql",
+    "appsync",
+    "product-catalog"
+  ],
+  "author": "Retail Pricing System",
+  "license": "MIT",
+  "note": "All dependencies are now managed in the root backend package.json for CDK bundling compatibility"
+}

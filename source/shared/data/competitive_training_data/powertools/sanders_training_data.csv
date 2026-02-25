@@ -1,0 +1,5 @@
+product_id,category,subcategory,role,our_msrp,our_map,our_cost,features_count,market_position_score,competitor_1_name,competitor_1_price,competitor_1_features,competitor_1_market_share,competitor_1_brand_strength,competitor_2_name,competitor_2_price,competitor_2_features,competitor_2_market_share,competitor_2_brand_strength,competitor_3_name,competitor_3_price,competitor_3_features,competitor_3_market_share,competitor_3_brand_strength
+RYOBI-SANDER-P411,powertools,sanders,good,79.99,69.99,35.99,3,0.33,Black+Decker BDCMS20C,69.99,2,0.28,0.60,DeWalt DCW210B,89.99,3,0.22,0.85,Milwaukee M18 2648-20,99.99,4,0.18,0.82
+DEWALT-SANDER-DCW210B,powertools,sanders,better,109.99,94.99,55.99,4,0.50,Milwaukee M18 2648-20,99.99,4,0.18,0.82,Makita XOB01Z,119.99,4,0.15,0.78,Bosch GSS18V-13,124.99,4,0.12,0.80
+MILWAUKEE-SANDER-2648-20,powertools,sanders,best,139.99,119.99,75.99,5,0.75,DeWalt DCW210B,109.99,4,0.22,0.85,Makita XOB01Z,119.99,4,0.15,0.78,Festool ETS EC 125,189.99,6,0.08,0.90
+HARBOR-SANDER-57064,powertools,sanders,entry,49.99,39.99,19.99,2,0.15,Chicago Electric 93431,34.99,1,0.08,0.45,Warrior 56562,44.99,2,0.04,0.42,Genesis GPS140,39.99,1,0.03,0.40

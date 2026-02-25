@@ -1,0 +1,756 @@
+/**
+ * @fileoverview Responsive design styles for pricing dashboard.
+ * 
+ * Implements responsive layouts for desktop, tablet, and mobile devices
+ * with CSS Grid and media queries. Ensures CloudScape components adapt
+ * properly across different screen sizes.
+ * 
+ * Requirements: 13.1, 13.2, 13.3, 13.4, 13.5
+ * 
+ * Breakpoints:
+ * - Desktop: ≥1200px (multi-column layout)
+ * - Tablet: 768px-1199px (two-column layout)
+ * - Mobile: <768px (single-column stacked layout)
+ */
+
+/* ============================================
+   Base Responsive Container
+   ============================================ */
+
+.pricing-dashboard-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ============================================
+   Desktop Layout (≥1200px)
+   Multi-column grid layout
+   ============================================ */
+
+@media (min-width: 1200px) {
+  /* Main dashboard grid - 3 columns */
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  /* Full-width items (span all columns) */
+  .dashboard-grid-full {
+    grid-column: 1 / -1;
+  }
+
+  /* Two-column items (span 2 columns) */
+  .dashboard-grid-two-thirds {
+    grid-column: span 2;
+  }
+
+  /* One-column items (span 1 column) */
+  .dashboard-grid-one-third {
+    grid-column: span 1;
+  }
+
+  /* Analysis panels grid - 3 columns side by side */
+  .analysis-panels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  /* Product details and recommendations side by side */
+  .product-recommendations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  /* Workflow and chat side by side */
+  .workflow-chat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  /* Set fixed height for both workflow and chat containers */
+  .workflow-chat-grid > div {
+    height: 600px;
+  }
+
+  /* Make CloudScape containers fill the wrapper height */
+  .workflow-chat-grid > div > [class*="awsui-container"] {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Ensure container content is scrollable if needed */
+  .workflow-chat-grid > div > [class*="awsui-container"] > [class*="awsui-container-content"] {
+    flex: 1;
+    overflow: auto;
+  }
+}
+
+/* ============================================
+   Tablet Layout (768px-1199px)
+   Two-column grid layout
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* Main dashboard grid - 2 columns */
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Full-width items (span all columns) */
+  .dashboard-grid-full {
+    grid-column: 1 / -1;
+  }
+
+  /* Two-column items (span 2 columns) */
+  .dashboard-grid-two-thirds {
+    grid-column: 1 / -1;
+  }
+
+  /* One-column items (span 1 column) */
+  .dashboard-grid-one-third {
+    grid-column: span 1;
+  }
+
+  /* Analysis panels grid - 2 columns, third wraps */
+  .analysis-panels-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Product details and recommendations side by side */
+  .product-recommendations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Workflow and chat side by side */
+  .workflow-chat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Set fixed height for both workflow and chat containers */
+  .workflow-chat-grid > div {
+    height: 600px;
+  }
+
+  /* Make CloudScape containers fill the wrapper height */
+  .workflow-chat-grid > div > [class*="awsui-container"] {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Ensure container content is scrollable if needed */
+  .workflow-chat-grid > div > [class*="awsui-container"] > [class*="awsui-container-content"] {
+    flex: 1;
+    overflow: auto;
+  }
+
+  /* Adjust product image size for tablet */
+  .product-image-container {
+    max-width: 250px;
+  }
+}
+
+/* ============================================
+   Mobile Layout (<768px)
+   Single-column stacked layout
+   ============================================ */
+
+@media (max-width: 767px) {
+  /* All grids become single column */
+  .dashboard-grid,
+  .analysis-panels-grid,
+  .product-recommendations-grid,
+  .workflow-chat-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  /* All grid items take full width */
+  .dashboard-grid-full,
+  .dashboard-grid-two-thirds,
+  .dashboard-grid-one-third {
+    width: 100%;
+  }
+
+  /* Reduce padding on mobile */
+  .pricing-dashboard-container {
+    padding: 0 8px;
+  }
+
+  /* Adjust product image size for mobile */
+  .product-image-container {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  /* Stack column layouts vertically on mobile */
+  .cloudscape-column-layout {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Adjust font sizes for mobile */
+  .suggested-price-mobile {
+    font-size: 36px !important;
+  }
+
+  /* Reduce gauge size on mobile */
+  .confidence-gauge-mobile {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  /* Adjust header actions for mobile */
+  .dashboard-header-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .dashboard-header-actions button {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   CloudScape Component Responsive Overrides
+   ============================================ */
+
+/* Ensure CloudScape containers adapt properly */
+@media (max-width: 767px) {
+  /* Make CloudScape containers full width on mobile */
+  [class*="awsui-container"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Adjust CloudScape column layouts for mobile */
+  [class*="awsui-column-layout"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Adjust CloudScape space between for mobile */
+  [class*="awsui-space-between"] {
+    gap: 12px !important;
+  }
+
+  /* Adjust CloudScape header actions for mobile */
+  [class*="awsui-header-actions"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  /* Make buttons full width on mobile */
+  [class*="awsui-header-actions"] button {
+    width: 100% !important;
+  }
+}
+
+/* ============================================
+   Responsive Typography
+   ============================================ */
+
+/* Desktop typography */
+@media (min-width: 1200px) {
+  .responsive-heading-1 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .responsive-heading-2 {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .responsive-heading-3 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .responsive-body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+/* Tablet typography */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .responsive-heading-1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .responsive-heading-2 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  .responsive-heading-3 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .responsive-body {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+/* Mobile typography */
+@media (max-width: 767px) {
+  .responsive-heading-1 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .responsive-heading-2 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .responsive-heading-3 {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .responsive-body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* ============================================
+   Responsive Spacing
+   ============================================ */
+
+/* Desktop spacing */
+@media (min-width: 1200px) {
+  .responsive-spacing-large {
+    margin-bottom: 32px;
+  }
+
+  .responsive-spacing-medium {
+    margin-bottom: 24px;
+  }
+
+  .responsive-spacing-small {
+    margin-bottom: 16px;
+  }
+}
+
+/* Tablet spacing */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .responsive-spacing-large {
+    margin-bottom: 28px;
+  }
+
+  .responsive-spacing-medium {
+    margin-bottom: 20px;
+  }
+
+  .responsive-spacing-small {
+    margin-bottom: 14px;
+  }
+}
+
+/* Mobile spacing */
+@media (max-width: 767px) {
+  .responsive-spacing-large {
+    margin-bottom: 24px;
+  }
+
+  .responsive-spacing-medium {
+    margin-bottom: 16px;
+  }
+
+  .responsive-spacing-small {
+    margin-bottom: 12px;
+  }
+}
+
+/* ============================================
+   Responsive Images
+   ============================================ */
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Product image responsive sizing */
+.product-image-container {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .product-image-container {
+    max-width: 200px;
+  }
+}
+
+/* ============================================
+   Responsive Tables and Data Display
+   ============================================ */
+
+/* Make tables scrollable on mobile */
+@media (max-width: 767px) {
+  .responsive-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .responsive-table {
+    min-width: 600px;
+  }
+}
+
+/* ============================================
+   Responsive Charts and Visualizations
+   ============================================ */
+
+/* Workflow visualization responsive sizing */
+.workflow-visualization-container {
+  width: 100%;
+  height: 325px;
+  min-height: 325px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ensure React Flow takes full container size */
+.workflow-visualization-container .react-flow {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .workflow-visualization-container {
+    height: 300px;
+    min-height: 300px;
+  }
+}
+
+/* Confidence gauge responsive sizing */
+.confidence-gauge-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.confidence-gauge {
+  width: 160px;
+  height: 160px;
+}
+
+@media (max-width: 767px) {
+  .confidence-gauge {
+    width: 120px;
+    height: 120px;
+  }
+
+  .confidence-gauge-value {
+    font-size: 28px !important;
+  }
+
+  .confidence-gauge-label {
+    font-size: 12px !important;
+  }
+}
+
+/* ============================================
+   Responsive Price Range Indicator
+   ============================================ */
+
+.price-range-container {
+  width: 100%;
+  padding: 16px 0;
+}
+
+.price-range-bar {
+  position: relative;
+  height: 40px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .price-range-bar {
+    height: 32px;
+  }
+
+  .price-range-label {
+    font-size: 12px !important;
+    padding: 2px 8px !important;
+  }
+}
+
+/* ============================================
+   Responsive Navigation and Actions
+   ============================================ */
+
+/* Header actions responsive layout */
+.dashboard-header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .dashboard-header-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .dashboard-header-actions > * {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   Responsive Alerts and Notifications
+   ============================================ */
+
+/* Ensure alerts are readable on all devices */
+.responsive-alert {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 767px) {
+  .responsive-alert {
+    font-size: 14px;
+  }
+
+  .responsive-alert [class*="awsui-alert-action"] {
+    margin-top: 12px;
+  }
+}
+
+/* ============================================
+   Responsive Chat Panel
+   ============================================ */
+
+.chat-panel-container {
+  height: 400px;
+  min-height: 400px;
+  max-height: 60vh;
+}
+
+@media (max-width: 767px) {
+  .chat-panel-container {
+    height: 300px;
+    min-height: 300px;
+    max-height: 50vh;
+  }
+}
+
+/* ============================================
+   Responsive Expandable Sections
+   ============================================ */
+
+/* Ensure expandable sections work well on mobile */
+@media (max-width: 767px) {
+  [class*="awsui-expandable-section-header"] {
+    font-size: 16px !important;
+  }
+
+  [class*="awsui-expandable-section-content"] {
+    padding: 12px !important;
+  }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+  /* Hide interactive elements when printing */
+  .dashboard-header-actions,
+  .workflow-visualization-container,
+  .chat-panel-container {
+    display: none !important;
+  }
+
+  /* Expand all sections for printing */
+  [class*="awsui-expandable-section"] {
+    display: block !important;
+  }
+
+  /* Ensure proper page breaks */
+  .dashboard-grid > *,
+  .analysis-panels-grid > * {
+    page-break-inside: avoid;
+  }
+
+  /* Use single column for printing */
+  .dashboard-grid,
+  .analysis-panels-grid,
+  .product-recommendations-grid,
+  .workflow-chat-grid {
+    display: block !important;
+  }
+
+  .dashboard-grid > *,
+  .analysis-panels-grid > * {
+    margin-bottom: 20px;
+  }
+}
+
+/* ============================================
+   Accessibility Enhancements
+   ============================================ */
+
+/* Ensure focus indicators are visible on all screen sizes */
+*:focus-visible {
+  outline: 2px solid #0972d3;
+  outline-offset: 2px;
+}
+
+/* Increase touch target size on mobile */
+@media (max-width: 767px) {
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* ============================================
+   Performance Optimizations (Requirement 15.4)
+   ============================================ */
+
+/* Use GPU acceleration for animations */
+.fade-in,
+.slide-in,
+.panel-update {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimize repaints */
+.dashboard-grid,
+.analysis-panels-grid {
+  contain: layout style;
+}
+
+/* Smooth transitions for responsive layout changes (Requirement 15.4) */
+.dashboard-grid,
+.analysis-panels-grid,
+.product-recommendations-grid,
+.workflow-chat-grid {
+  transition: grid-template-columns 0.3s ease-in-out;
+}
+
+/* Smooth transitions for responsive elements */
+.product-image-container,
+.confidence-gauge,
+.price-range-bar {
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+/* Optimize image loading */
+img {
+  content-visibility: auto;
+}
+
+/* Lazy load images below the fold */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .fade-in,
+  .slide-in,
+  .panel-update {
+    will-change: auto;
+    transform: none;
+  }
+}
+
+/* Optimize scrolling performance */
+.chat-panel-container,
+.workflow-visualization-container {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Contain layout shifts */
+.product-image-container,
+.confidence-gauge-container,
+.price-range-container {
+  contain: layout;
+}
+
+/* Optimize font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Hardware acceleration for transforms */
+.dashboard-grid > *,
+.analysis-panels-grid > * {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Remove will-change after animation completes */
+.dashboard-grid > *.animation-complete,
+.analysis-panels-grid > *.animation-complete {
+  will-change: auto;
+}

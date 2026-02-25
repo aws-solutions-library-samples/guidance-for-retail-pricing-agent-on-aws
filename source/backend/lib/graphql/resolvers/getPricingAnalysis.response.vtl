@@ -1,0 +1,36 @@
+## VTL response resolver for getPricingAnalysis query
+## Returns the PRICING# record in PricingAnalysis format
+## Requirements: Query PRICING# records via AppSync
+
+#if($ctx.error)
+  $util.error($ctx.error.message, $ctx.error.type)
+#end
+
+## Return null if item not found
+#if(!$ctx.result)
+  #return
+#end
+
+## Map DynamoDB result to PricingAnalysis type
+## Handle null values properly - return null instead of "null" string
+## Product is stored as a Map in DynamoDB, convert to JSON string for AWSJSON scalar
+#set($product = $ctx.result.product)
+#set($demandForecast = $ctx.result.demandForecast)
+#set($competitiveAnalysis = $ctx.result.competitiveAnalysis)
+#set($marginAnalysis = $ctx.result.marginAnalysis)
+#set($finalRecommendation = $ctx.result.finalRecommendation)
+
+{
+  "id": "$util.defaultIfNull($ctx.result.id, $ctx.result.sessionId)",
+  "sessionId": "$util.defaultIfNull($ctx.result.sessionId, $ctx.result.id)",
+  "userId": "$ctx.result.userId",
+  "productId": "$util.defaultIfNull($ctx.result.productId, '')",
+  "product": #if($product)$util.toJson($product)#{else}null#end,
+  "status": "$ctx.result.status",
+  "demandForecast": #if($demandForecast)$util.toJson($demandForecast)#{else}null#end,
+  "competitiveAnalysis": #if($competitiveAnalysis)$util.toJson($competitiveAnalysis)#{else}null#end,
+  "marginAnalysis": #if($marginAnalysis)$util.toJson($marginAnalysis)#{else}null#end,
+  "finalRecommendation": #if($finalRecommendation)$util.toJson($finalRecommendation)#{else}null#end,
+  "createdAt": "$ctx.result.createdAt",
+  "updatedAt": "$ctx.result.updatedAt"
+}

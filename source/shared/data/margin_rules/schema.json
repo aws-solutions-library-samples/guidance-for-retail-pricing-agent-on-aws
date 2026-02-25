@@ -1,0 +1,257 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Margin Rules Configuration Schema",
+  "description": "JSON schema for validating margin rules configuration",
+  "type": "object",
+  "required": [
+    "version",
+    "last_updated",
+    "role_based",
+    "feature_adjustments",
+    "volume_adjustments",
+    "seasonal_adjustments"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+$",
+      "description": "Configuration version in semver format"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of last update"
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable description of the configuration"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "created_by": { "type": "string" },
+        "environment": { "type": "string" },
+        "schema_version": { "type": "string" }
+      }
+    },
+    "role_based": {
+      "type": "object",
+      "required": ["Best", "Better", "Good", "Entry"],
+      "properties": {
+        "Best": { "$ref": "#/definitions/roleConfig" },
+        "Better": { "$ref": "#/definitions/roleConfig" },
+        "Good": { "$ref": "#/definitions/roleConfig" },
+        "Entry": { "$ref": "#/definitions/roleConfig" }
+      },
+      "additionalProperties": false
+    },
+    "feature_adjustments": {
+      "type": "object",
+      "required": ["battery", "features"],
+      "properties": {
+        "battery": {
+          "type": "object",
+          "required": ["60V_MAX", "40V_MAX", "20V_MAX", "20V"],
+          "properties": {
+            "60V_MAX": { "$ref": "#/definitions/featureAdjustment" },
+            "40V_MAX": { "$ref": "#/definitions/featureAdjustment" },
+            "20V_MAX": { "$ref": "#/definitions/featureAdjustment" },
+            "20V": { "$ref": "#/definitions/featureAdjustment" }
+          }
+        },
+        "features": {
+          "type": "object",
+          "required": ["metal_blade_guard", "premium_case", "LED_light", "electric_brake"],
+          "properties": {
+            "metal_blade_guard": { "$ref": "#/definitions/featureAdjustment" },
+            "premium_case": { "$ref": "#/definitions/featureAdjustment" },
+            "LED_light": { "$ref": "#/definitions/featureAdjustment" },
+            "electric_brake": { "$ref": "#/definitions/featureAdjustment" }
+          }
+        }
+      }
+    },
+    "volume_adjustments": {
+      "type": "object",
+      "required": ["high_volume", "medium_volume", "low_volume"],
+      "properties": {
+        "high_volume": { "$ref": "#/definitions/volumeAdjustment" },
+        "medium_volume": { "$ref": "#/definitions/volumeAdjustment" },
+        "low_volume": { "$ref": "#/definitions/volumeAdjustment" }
+      }
+    },
+    "seasonal_adjustments": {
+      "type": "object",
+      "required": ["peak", "off_season", "holiday"],
+      "properties": {
+        "peak": { "$ref": "#/definitions/seasonalAdjustment" },
+        "off_season": { "$ref": "#/definitions/seasonalAdjustment" },
+        "holiday": { "$ref": "#/definitions/dynamicSeasonalAdjustment" },
+        "back_to_school": { "$ref": "#/definitions/seasonalAdjustment" },
+        "end_of_year": { "$ref": "#/definitions/seasonalAdjustment" }
+      }
+    },
+    "compliance_rules": {
+      "type": "object",
+      "properties": {
+        "map_enforcement": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "description": { "type": "string" }
+          }
+        },
+        "margin_floor_enforcement": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "description": { "type": "string" }
+          }
+        },
+        "review_thresholds": {
+          "type": "object",
+          "properties": {
+            "low_margin_review": { "type": "number", "minimum": 0, "maximum": 1 },
+            "high_margin_review": { "type": "number", "minimum": 0, "maximum": 1 },
+            "description": { "type": "string" }
+          }
+        }
+      }
+    },
+    "calculation_rules": {
+      "type": "object",
+      "properties": {
+        "margin_formula": { "type": "string" },
+        "rounding_precision": { "type": "integer", "minimum": 0, "maximum": 4 },
+        "currency": { "type": "string" },
+        "price_increment": { "type": "number", "minimum": 0.01 }
+      }
+    }
+  },
+  "definitions": {
+    "roleConfig": {
+      "type": "object",
+      "required": ["target_margin", "min_margin", "max_margin", "promo_floor", "max_volume_discount"],
+      "properties": {
+        "target_margin": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Target margin percentage (0-1)"
+        },
+        "min_margin": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Minimum acceptable margin percentage (0-1)"
+        },
+        "max_margin": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Maximum recommended margin percentage (0-1)"
+        },
+        "promo_floor": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Minimum margin during promotional periods (0-1)"
+        },
+        "max_volume_discount": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.5,
+          "description": "Maximum volume-based discount allowed (0-0.5)"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the role"
+        }
+      }
+    },
+    "featureAdjustment": {
+      "type": "object",
+      "required": ["adjustment"],
+      "properties": {
+        "adjustment": {
+          "type": "number",
+          "minimum": -0.1,
+          "maximum": 0.1,
+          "description": "Margin adjustment percentage (-0.1 to +0.1)"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the feature"
+        }
+      }
+    },
+    "volumeAdjustment": {
+      "type": "object",
+      "required": ["threshold", "adjustment"],
+      "properties": {
+        "threshold": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Volume threshold in units"
+        },
+        "adjustment": {
+          "type": "number",
+          "minimum": -0.05,
+          "maximum": 0.05,
+          "description": "Margin adjustment percentage (-0.05 to +0.05)"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the volume tier"
+        }
+      }
+    },
+    "seasonalAdjustment": {
+      "type": "object",
+      "required": ["adjustment"],
+      "properties": {
+        "adjustment": {
+          "type": "number",
+          "minimum": -0.05,
+          "maximum": 0.05,
+          "description": "Seasonal margin adjustment percentage (-0.05 to +0.05)"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the seasonal period"
+        }
+      }
+    },
+    "dynamicSeasonalAdjustment": {
+      "type": "object",
+      "required": ["adjustment"],
+      "properties": {
+        "adjustment": {
+          "type": "string",
+          "enum": ["dynamic"],
+          "description": "Dynamic adjustment indicator"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the dynamic adjustment"
+        },
+        "calculation_method": {
+          "type": "string",
+          "description": "Method used for dynamic calculation"
+        },
+        "min_adjustment": {
+          "type": "number",
+          "minimum": -0.05,
+          "maximum": 0.05,
+          "description": "Minimum dynamic adjustment"
+        },
+        "max_adjustment": {
+          "type": "number",
+          "minimum": -0.05,
+          "maximum": 0.05,
+          "description": "Maximum dynamic adjustment"
+        }
+      }
+    }
+  }
+}

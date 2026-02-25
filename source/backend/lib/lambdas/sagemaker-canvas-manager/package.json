@@ -1,0 +1,20 @@
+{
+  "name": "sagemaker-canvas-manager",
+  "version": "1.0.0",
+  "description": "SageMaker Canvas Model Manager Lambda function for demand forecasting",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "keywords": [
+    "sagemaker",
+    "canvas",
+    "machine-learning",
+    "demand-forecasting",
+    "model-management"
+  ],
+  "author": "Retail Pricing System",
+  "license": "MIT",
+  "note": "All dependencies are now managed in the root backend package.json for CDK bundling compatibility"
+}

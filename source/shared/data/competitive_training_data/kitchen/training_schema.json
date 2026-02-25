@@ -1,0 +1,101 @@
+{
+  "title": "SageMaker Canvas Kitchen Appliance Training Data Schema",
+  "description": "Schema for training data used to train SageMaker Canvas models for kitchen appliance competitive analysis",
+  "type": "object",
+  "required": [
+    "product_id",
+    "category",
+    "subcategory",
+    "role",
+    "our_msrp",
+    "our_map",
+    "our_cost",
+    "features_count",
+    "power_watts",
+    "capacity_metric",
+    "market_position_score",
+    "competitor_data"
+  ],
+  "properties": {
+    "product_id": {
+      "type": "string",
+      "description": "Product identifier"
+    },
+    "category": {
+      "type": "string",
+      "description": "Product category (kitchen)"
+    },
+    "subcategory": {
+      "type": "string",
+      "description": "Product subcategory (blenders, mixers, coffee-makers, toasters)"
+    },
+    "role": {
+      "type": "string",
+      "enum": ["best", "better", "good", "entry"],
+      "description": "Product tier positioning"
+    },
+    "our_msrp": {
+      "type": "number",
+      "description": "Our manufacturer suggested retail price"
+    },
+    "our_map": {
+      "type": "number",
+      "description": "Our minimum advertised price"
+    },
+    "our_cost": {
+      "type": "number",
+      "description": "Our product cost"
+    },
+    "features_count": {
+      "type": "integer",
+      "description": "Number of key features our product has"
+    },
+    "power_watts": {
+      "type": "number",
+      "description": "Product power consumption in watts"
+    },
+    "capacity_metric": {
+      "type": "number",
+      "description": "Product capacity (oz for blenders, qt for mixers, cups for coffee makers, slices for toasters)"
+    },
+    "market_position_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Target variable: Market position score (0=value, 0.33=mid-range, 0.66=mid-premium, 1=premium)"
+    },
+    "competitor_data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "competitor_name": {
+            "type": "string"
+          },
+          "competitor_price": {
+            "type": "number"
+          },
+          "competitor_features_count": {
+            "type": "integer"
+          },
+          "competitor_power_watts": {
+            "type": "number"
+          },
+          "competitor_capacity": {
+            "type": "number"
+          },
+          "market_share": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "brand_strength": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    }
+  }
+}

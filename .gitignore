@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+*.js
+*.d.ts
+*.js.map
+!jest.config.js
+!*.config.js
+dist/
+build/
+cdk.out/
+
+# Environment and config
+.env
+.env.local
+local.json
+cdk.context.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# AWS
+.aws-sam/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Guidance documentation outputs
+guidance-docs/

@@ -1,0 +1,13 @@
+{
+  "version": "1",
+  "api": {
+    "aws_appsync_graphqlEndpoint": "https://4yixobpdvvfojpwk6a4wfj4yfi.appsync-api.us-east-1.amazonaws.com/graphql",
+    "aws_appsync_region": "us-east-1",
+    "aws_appsync_authenticationType": "AMAZON_COGNITO_USER_POOLS"
+  },
+  "auth": {
+    "aws_region": "us-east-1",
+    "user_pool_id": "us-east-1_TmUK3S8XU",
+    "user_pool_client_id": "2ji78ip40b67mfa1eq6pqfk44q"
+  }
+}

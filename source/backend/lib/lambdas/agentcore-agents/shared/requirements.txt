@@ -1,0 +1,11 @@
+# AppSync Utilities Dependencies
+# These dependencies are required for the appsync_utils module
+
+# AWS SDK for Python
+boto3>=1.40.0
+
+# HTTP requests library for AppSync mutations
+requests>=2.31.0
+
+# AWS request signing (included with boto3/botocore)
+# botocore is automatically installed with boto3

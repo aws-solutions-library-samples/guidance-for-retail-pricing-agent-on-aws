@@ -1,0 +1,95 @@
+{
+  "name": "retail-pricing-generator",
+  "version": "1.0.0",
+  "description": "AI-powered retail pricing system with agent orchestration",
+  "private": true,
+  "workspaces": [
+    "src/frontend",
+    "src/backend",
+    "src/shared"
+  ],
+  "scripts": {
+    "setup": "node scripts/setup.js",
+    "setup:bash": "bash scripts/setup.sh",
+    "setup:powershell": "powershell -ExecutionPolicy Bypass -File scripts/setup.ps1",
+    "install:all": "npm install && npm run install:frontend && npm run install:backend",
+    "install:frontend": "cd src/frontend && npm install",
+    "install:backend": "cd src/backend && npm install",
+    
+    "dev:frontend": "cd src/frontend && npm run dev",
+    "build:frontend": "cd src/frontend && npm run build",
+
+    "deploy:frontend:local": "cd src/frontend && npm run deploy:frontend:local",
+    "deploy:frontend:dev": "cd src/frontend && npm run deploy:frontend:dev",
+    "deploy:frontend:prod": "cd src/frontend && npm run deploy:frontend:prod",
+
+
+    "sync:frontend:local": "cd src/frontend && npm run sync:frontend:local",
+    "sync:frontend:dev": "cd src/frontend && npm run sync:frontend:dev",
+    "sync:frontend:prod": "cd src/frontend && npm run sync:frontend:prod",
+    "setup:amplify:local": "cd src/frontend && npm run setup:amplify:local",
+    "setup:amplify:dev": "cd src/frontend && npm run setup:amplify:dev",
+    "setup:amplify:prod": "cd src/frontend && npm run setup:amplify:prod",
+
+    "deploy:backend:local:dry-run": "cd src/backend && npm run deploy:backend:local:dry-run",
+    "deploy:backend:local": "cd src/backend && npm run deploy:backend:local",
+    "deploy:infra:only:local": "cd src/backend && npm run deploy:infra:only:local",
+    "deploy:cdk:only:local": "cd src/backend && npm run deploy:cdk:only:local",
+    "deploy:agentcore:only:local": "cd src/backend && npm run deploy:agentcore:only:local",
+    "deploy:data:only:local": "cd src/backend && npm run deploy:data:only:local",
+    "deploy:sagemaker:only:local": "cd src/backend && npm run deploy:sagemaker:only:local",
+
+    "deploy:backend:dev": "cd src/backend && npm run deploy:backend:dev",
+    "deploy:infra:only:dev": "cd src/backend && npm run deploy:infra:only:dev",
+    "deploy:data:only:dev": "cd src/backend && npm run deploy:data:only:dev",
+    "deploy:sagemaker:only:dev": "cd src/backend && npm run deploy:sagemaker:only:dev",
+
+    "deploy:backend:prod:dry-run": "cd src/backend && npm run deploy:backend:prod:dry-run",
+    "deploy:backend:prod": "cd src/backend && npm run deploy:backend:prod",
+    "deploy:infra:only:prod": "cd src/backend && npm run deploy:infra:only:prod",
+    "deploy:data:only:prod": "cd src/backend && npm run deploy:data:only:prod",
+    "deploy:sagemaker:only:prod": "cd src/backend && npm run deploy:sagemaker:only:prod",
+
+    "verify:deployment": "cd src/backend && npm run verify:deployment",
+    "verify:deployment:local": "cd src/backend && npm run verify:deployment:local",
+    "verify:deployment:dev": "cd src/backend && npm run verify:deployment:dev",
+    "verify:deployment:prod": "cd src/backend && npm run verify:deployment:prod",
+
+    "validate:config:local": "cd src/backend && npm run validate:config:local",
+    "validate:config:dev": "cd src/backend && npm run validate:config:dev",
+    "validate:config:prod": "cd src/backend && npm run validate:config:prod",
+
+    "synth:local": "cd src/backend && npm run synth:local",
+    "synth:dev": "cd src/backend && npm run synth:dev",
+    "synth:prod": "cd src/backend && npm run synth:prod",
+
+    "bootstrap:cdk:local": "cd src/backend && npm run bootstrap:local",
+    "bootstrap:cdk:dev": "cd src/backend && npm run bootstrap:dev",
+    "bootstrap:cdk:prod": "cd src/backend && npm run bootstrap:prod",
+
+    "test:all": "bash scripts/run-tests.sh",
+    "test:frontend": "jest --config tests/frontend.jest.config.js",
+    "test:backend": "jest --config tests/backend.jest.config.js",
+    "lint:all": "npm run lint:frontend && npm run lint:backend",
+    "lint:frontend": "cd src/frontend && npm run lint",
+    "lint:backend": "cd src/backend && npm run lint",
+    "type-check:all": "npm run type-check:frontend && npm run type-check:backend",
+    "type-check:frontend": "cd src/frontend && npm run type-check",
+    "type-check:backend": "cd src/backend && npm run type-check"
+  },
+  "keywords": [
+    "retail",
+    "pricing",
+    "ai",
+    "agents",
+    "aws",
+    "typescript",
+    "react"
+  ],
+  "author": "Pricing Team",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "concurrently": "^8.0.0",
+    "identity-obj-proxy": "^3.0.0"
+  }
+}

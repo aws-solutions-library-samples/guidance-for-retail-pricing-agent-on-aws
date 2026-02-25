@@ -1,0 +1,496 @@
+[
+  {
+    "product_id": "NIKE-SHIRTS-M001",
+    "category": "apparel",
+    "subcategory": "shirts",
+    "role": "better",
+    "vendor": "NIKE",
+    "cost": 15.99,
+    "MSRP": 39.99,
+    "MAP": 34.99,
+    "yearTarget": 10000,
+    "attributes": {
+      "size": "M",
+      "color": "blue",
+      "material": "polyester",
+      "season": "summer",
+      "gender": "men",
+      "fit": "regular",
+      "sleeve": "short"
+    },
+    "features": [
+      "Moisture-wicking",
+      "UV Protection",
+      "Quick Dry",
+      "Breathable Fabric"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/NIKE-SHIRTS-M001.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:36:02.151Z"
+  },
+  {
+    "product_id": "UNDERARMOUR-SHIRTS-UA-TECH-20",
+    "category": "apparel",
+    "subcategory": "shirts",
+    "role": "best",
+    "vendor": "UNDER ARMOUR",
+    "cost": 18.99,
+    "MSRP": 44.99,
+    "MAP": 39.99,
+    "yearTarget": 8000,
+    "attributes": {
+      "size": "L",
+      "color": "black",
+      "material": "polyester",
+      "season": "all-season",
+      "gender": "men",
+      "fit": "athletic",
+      "sleeve": "short"
+    },
+    "features": [
+      "HeatGear Technology",
+      "Anti-Odor",
+      "Loose Fit",
+      "4-Way Stretch"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/UNDERARMOUR-SHIRTS-UA-TECH-20.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:36:06.647Z"
+  },
+  {
+    "product_id": "ADIDAS-SHIRTS-CLIMALITE-TEE",
+    "category": "apparel",
+    "subcategory": "shirts",
+    "role": "better",
+    "vendor": "ADIDAS",
+    "cost": 16.99,
+    "MSRP": 42.99,
+    "MAP": 37.99,
+    "yearTarget": 9000,
+    "attributes": {
+      "size": "M",
+      "color": "white",
+      "material": "polyester",
+      "season": "summer",
+      "gender": "women",
+      "fit": "regular",
+      "sleeve": "short"
+    },
+    "features": [
+      "Climalite Fabric",
+      "Crew Neck",
+      "Regular Fit",
+      "Moisture Management"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/ADIDAS-SHIRTS-CLIMALITE-TEE.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:36:10.731Z"
+  },
+  {
+    "product_id": "CHAMPION-SHIRTS-C9-BASIC",
+    "category": "apparel",
+    "subcategory": "shirts",
+    "role": "good",
+    "vendor": "CHAMPION",
+    "cost": 12.99,
+    "MSRP": 29.99,
+    "MAP": 24.99,
+    "yearTarget": 15000,
+    "attributes": {
+      "size": "L",
+      "color": "gray",
+      "material": "cotton",
+      "season": "all-season",
+      "gender": "unisex",
+      "fit": "regular",
+      "sleeve": "short"
+    },
+    "features": [
+      "Double Dry Technology",
+      "Tag-Free",
+      "Preshrunk",
+      "Classic Fit"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/CHAMPION-SHIRTS-C9-BASIC.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:36:14.974Z"
+  },
+  {
+    "product_id": "ADIDAS-HOODIES-W002",
+    "category": "apparel",
+    "subcategory": "hoodies",
+    "role": "best",
+    "vendor": "ADIDAS",
+    "cost": 35.99,
+    "MSRP": 79.99,
+    "MAP": 69.99,
+    "yearTarget": 7500,
+    "attributes": {
+      "size": "L",
+      "color": "black",
+      "material": "cotton",
+      "season": "fall",
+      "gender": "women",
+      "fit": "regular",
+      "sleeve": "long"
+    },
+    "features": [
+      "Kangaroo Pocket",
+      "Drawstring Hood",
+      "Ribbed Cuffs",
+      "Soft Interior"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/ADIDAS-HOODIES-W002.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:36:19.026Z"
+  },
+  {
+    "product_id": "NIKE-HOODIES-CLUB-FLEECE",
+    "category": "apparel",
+    "subcategory": "hoodies",
+    "role": "better",
+    "vendor": "NIKE",
+    "cost": 32.99,
+    "MSRP": 74.99,
+    "MAP": 64.99,
+    "yearTarget": 8500,
+    "attributes": {
+      "size": "M",
+      "color": "navy",
+      "material": "blend",
+      "season": "winter",
+      "gender": "men",
+      "fit": "regular",
+      "sleeve": "long"
+    },
+    "features": [
+      "Brushed Fleece",
+      "Kangaroo Pocket",
+      "Ribbed Hem",
+      "Standard Fit"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/NIKE-HOODIES-CLUB-FLEECE.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:36:23.323Z"
+  },
+  {
+    "product_id": "CHAMPION-HOODIES-POWERBLEND",
+    "category": "apparel",
+    "subcategory": "hoodies",
+    "role": "good",
+    "vendor": "CHAMPION",
+    "cost": 28.99,
+    "MSRP": 64.99,
+    "MAP": 54.99,
+    "yearTarget": 10000,
+    "attributes": {
+      "size": "L",
+      "color": "charcoal",
+      "material": "blend",
+      "season": "fall",
+      "gender": "unisex",
+      "fit": "regular",
+      "sleeve": "long"
+    },
+    "features": [
+      "Powerblend Fleece",
+      "Reduced Pilling",
+      "Front Pocket",
+      "Double Needle Stitching"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/CHAMPION-HOODIES-POWERBLEND.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:36:27.438Z"
+  },
+  {
+    "product_id": "HANES-HOODIES-ECOSMART",
+    "category": "apparel",
+    "subcategory": "hoodies",
+    "role": "entry",
+    "vendor": "HANES",
+    "cost": 22.99,
+    "MSRP": 49.99,
+    "MAP": 42.99,
+    "yearTarget": 12000,
+    "attributes": {
+      "size": "XL",
+      "color": "heather",
+      "material": "cotton",
+      "season": "fall",
+      "gender": "men",
+      "fit": "regular",
+      "sleeve": "long"
+    },
+    "features": [
+      "EcoSmart Fleece",
+      "Kangaroo Pocket",
+      "Ribbed Waistband",
+      "Patented Low-Pill"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/HANES-HOODIES-ECOSMART.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:36:32.477Z"
+  },
+  {
+    "product_id": "HANES-T-SHIRTS-U003",
+    "category": "apparel",
+    "subcategory": "t-shirts",
+    "role": "good",
+    "vendor": "HANES",
+    "cost": 8.99,
+    "MSRP": 19.99,
+    "MAP": 16.99,
+    "yearTarget": 15000,
+    "attributes": {
+      "size": "L",
+      "color": "white",
+      "material": "cotton",
+      "season": "all-season",
+      "gender": "unisex",
+      "fit": "regular",
+      "sleeve": "short"
+    },
+    "features": [
+      "Pre-shrunk",
+      "Tag-free",
+      "Double-needle Stitching"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/HANES-T-SHIRTS-U003.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:36:36.623Z"
+  },
+  {
+    "product_id": "GILDAN-T-SHIRTS-HEAVY-COTTON",
+    "category": "apparel",
+    "subcategory": "t-shirts",
+    "role": "entry",
+    "vendor": "GILDAN",
+    "cost": 6.99,
+    "MSRP": 16.99,
+    "MAP": 13.99,
+    "yearTarget": 20000,
+    "attributes": {
+      "size": "M",
+      "color": "black",
+      "material": "cotton",
+      "season": "all-season",
+      "gender": "unisex",
+      "fit": "regular",
+      "sleeve": "short"
+    },
+    "features": [
+      "Heavy Cotton",
+      "Seamless Collar",
+      "Taped Shoulders",
+      "Classic Fit"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/GILDAN-T-SHIRTS-HEAVY-COTTON.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:36:40.910Z"
+  },
+  {
+    "product_id": "COMFORTCOLORS-T-SHIRTS-GARMENT-DYED",
+    "category": "apparel",
+    "subcategory": "t-shirts",
+    "role": "better",
+    "vendor": "COMFORT COLORS",
+    "cost": 11.99,
+    "MSRP": 26.99,
+    "MAP": 22.99,
+    "yearTarget": 12000,
+    "attributes": {
+      "size": "L",
+      "color": "gray",
+      "material": "cotton",
+      "season": "all-season",
+      "gender": "unisex",
+      "fit": "loose",
+      "sleeve": "short"
+    },
+    "features": [
+      "Garment Dyed",
+      "Soft Wash",
+      "Relaxed Fit",
+      "Vintage Look"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/COMFORTCOLORS-T-SHIRTS-GARMENT-DYED.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:36:45.332Z"
+  },
+  {
+    "product_id": "NEXTLEVEL-T-SHIRTS-PREMIUM-FITTED",
+    "category": "apparel",
+    "subcategory": "t-shirts",
+    "role": "good",
+    "vendor": "NEXT LEVEL",
+    "cost": 9.99,
+    "MSRP": 22.99,
+    "MAP": 18.99,
+    "yearTarget": 14000,
+    "attributes": {
+      "size": "M",
+      "color": "blue",
+      "material": "cotton",
+      "season": "all-season",
+      "gender": "men",
+      "fit": "slim",
+      "sleeve": "short"
+    },
+    "features": [
+      "Premium Fitted",
+      "Side Seamed",
+      "Shoulder Taping",
+      "Tear Away Label"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/NEXTLEVEL-T-SHIRTS-PREMIUM-FITTED.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:36:49.776Z"
+  },
+  {
+    "product_id": "FRUITOFTHELOOM-POLO-SHIRTS-K004",
+    "category": "apparel",
+    "subcategory": "polo-shirts",
+    "role": "entry",
+    "vendor": "FRUIT OF THE LOOM",
+    "cost": 6.99,
+    "MSRP": 16.99,
+    "MAP": 13.99,
+    "yearTarget": 20000,
+    "attributes": {
+      "size": "S",
+      "color": "red",
+      "material": "blend",
+      "season": "spring",
+      "gender": "kids",
+      "fit": "regular",
+      "sleeve": "short"
+    },
+    "features": [
+      "Three-button Placket",
+      "Side Vents",
+      "Easy Care"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/FRUITOFTHELOOM-POLO-SHIRTS-K004.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:36:55.822Z"
+  },
+  {
+    "product_id": "NIKE-POLO-SHIRTS-DRI-FIT-POLO",
+    "category": "apparel",
+    "subcategory": "polo-shirts",
+    "role": "best",
+    "vendor": "NIKE",
+    "cost": 24.99,
+    "MSRP": 54.99,
+    "MAP": 47.99,
+    "yearTarget": 6000,
+    "attributes": {
+      "size": "M",
+      "color": "navy",
+      "material": "polyester",
+      "season": "summer",
+      "gender": "men",
+      "fit": "regular",
+      "sleeve": "short"
+    },
+    "features": [
+      "Dri-FIT Technology",
+      "Two-Button Placket",
+      "Flat Knit Collar",
+      "Hemmed Sleeves"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/NIKE-POLO-SHIRTS-DRI-FIT-POLO.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:37:04.694Z"
+  },
+  {
+    "product_id": "POLORALPHLAUREN-POLO-SHIRTS-CLASSIC-FIT",
+    "category": "apparel",
+    "subcategory": "polo-shirts",
+    "role": "best",
+    "vendor": "POLO RALPH LAUREN",
+    "cost": 35.99,
+    "MSRP": 79.99,
+    "MAP": 69.99,
+    "yearTarget": 4000,
+    "attributes": {
+      "size": "L",
+      "color": "white",
+      "material": "cotton",
+      "season": "all-season",
+      "gender": "men",
+      "fit": "regular",
+      "sleeve": "short"
+    },
+    "features": [
+      "Classic Fit",
+      "Ribbed Collar",
+      "Two-Button Placket",
+      "Embroidered Pony"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/POLORALPHLAUREN-POLO-SHIRTS-CLASSIC-FIT.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:37:08.629Z"
+  },
+  {
+    "product_id": "IZOD-POLO-SHIRTS-ADVANTAGE",
+    "category": "apparel",
+    "subcategory": "polo-shirts",
+    "role": "good",
+    "vendor": "IZOD",
+    "cost": 14.99,
+    "MSRP": 34.99,
+    "MAP": 29.99,
+    "yearTarget": 10000,
+    "attributes": {
+      "size": "M",
+      "color": "khaki",
+      "material": "cotton",
+      "season": "spring",
+      "gender": "men",
+      "fit": "regular",
+      "sleeve": "short"
+    },
+    "features": [
+      "Advantage Performance",
+      "Moisture Wicking",
+      "UV Protection",
+      "Easy Care"
+    ],
+    "imageUrl": "https://CLOUDFRONT_DOMAIN_PLACEHOLDER/products/images/apparel/IZOD-POLO-SHIRTS-ADVANTAGE.jpg",
+    "createdAt": "2025-12-04T22:20:03.306Z",
+    "updatedAt": "2025-12-04T22:20:03.306Z",
+    "imageExisted": true,
+    "imageGeneratedAt": "2026-02-25T21:37:13.018Z"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "product_id": "CMAN-SAW-PRO725",
+  "data_source": "historical-fallback",
+  "analysis_timestamp": "2024-01-15T10:30:00Z",
+  "market_statistics": {
+    "lowest_market_price": 159.99,
+    "highest_market_price": 229.99,
+    "average_market_price": 189.45,
+    "median_market_price": 185.99,
+    "market_volatility": 0.18,
+    "competitor_count": 7
+  },
+  "competitive_positioning": {
+    "primary_competitor": "DeWalt DCS570B 20V MAX",
+    "competitive_relevance_score": 0.94,
+    "market_share_estimate": 0.23,
+    "price_positioning": "mid-premium",
+    "competitive_advantages": [
+      "Superior LED work light system with dual positioning",
+      "Enhanced electric brake safety feature",
+      "Included carrying case (competitors charge extra)",
+      "60V MAX battery system vs competitors' 20V systems",
+      "Brushless motor efficiency rating 15% higher"
+    ]
+  },
+  "strategic_insights": {
+    "market_position_assessment": "mid-premium",
+    "recommended_strategy": "premium_position",
+    "strategy_rationale": "Our 60V MAX system and superior safety features justify premium positioning. Market analysis shows customers willing to pay 10-15% premium for enhanced safety and performance features in professional-grade circular saws.",
+    "confidence_intervals": {
+      "price_recommendation_confidence": 0.70,
+      "market_position_confidence": 0.75,
+      "competitive_analysis_confidence": 0.68
+    }
+  },
+  "data_quality_metrics": {
+    "data_freshness_days": 45,
+    "sample_size": 127,
+    "data_completeness_score": 0.85,
+    "outliers_excluded": 3
+  }
+}

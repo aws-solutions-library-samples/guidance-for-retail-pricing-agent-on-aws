@@ -1,0 +1,21 @@
+## VTL resolver for listChatMessages query
+## Lists all chat messages for a session in chronological order
+## Requirements: 8.6, 8.7
+##
+## Note: For filtering by specific agent, use listChatMessagesByAgent query instead
+
+{
+  "version": "2018-05-29",
+  "operation": "Query",
+  "query": {
+    "expression": "sessionId = :sessionId",
+    "expressionValues": {
+      ":sessionId": $util.dynamodb.toDynamoDBJson($ctx.args.sessionId)
+    }
+  },
+  "limit": $util.defaultIfNull($ctx.args.limit, 50),
+  #if($ctx.args.nextToken)
+  "nextToken": "$ctx.args.nextToken",
+  #end
+  "scanIndexForward": #if($ctx.args.sortDirection == "DESC")false#{else}true#end
+}

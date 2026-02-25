@@ -1,0 +1,122 @@
+{
+  "environment": "prod",
+  "aws": {
+    "account": "596434363265",
+    "region": "us-east-1"
+  },
+  "apiGateway": {
+    "throttling": {
+      "rateLimit": 10,
+      "burstLimit": 20
+    },
+    "cors": {
+      "allowOrigins": [
+        "http://localhost:3000"
+      ],
+      "allowMethods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE",
+        "OPTIONS"
+      ],
+      "allowHeaders": [
+        "Content-Type",
+        "Authorization"
+      ]
+    }
+  },
+  "database": {
+    "type": "dynamodb",
+    "billingMode": "PAY_PER_REQUEST",
+    "pointInTimeRecovery": false
+  },
+  "tableNames": {
+    "productTable": "ProductCatalog",
+    "pricingTable": "PricingOrchestration"
+  },
+  "bedrock": {
+    "region": "us-east-1",
+    "models": {
+      "classifier": "anthropic.claude-3-5-haiku-20241022-v1:0",
+      "specialized": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+      "supervisor": "us.anthropic.claude-sonnet-4-5-20250929-v1:0"
+    }
+  },
+  "agentCore": {
+    "region": "us-east-1",
+    "codeBucket": "retail-pricing-agentcore-code",
+    "note": "Actual bucket name will be: retail-pricing-agentcore-code-{ENVIRONMENT}-{ACCOUNT_ID}",
+    "agents": {
+      "demandForecast": "demand_forecast-fZdpqD9X1k",
+      "competitiveAnalysis": "competitive_analysis-M07cqO36Uk",
+      "marginAnalysis": "margin_analysis-CdCV3MHUty"
+    }
+  },
+  "appSync": {
+    "endpoint": "",
+    "apiId": "",
+    "wssEndpoint": "",
+    "apiKey": ""
+  },
+  "cognito": {
+    "poolId": "",
+    "poolClientId": ""
+  },
+  "amplify": {
+    "appId": "",
+    "appName": "RetailPricingUI",
+    "defaultDomain": "",
+    "appUrl": "",
+    "environment": "prod",
+    "deploymentBucketBase": "retail-pricing-amplify-deployment",
+    "deploymentBucket": ""
+  },
+  "monitoring": {
+    "logLevel": "DEBUG",
+    "metricsEnabled": false,
+    "tracingEnabled": false
+  },
+  "midwayOIDC": {
+    "enabled": false,
+    "domain": "",
+    "clientIdSecretName": "",
+    "clientSecretSecretName": "",
+    "scopes": [
+      "email",
+      "openid",
+      "profile"
+    ],
+    "callbackUrls": [
+      "http://localhost:3000/oauth/callback"
+    ],
+    "logoutUrls": [
+      "http://localhost:3000/login"
+    ]
+  },
+  "sageMakerCanvas": {
+    "note": "SageMaker Canvas infrastructure is mandatory and will always be deployed. Bucket base names will have -{ACCOUNT_ID} appended. Final names written after CDK deployment.",
+    "domainNamePrefix": "pricing-canvas",
+    "trainingDataBucketBase": "pricing-canvas-training-data",
+    "trainingDataBucket": "pricing-canvas-training-data-prod-596434363265",
+    "modelOutputBucketBase": "pricing-canvas-model-outputs",
+    "modelOutputBucket": "pricing-canvas-model-outputs-prod-596434363265",
+    "enableVpc": true,
+    "vpcCidr": "10.2.0.0/16",
+    "modelCategories": [
+      "powertools",
+      "kitchen",
+      "apparel",
+      "footwear"
+    ],
+    "trainingSchedule": {
+      "enabled": false,
+      "frequency": "weekly"
+    },
+    "performanceThresholds": {
+      "minAccuracy": 0.7,
+      "maxModelAge": 90
+    },
+    "autopilotExecutionRoleArn": "arn:aws:iam::596434363265:role/AmazonSageMaker-ExecutionRole-prod"
+  }
+}

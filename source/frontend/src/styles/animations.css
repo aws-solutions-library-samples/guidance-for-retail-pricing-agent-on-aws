@@ -1,0 +1,88 @@
+/**
+ * @fileoverview Animation styles for pricing dashboard.
+ * 
+ * Provides smooth fade-in animations for progressive panel updates
+ * when subscription data arrives.
+ */
+
+/* Fade-in animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in animation class */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in with delay for staggered animations */
+.fade-in-delay-1 {
+  animation: fadeIn 0.5s ease-in-out 0.1s both;
+}
+
+.fade-in-delay-2 {
+  animation: fadeIn 0.5s ease-in-out 0.2s both;
+}
+
+.fade-in-delay-3 {
+  animation: fadeIn 0.5s ease-in-out 0.3s both;
+}
+
+/* Pulse animation for loading states */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Slide-in animation for panels */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.4s ease-out;
+}
+
+/* Smooth transition for panel updates */
+.panel-update {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Highlight animation for new data */
+@keyframes highlight {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(9, 114, 211, 0.1);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.highlight-update {
+  animation: highlight 1s ease-in-out;
+}

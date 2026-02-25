@@ -1,0 +1,5 @@
+product_id,category,subcategory,role,our_msrp,our_map,our_cost,features_count,market_position_score,competitor_1_name,competitor_1_price,competitor_1_features,competitor_1_market_share,competitor_1_brand_strength,competitor_2_name,competitor_2_price,competitor_2_features,competitor_2_market_share,competitor_2_brand_strength,competitor_3_name,competitor_3_price,competitor_3_features,competitor_3_market_share,competitor_3_brand_strength
+CMAN-SAW-PRO725,powertools,saws,best,179.99,149.99,89.99,4,0.66,DeWalt DCS570B,185.99,3,0.23,0.85,Milwaukee M18 FUEL,199.99,4,0.19,0.82,Makita XSS02Z,189.99,3,0.15,0.78
+DEWALT-SAW-DCS391B,powertools,saws,better,149.99,129.99,75.99,3,0.50,Milwaukee M18,159.99,3,0.19,0.82,Ryobi P507,119.99,2,0.12,0.65,Craftsman V20,139.99,3,0.08,0.70
+RYOBI-SAW-P507,powertools,saws,good,119.99,99.99,55.99,2,0.33,Black+Decker BDCCS20C,89.99,2,0.14,0.60,Worx WX429L,109.99,2,0.06,0.55,Kobalt KCS 124B-03,99.99,2,0.05,0.58
+HARBOR-SAW-62370,powertools,saws,entry,79.99,69.99,35.99,2,0.15,Chicago Electric,59.99,1,0.08,0.45,Warrior,69.99,2,0.04,0.42,Genesis GCS445,74.99,1,0.03,0.40

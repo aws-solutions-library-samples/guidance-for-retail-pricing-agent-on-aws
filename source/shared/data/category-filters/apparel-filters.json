@@ -1,0 +1,13 @@
+{
+  "categoryId": "apparel",
+  "availableFilters": {
+    "roles": ["best", "better", "good", "entry"],
+    "subcategories": ["shirts", "hoodies", "t-shirts", "polo-shirts"],
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
+    "colors": ["black", "white", "blue", "red", "green", "gray", "navy"],
+    "materials": ["cotton", "polyester", "wool", "silk", "linen", "blend"],
+    "genders": ["men", "women", "unisex", "kids"],
+    "seasons": ["spring", "summer", "fall", "winter", "all-season"]
+  },
+  "lastUpdated": "2024-01-15T10:30:00Z"
+}

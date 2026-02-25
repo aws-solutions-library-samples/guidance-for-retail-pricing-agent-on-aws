@@ -1,0 +1,12 @@
+{
+  "categoryId": "powertools",
+  "availableFilters": {
+    "roles": ["best", "better", "good", "entry"],
+    "subcategories": ["saws", "drills", "sanders", "grinders"],
+    "powerTypes": ["cordless", "corded", "pneumatic"],
+    "batteryVoltages": ["12V", "18V", "20V MAX", "60V MAX"],
+    "colors": ["red", "yellow", "green", "blue", "black"],
+    "materials": ["steel", "aluminum", "plastic"]
+  },
+  "lastUpdated": "2024-01-15T10:30:00Z"
+}

@@ -1,0 +1,15 @@
+## Simplified VTL resolver for testing
+## Minimal query to isolate issues
+
+{
+  "version": "2018-05-29",
+  "operation": "Query",
+  "query": {
+    "expression": "sessionId = :sid",
+    "expressionValues": {
+      ":sid": {
+        "S": "$ctx.args.sessionId"
+      }
+    }
+  }
+}

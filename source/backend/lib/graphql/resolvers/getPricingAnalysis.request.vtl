@@ -1,0 +1,14 @@
+## VTL resolver for getPricingAnalysis query
+## Retrieves PRICING# records from PricingOrchestration table
+## Requirements: Query PRICING# records via AppSync
+
+#set($sessionId = $ctx.args.sessionId)
+
+{
+  "version": "2018-05-29",
+  "operation": "GetItem",
+  "key": {
+    "PK": $util.dynamodb.toDynamoDBJson("PRICING#${sessionId}"),
+    "SK": $util.dynamodb.toDynamoDBJson("METADATA")
+  }
+}

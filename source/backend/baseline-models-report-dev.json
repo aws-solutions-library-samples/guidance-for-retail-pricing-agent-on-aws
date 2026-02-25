@@ -1,0 +1,425 @@
+{
+  "timestamp": "2025-12-04T22:44:23.436Z",
+  "environment": "dev",
+  "region": "us-east-1",
+  "totalCategories": 4,
+  "successful": 4,
+  "failed": 0,
+  "skipped": 0,
+  "averageAccuracy": 0.013211840177201912,
+  "averageMSE": 258.8174715042114,
+  "results": [
+    {
+      "status": "completed",
+      "jobName": "df-powe-dev-472235",
+      "modelName": "df-powe-dev-472235LcnNBHQ9sfHPh6-009-14cfbe4c",
+      "accuracy": 0.010737951529624767,
+      "metrics": {
+        "MSE": 92.12763214111328,
+        "MetricName": "validation:mse",
+        "BestCandidate": "df-powe-dev-472235LcnNBHQ9sfHPh6-009-14cfbe4c"
+      },
+      "completionTime": "2025-12-04T21:19:28.624Z",
+      "bestCandidate": {
+        "CandidateName": "df-powe-dev-472235LcnNBHQ9sfHPh6-009-14cfbe4c",
+        "FinalAutoMLJobObjectiveMetric": {
+          "MetricName": "validation:mse",
+          "Value": 92.12763214111328,
+          "StandardMetricName": "MSE"
+        },
+        "ObjectiveStatus": "Succeeded",
+        "CandidateSteps": [
+          {
+            "CandidateStepType": "AWS::SageMaker::ProcessingJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:processing-job/df-powe-dev-472235-db-1-a07fcdc05bf14acbb6b60280e90f2337abcf021",
+            "CandidateStepName": "df-powe-dev-472235-db-1-a07fcdc05bf14acbb6b60280e90f2337abcf021"
+          },
+          {
+            "CandidateStepType": "AWS::SageMaker::TrainingJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-powe-dev-472235-dpp3-1-52f5962438614e339587b38734ba6263dd435",
+            "CandidateStepName": "df-powe-dev-472235-dpp3-1-52f5962438614e339587b38734ba6263dd435"
+          },
+          {
+            "CandidateStepType": "AWS::SageMaker::TransformJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:transform-job/df-powe-dev-472235-dpp3-rpb-1-511b6aa5dd164ea0a579d10a87b51c79b",
+            "CandidateStepName": "df-powe-dev-472235-dpp3-rpb-1-511b6aa5dd164ea0a579d10a87b51c79b"
+          },
+          {
+            "CandidateStepType": "AWS::SageMaker::TrainingJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-powe-dev-472235LcnNBHQ9sfHPh6-009-14cfbe4c",
+            "CandidateStepName": "df-powe-dev-472235LcnNBHQ9sfHPh6-009-14cfbe4c"
+          }
+        ],
+        "CandidateStatus": "Completed",
+        "InferenceContainers": [
+          {
+            "Image": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
+            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/powertools/df-powe-dev-472235/data-processor-models/df-powe-dev-472235-dpp3-1-52f5962438614e339587b38734ba6263dd435/output/model.tar.gz",
+            "Environment": {
+              "AUTOML_TRANSFORM_MODE": "feature-transform",
+              "SAGEMAKER_DEFAULT_INVOCATIONS_ACCEPT": "application/x-recordio-protobuf",
+              "SAGEMAKER_PROGRAM": "sagemaker_serve",
+              "SAGEMAKER_SUBMIT_DIRECTORY": "/opt/ml/model/code"
+            }
+          },
+          {
+            "Image": "382416733822.dkr.ecr.us-east-1.amazonaws.com/linear-learner:inference-cpu",
+            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/powertools/df-powe-dev-472235/tuning/df-powe-de-dpp3-ll/df-powe-dev-472235LcnNBHQ9sfHPh6-009-14cfbe4c/output/model.tar.gz",
+            "Environment": {
+              "MAX_CONTENT_LENGTH": "20971520",
+              "ML_APPLICATION": "linear_learner",
+              "SAGEMAKER_DEFAULT_INVOCATIONS_ACCEPT": "text/csv"
+            }
+          }
+        ],
+        "CreationTime": "2025-12-04T21:06:48.000Z",
+        "EndTime": "2025-12-04T21:09:23.000Z",
+        "LastModifiedTime": "2025-12-04T21:11:07.384Z",
+        "CandidateProperties": {
+          "CandidateArtifactLocations": {
+            "Explainability": "s3://pricing-canvas-dev-model-outputs-dev/models/powertools/df-powe-dev-472235/documentation/explainability/output",
+            "ModelInsights": "s3://pricing-canvas-dev-model-outputs-dev/models/powertools/df-powe-dev-472235/documentation/model_monitor/output"
+          },
+          "CandidateMetrics": [
+            {
+              "MetricName": "MSE",
+              "Value": 92.12763214111328,
+              "Set": "Validation",
+              "StandardMetricName": "MSE"
+            },
+            {
+              "MetricName": "MAE",
+              "Value": 8.078734397888184,
+              "Set": "Validation",
+              "StandardMetricName": "MAE"
+            },
+            {
+              "MetricName": "RMSE",
+              "Value": 9.59831428527832,
+              "Set": "Validation",
+              "StandardMetricName": "RMSE"
+            },
+            {
+              "MetricName": "R2",
+              "Value": 0.3407316207885742,
+              "Set": "Validation",
+              "StandardMetricName": "R2"
+            }
+          ]
+        }
+      },
+      "category": "powertools",
+      "meetsThreshold": false
+    },
+    {
+      "status": "completed",
+      "jobName": "df-kitc-dev-169470",
+      "modelName": "df-kitc-dev-169470MSmCtiTQjrxQLi-009-531d1569",
+      "accuracy": 0.03630936592548065,
+      "metrics": {
+        "MSE": 26.54110336303711,
+        "MetricName": "validation:mse",
+        "BestCandidate": "df-kitc-dev-169470MSmCtiTQjrxQLi-009-531d1569"
+      },
+      "completionTime": "2025-12-04T21:48:49.771Z",
+      "bestCandidate": {
+        "CandidateName": "df-kitc-dev-169470MSmCtiTQjrxQLi-009-531d1569",
+        "FinalAutoMLJobObjectiveMetric": {
+          "MetricName": "validation:mse",
+          "Value": 26.54110336303711,
+          "StandardMetricName": "MSE"
+        },
+        "ObjectiveStatus": "Succeeded",
+        "CandidateSteps": [
+          {
+            "CandidateStepType": "AWS::SageMaker::ProcessingJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:processing-job/df-kitc-dev-169470-db-1-4543416ea4bc4064ae4a9a6e3a6819c5fcc9c31",
+            "CandidateStepName": "df-kitc-dev-169470-db-1-4543416ea4bc4064ae4a9a6e3a6819c5fcc9c31"
+          },
+          {
+            "CandidateStepType": "AWS::SageMaker::TrainingJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-kitc-dev-169470-dpp3-1-74ec86f5490c4d18bd57f0f2cc422debd8e77",
+            "CandidateStepName": "df-kitc-dev-169470-dpp3-1-74ec86f5490c4d18bd57f0f2cc422debd8e77"
+          },
+          {
+            "CandidateStepType": "AWS::SageMaker::TransformJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:transform-job/df-kitc-dev-169470-dpp3-rpb-1-2a8a8758753e44c4b836e706a3219cf9b",
+            "CandidateStepName": "df-kitc-dev-169470-dpp3-rpb-1-2a8a8758753e44c4b836e706a3219cf9b"
+          },
+          {
+            "CandidateStepType": "AWS::SageMaker::TrainingJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-kitc-dev-169470MSmCtiTQjrxQLi-009-531d1569",
+            "CandidateStepName": "df-kitc-dev-169470MSmCtiTQjrxQLi-009-531d1569"
+          }
+        ],
+        "CandidateStatus": "Completed",
+        "InferenceContainers": [
+          {
+            "Image": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
+            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/kitchen/df-kitc-dev-169470/data-processor-models/df-kitc-dev-169470-dpp3-1-74ec86f5490c4d18bd57f0f2cc422debd8e77/output/model.tar.gz",
+            "Environment": {
+              "AUTOML_TRANSFORM_MODE": "feature-transform",
+              "SAGEMAKER_DEFAULT_INVOCATIONS_ACCEPT": "application/x-recordio-protobuf",
+              "SAGEMAKER_PROGRAM": "sagemaker_serve",
+              "SAGEMAKER_SUBMIT_DIRECTORY": "/opt/ml/model/code"
+            }
+          },
+          {
+            "Image": "382416733822.dkr.ecr.us-east-1.amazonaws.com/linear-learner:inference-cpu",
+            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/kitchen/df-kitc-dev-169470/tuning/df-kitc-de-dpp3-ll/df-kitc-dev-169470MSmCtiTQjrxQLi-009-531d1569/output/model.tar.gz",
+            "Environment": {
+              "MAX_CONTENT_LENGTH": "20971520",
+              "ML_APPLICATION": "linear_learner",
+              "SAGEMAKER_DEFAULT_INVOCATIONS_ACCEPT": "text/csv"
+            }
+          }
+        ],
+        "CreationTime": "2025-12-04T21:35:40.000Z",
+        "EndTime": "2025-12-04T21:38:04.000Z",
+        "LastModifiedTime": "2025-12-04T21:38:18.115Z",
+        "CandidateProperties": {
+          "CandidateArtifactLocations": {
+            "Explainability": "s3://pricing-canvas-dev-model-outputs-dev/models/kitchen/df-kitc-dev-169470/documentation/explainability/output",
+            "ModelInsights": "s3://pricing-canvas-dev-model-outputs-dev/models/kitchen/df-kitc-dev-169470/documentation/model_monitor/output"
+          },
+          "CandidateMetrics": [
+            {
+              "MetricName": "MSE",
+              "Value": 26.54110336303711,
+              "Set": "Validation",
+              "StandardMetricName": "MSE"
+            },
+            {
+              "MetricName": "MAE",
+              "Value": 4.433064937591553,
+              "Set": "Validation",
+              "StandardMetricName": "MAE"
+            },
+            {
+              "MetricName": "RMSE",
+              "Value": 5.151805877685547,
+              "Set": "Validation",
+              "StandardMetricName": "RMSE"
+            },
+            {
+              "MetricName": "R2",
+              "Value": -0.012713971547782421,
+              "Set": "Validation",
+              "StandardMetricName": "R2"
+            }
+          ]
+        }
+      },
+      "category": "kitchen",
+      "meetsThreshold": false
+    },
+    {
+      "status": "completed",
+      "jobName": "df-appa-dev-930370",
+      "modelName": "df-appa-dev-930370pa1xOyNxz5cO7m-001-be2d8f4b",
+      "accuracy": 0.0014522197627574234,
+      "metrics": {
+        "MSE": 687.6010131835938,
+        "MetricName": "validation:mse",
+        "BestCandidate": "df-appa-dev-930370pa1xOyNxz5cO7m-001-be2d8f4b"
+      },
+      "completionTime": "2025-12-04T22:17:04.283Z",
+      "bestCandidate": {
+        "CandidateName": "df-appa-dev-930370pa1xOyNxz5cO7m-001-be2d8f4b",
+        "FinalAutoMLJobObjectiveMetric": {
+          "MetricName": "validation:mse",
+          "Value": 687.6010131835938,
+          "StandardMetricName": "MSE"
+        },
+        "ObjectiveStatus": "Succeeded",
+        "CandidateSteps": [
+          {
+            "CandidateStepType": "AWS::SageMaker::ProcessingJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:processing-job/df-appa-dev-930370-db-1-b7250422602c4e52aea7888572e4bf62baf9036",
+            "CandidateStepName": "df-appa-dev-930370-db-1-b7250422602c4e52aea7888572e4bf62baf9036"
+          },
+          {
+            "CandidateStepType": "AWS::SageMaker::TrainingJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-appa-dev-930370-dpp5-1-4469440c31e44d1481294c14a96c4e5fb2c72",
+            "CandidateStepName": "df-appa-dev-930370-dpp5-1-4469440c31e44d1481294c14a96c4e5fb2c72"
+          },
+          {
+            "CandidateStepType": "AWS::SageMaker::TransformJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:transform-job/df-appa-dev-930370-dpp5-rpb-1-68dd1e6317964fea8812d3d48e89a331b",
+            "CandidateStepName": "df-appa-dev-930370-dpp5-rpb-1-68dd1e6317964fea8812d3d48e89a331b"
+          },
+          {
+            "CandidateStepType": "AWS::SageMaker::TrainingJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-appa-dev-930370pa1xOyNxz5cO7m-001-be2d8f4b",
+            "CandidateStepName": "df-appa-dev-930370pa1xOyNxz5cO7m-001-be2d8f4b"
+          }
+        ],
+        "CandidateStatus": "Completed",
+        "InferenceContainers": [
+          {
+            "Image": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
+            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/apparel/df-appa-dev-930370/data-processor-models/df-appa-dev-930370-dpp5-1-4469440c31e44d1481294c14a96c4e5fb2c72/output/model.tar.gz",
+            "Environment": {
+              "AUTOML_SPARSE_ENCODE_RECORDIO_PROTOBUF": "1",
+              "AUTOML_TRANSFORM_MODE": "feature-transform",
+              "SAGEMAKER_DEFAULT_INVOCATIONS_ACCEPT": "application/x-recordio-protobuf",
+              "SAGEMAKER_PROGRAM": "sagemaker_serve",
+              "SAGEMAKER_SUBMIT_DIRECTORY": "/opt/ml/model/code"
+            }
+          },
+          {
+            "Image": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:1.3-1-cpu-py3",
+            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/apparel/df-appa-dev-930370/tuning/df-appa-de-dpp5-xgb/df-appa-dev-930370pa1xOyNxz5cO7m-001-be2d8f4b/output/model.tar.gz",
+            "Environment": {
+              "MAX_CONTENT_LENGTH": "20971520",
+              "SAGEMAKER_DEFAULT_INVOCATIONS_ACCEPT": "text/csv"
+            }
+          }
+        ],
+        "CreationTime": "2025-12-04T22:04:12.000Z",
+        "EndTime": "2025-12-04T22:06:11.000Z",
+        "LastModifiedTime": "2025-12-04T22:08:11.271Z",
+        "CandidateProperties": {
+          "CandidateArtifactLocations": {
+            "Explainability": "s3://pricing-canvas-dev-model-outputs-dev/models/apparel/df-appa-dev-930370/documentation/explainability/output",
+            "ModelInsights": "s3://pricing-canvas-dev-model-outputs-dev/models/apparel/df-appa-dev-930370/documentation/model_monitor/output"
+          },
+          "CandidateMetrics": [
+            {
+              "MetricName": "MSE",
+              "Value": 687.6010131835938,
+              "Set": "Validation",
+              "StandardMetricName": "MSE"
+            },
+            {
+              "MetricName": "MAE",
+              "Value": 20.981210708618164,
+              "Set": "Validation",
+              "StandardMetricName": "MAE"
+            },
+            {
+              "MetricName": "RMSE",
+              "Value": 26.2164306640625,
+              "Set": "Validation",
+              "StandardMetricName": "RMSE"
+            },
+            {
+              "MetricName": "R2",
+              "Value": 0.29423001408576965,
+              "Set": "Validation",
+              "StandardMetricName": "R2"
+            }
+          ]
+        }
+      },
+      "category": "apparel",
+      "meetsThreshold": false
+    },
+    {
+      "status": "completed",
+      "jobName": "df-foot-dev-624878",
+      "modelName": "df-foot-dev-624878D2T6y1eKk0zdNt-003-b5026f4b",
+      "accuracy": 0.00434782349094481,
+      "metrics": {
+        "MSE": 229.00013732910156,
+        "MetricName": "validation:mse",
+        "BestCandidate": "df-foot-dev-624878D2T6y1eKk0zdNt-003-b5026f4b"
+      },
+      "completionTime": "2025-12-04T22:44:21.089Z",
+      "bestCandidate": {
+        "CandidateName": "df-foot-dev-624878D2T6y1eKk0zdNt-003-b5026f4b",
+        "FinalAutoMLJobObjectiveMetric": {
+          "MetricName": "validation:mse",
+          "Value": 229.00013732910156,
+          "StandardMetricName": "MSE"
+        },
+        "ObjectiveStatus": "Succeeded",
+        "CandidateSteps": [
+          {
+            "CandidateStepType": "AWS::SageMaker::ProcessingJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:processing-job/df-foot-dev-624878-db-1-696ef9aa94ec4ad296792f61d064ae8bdce64e5",
+            "CandidateStepName": "df-foot-dev-624878-db-1-696ef9aa94ec4ad296792f61d064ae8bdce64e5"
+          },
+          {
+            "CandidateStepType": "AWS::SageMaker::TrainingJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-foot-dev-624878-dpp0-1-d65f4b0db28f4a659bd8fbb8e94a4d3bb1147",
+            "CandidateStepName": "df-foot-dev-624878-dpp0-1-d65f4b0db28f4a659bd8fbb8e94a4d3bb1147"
+          },
+          {
+            "CandidateStepType": "AWS::SageMaker::TransformJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:transform-job/df-foot-dev-624878-dpp0-csv-1-c9a72c029a614e49ab1a4794433586ef3",
+            "CandidateStepName": "df-foot-dev-624878-dpp0-csv-1-c9a72c029a614e49ab1a4794433586ef3"
+          },
+          {
+            "CandidateStepType": "AWS::SageMaker::TrainingJob",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-foot-dev-624878D2T6y1eKk0zdNt-003-b5026f4b",
+            "CandidateStepName": "df-foot-dev-624878D2T6y1eKk0zdNt-003-b5026f4b"
+          }
+        ],
+        "CandidateStatus": "Completed",
+        "InferenceContainers": [
+          {
+            "Image": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
+            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/footwear/df-foot-dev-624878/data-processor-models/df-foot-dev-624878-dpp0-1-d65f4b0db28f4a659bd8fbb8e94a4d3bb1147/output/model.tar.gz",
+            "Environment": {
+              "AUTOML_TRANSFORM_MODE": "feature-transform",
+              "SAGEMAKER_DEFAULT_INVOCATIONS_ACCEPT": "application/x-recordio-protobuf",
+              "SAGEMAKER_PROGRAM": "sagemaker_serve",
+              "SAGEMAKER_SUBMIT_DIRECTORY": "/opt/ml/model/code"
+            }
+          },
+          {
+            "Image": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:1.3-1-cpu-py3",
+            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/footwear/df-foot-dev-624878/tuning/df-foot-de-dpp0-xgb/df-foot-dev-624878D2T6y1eKk0zdNt-003-b5026f4b/output/model.tar.gz",
+            "Environment": {
+              "MAX_CONTENT_LENGTH": "20971520",
+              "SAGEMAKER_DEFAULT_INVOCATIONS_ACCEPT": "text/csv"
+            }
+          }
+        ],
+        "CreationTime": "2025-12-04T22:32:09.000Z",
+        "EndTime": "2025-12-04T22:33:49.000Z",
+        "LastModifiedTime": "2025-12-04T22:36:06.798Z",
+        "CandidateProperties": {
+          "CandidateArtifactLocations": {
+            "Explainability": "s3://pricing-canvas-dev-model-outputs-dev/models/footwear/df-foot-dev-624878/documentation/explainability/output",
+            "ModelInsights": "s3://pricing-canvas-dev-model-outputs-dev/models/footwear/df-foot-dev-624878/documentation/model_monitor/output"
+          },
+          "CandidateMetrics": [
+            {
+              "MetricName": "MSE",
+              "Value": 229.00013732910156,
+              "Set": "Validation",
+              "StandardMetricName": "MSE"
+            },
+            {
+              "MetricName": "MAE",
+              "Value": 12.652400016784668,
+              "Set": "Validation",
+              "StandardMetricName": "MAE"
+            },
+            {
+              "MetricName": "RMSE",
+              "Value": 15.131230354309082,
+              "Set": "Validation",
+              "StandardMetricName": "RMSE"
+            },
+            {
+              "MetricName": "R2",
+              "Value": 0.6297100186347961,
+              "Set": "Validation",
+              "StandardMetricName": "R2"
+            }
+          ]
+        }
+      },
+      "category": "footwear",
+      "meetsThreshold": false
+    }
+  ],
+  "recommendations": [
+    "Consider collecting more training data or adjusting Autopilot parameters",
+    "All baseline models trained successfully via Autopilot. Ready for demand forecasting.",
+    "Models can be deployed to endpoints for real-time inference or used for batch predictions."
+  ]
+}

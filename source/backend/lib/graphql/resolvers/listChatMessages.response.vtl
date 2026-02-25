@@ -1,0 +1,24 @@
+## VTL response mapping for listChatMessages query
+## Returns paginated list of chat messages
+## Requirements: 8.6, 8.7
+
+## Check for errors in the result
+#if($ctx.error)
+  ## Log the error for debugging
+  $util.qr($ctx.stash.put("errorMessage", $ctx.error.message))
+  $util.qr($ctx.stash.put("errorType", $ctx.error.type))
+  $util.error($ctx.error.message, $ctx.error.type, $ctx.error)
+#end
+
+## Check if result exists
+#if(!$ctx.result)
+  $util.error("No result returned from DynamoDB query", "NoResultError")
+#end
+
+## Return the result with proper structure
+{
+  "items": $util.toJson($util.defaultIfNull($ctx.result.items, [])),
+  #if($ctx.result.nextToken)
+  "nextToken": "$ctx.result.nextToken"
+  #end
+}

@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "types": ["jest", "@testing-library/jest-dom", "node", "react", "react-dom"],
+    "baseUrl": "../../",
+    "paths": {
+      "@/*": ["src/frontend/src/*"],
+      "@/components/*": ["src/frontend/src/components/*"],
+      "@/types/*": ["src/frontend/src/types/*"],
+      "@/services/*": ["src/frontend/src/services/*"],
+      "@/utils/*": ["src/frontend/src/utils/*"],
+      "@/hooks/*": ["src/frontend/src/hooks/*"],
+      "@/graphql/*": ["src/frontend/src/graphql/*"],
+      "@/data/*": ["src/frontend/src/data/*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "../../src/frontend/src/**/*.ts",
+    "../../src/frontend/src/**/*.tsx",
+    "../../src/frontend/src/types/react.d.ts",
+    "setup/test-types.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

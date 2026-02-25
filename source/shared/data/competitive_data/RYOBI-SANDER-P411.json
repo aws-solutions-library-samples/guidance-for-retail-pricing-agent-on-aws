@@ -1,0 +1,42 @@
+{
+  "product_id": "RYOBI-SANDER-P411",
+  "data_source": "historical-fallback",
+  "analysis_timestamp": "2024-01-15T10:30:00Z",
+  "market_statistics": {
+    "lowest_market_price": 59.99,
+    "highest_market_price": 89.99,
+    "average_market_price": 72.85,
+    "median_market_price": 69.99,
+    "market_volatility": 0.15,
+    "competitor_count": 6
+  },
+  "competitive_positioning": {
+    "primary_competitor": "Black+Decker BDCMS20C",
+    "competitive_relevance_score": 0.82,
+    "market_share_estimate": 0.28,
+    "price_positioning": "mid-range",
+    "competitive_advantages": [
+      "Variable speed control (competitor has fixed speed)",
+      "Superior dust collection system with micro-filter",
+      "Ergonomic grip design reduces hand fatigue",
+      "18V ONE+ battery compatibility with 175+ tools",
+      "3-year warranty vs competitor's 2-year"
+    ]
+  },
+  "strategic_insights": {
+    "market_position_assessment": "mid-range",
+    "recommended_strategy": "value_leader",
+    "strategy_rationale": "RYOBI's value positioning and extensive battery ecosystem create strong customer loyalty. Aggressive pricing can capture market share from Black+Decker while maintaining healthy margins due to battery ecosystem lock-in effect.",
+    "confidence_intervals": {
+      "price_recommendation_confidence": 0.68,
+      "market_position_confidence": 0.73,
+      "competitive_analysis_confidence": 0.66
+    }
+  },
+  "data_quality_metrics": {
+    "data_freshness_days": 52,
+    "sample_size": 98,
+    "data_completeness_score": 0.82,
+    "outliers_excluded": 2
+  }
+}
