@@ -33,15 +33,16 @@ The system uses **Amazon Bedrock** foundation models to power three specialized 
 
 The architecture works as follows:
 
-1. Users access the React frontend hosted on **AWS Amplify**, authenticating through **Amazon Cognito**.
+1. The Pricing Analyst accesses the React frontend application served through **AWS CloudFront**, authenticating via **Amazon Cognito**. The analyst browses the product catalog, selects products for pricing analysis, and receives AI-generated pricing recommendations with demand forecasts, competitive positioning, and margin compliance assessments.
 2. The frontend communicates with **AWS AppSync** (GraphQL API) for product catalog queries, pricing analysis requests, and real-time subscriptions.
 3. When a pricing analysis is requested, an **AWS Lambda** resolver triggers an **AWS Step Functions** state machine that orchestrates the multi-agent workflow.
-4. The state machine invokes three specialized **Amazon Bedrock** agents in parallel: demand forecast, competitive analysis, and margin analysis.
+4. **AWS Step Functions** invokes three specialized **AWS Lambda** functions in parallel, each implementing a custom agent using Strands framework: demand forecast, competitive analysis, and margin analysis.
 5. **Amazon SageMaker Canvas** provides ML-based demand forecasting models trained on historical sales data stored in **Amazon S3**.
 6. Product catalog data and orchestration state are persisted in **Amazon DynamoDB** tables.
-7. Product images and competitive data assets are served through **Amazon CloudFront** backed by **Amazon S3**.
-8. **Amazon EventBridge** handles event-driven communication between pricing analysis components.
-9. **Amazon CloudWatch** dashboards and alarms provide real-time monitoring of the system.
+7. Agents leverage **Amazon Bedrock**, a fully managed service for generative AI applications with foundation models from leading AI companies, and **Amazon SageMaker Canvas** for demand forecasting.
+8. Product images and competitive data assets are served through **Amazon CloudFront** backed by **Amazon S3**.
+9. **Amazon EventBridge** handles event-driven communication between pricing analysis components.
+10. **Amazon CloudWatch** dashboards and alarms provide real-time monitoring of the system.
 
 ### Cost
 
