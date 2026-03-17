@@ -291,39 +291,7 @@ aws sts get-caller-identity --query Account --output text
 
 ---
 
-### 11. Midway OIDC (`midwayOIDC`)
-
-**Purpose:** Configures Amazon Midway OIDC authentication (optional).
-
-**Fields:**
-- `enabled` - Enable Midway OIDC integration (boolean)
-- `domain` - Cognito domain for OIDC
-- `clientIdSecretName` - AWS Secrets Manager secret name for client ID
-- `clientSecretSecretName` - AWS Secrets Manager secret name for client secret
-- `scopes` - OAuth scopes
-- `callbackUrls` - OAuth callback URLs
-- `logoutUrls` - OAuth logout URLs
-
-**Example:**
-```json
-"midwayOIDC": {
-  "enabled": false,
-  "domain": "",
-  "clientIdSecretName": "",
-  "clientSecretSecretName": "",
-  "scopes": ["email", "openid", "profile"],
-  "callbackUrls": ["http://localhost:3000/oauth/callback"],
-  "logoutUrls": ["http://localhost:3000/login"]
-}
-```
-
-**Local Development Notes:**
-- Keep `enabled: false` unless you need Midway OIDC integration
-- Callback URLs should point to your local frontend
-
----
-
-### 12. SageMaker Canvas (`sageMakerCanvas`)
+### 11. SageMaker Canvas (`sageMakerCanvas`)
 
 **Purpose:** Configures Amazon SageMaker Canvas for ML model training.
 

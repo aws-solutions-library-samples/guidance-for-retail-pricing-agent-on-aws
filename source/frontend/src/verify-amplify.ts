@@ -5,7 +5,7 @@
  * without requiring a full test environment.
  */
 
-import { configureAmplify, getAmplifyConfigInfo, isMidwayOIDCEnabled } from './amplify-config';
+import { configureAmplify, getAmplifyConfigInfo } from './amplify-config';
 
 /**
  * Verify Amplify configuration setup.
@@ -17,11 +17,7 @@ const verifyAmplifyConfig = () => {
     // Test configuration info retrieval
     const configInfo = getAmplifyConfigInfo();
     console.log('📋 Configuration Info:', configInfo);
-    
-    // Test Midway OIDC detection
-    const midwayEnabled = isMidwayOIDCEnabled();
-    console.log('🔐 Midway OIDC Enabled:', midwayEnabled);
-    
+
     // Test configuration (this will actually configure Amplify)
     configureAmplify();
     console.log('✅ Amplify configuration successful!');

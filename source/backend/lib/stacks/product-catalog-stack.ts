@@ -16,7 +16,6 @@ import { LambdaFunction } from 'aws-cdk-lib/aws-events-targets';
 import { PolicyStatement, Effect, CanonicalUserPrincipal } from 'aws-cdk-lib/aws-iam';
 
 import { ProductApiConstruct } from '../constructs/product-api';
-import { MidwayOIDCConstruct, type MidwayOIDCConfig } from '../constructs/midway-oidc';
 import { SageMakerCanvasConstruct, type SageMakerCanvasConfig } from '../constructs/sagemaker-canvas';
 import { OrchestrationTableConstruct } from '../constructs/orchestration-table';
 import { SessionChatTableConstruct } from '../constructs/session-chat-table';
@@ -39,9 +38,7 @@ import { GraphqlApi } from 'aws-cdk-lib/aws-appsync';
 export interface ProductCatalogStackProps extends StackProps {
   /** Environment name (dev, prod, local) */
   environment: string;
-  /** Optional Midway OIDC configuration for enterprise authentication */
-  midwayOIDC?: MidwayOIDCConfig;
-  /** 
+  /**
    * Optional SageMaker Canvas configuration for customization.
    * Note: SageMaker Canvas infrastructure is always deployed regardless
    * of whether this configuration is provided. This property only allows
@@ -70,7 +67,6 @@ export class ProductCatalogStack extends Stack {
   public readonly productApi: ProductApiConstruct;
   public readonly graphqlApi: GraphqlApi;
   public readonly apiUrl: string;
-  public readonly midwayOIDC?: MidwayOIDCConstruct;
   /** SageMaker Canvas construct (always present as it's mandatory infrastructure) */
   public readonly sageMakerCanvas: SageMakerCanvasConstruct;
   public readonly assetsBucket: Bucket;
@@ -84,7 +80,7 @@ export class ProductCatalogStack extends Stack {
   constructor(scope: Construct, id: string, props: ProductCatalogStackProps) {
     super(scope, id, props);
 
-    const { environment, midwayOIDC, sageMakerCanvas, monitoring, agentCore } = props;
+    const { environment, sageMakerCanvas, monitoring, agentCore } = props;
 
     // Create Cognito User Pool for authentication
     this.userPool = new UserPool(this, 'ProductCatalogUserPool', {
@@ -172,17 +168,6 @@ export class ProductCatalogStack extends Stack {
       partitionKey: { name: 'GSI2PK', type: AttributeType.STRING },
       sortKey: { name: 'GSI2SK', type: AttributeType.STRING }
     });
-
-    // Create Midway OIDC integration if enabled
-    if (midwayOIDC?.enabled) {
-      this.midwayOIDC = new MidwayOIDCConstruct(this, 'MidwayOIDC', {
-        userPool: this.userPool,
-        userPoolClient: this.userPoolClient,
-        config: midwayOIDC,
-        environment,
-        userTable: this.productTable
-      });
-    }
 
     // Create SageMaker Canvas infrastructure (mandatory)
     // SageMaker Canvas is always deployed as it is core infrastructure for demand forecasting
@@ -557,37 +542,6 @@ export class ProductCatalogStack extends Stack {
         description: 'CloudWatch Alarm Name for DynamoDB Throttles',
         exportName: `${id}-DynamoDBThrottleAlarmName`
       });
-    }
-
-    // Output Midway OIDC configuration if enabled
-    if (this.midwayOIDC) {
-      new CfnOutput(this, 'MidwayOIDCEnabled', {
-        value: 'true',
-        description: 'Midway OIDC Integration Enabled',
-        exportName: `${id}-MidwayOIDCEnabled`
-      });
-
-      new CfnOutput(this, 'MidwayOIDCProviderName', {
-        value: this.midwayOIDC.getProviderName() || 'Midway',
-        description: 'Midway OIDC Provider Name',
-        exportName: `${id}-MidwayOIDCProviderName`
-      });
-
-      if (this.midwayOIDC.clientIdSecret) {
-        new CfnOutput(this, 'MidwayClientIdSecretArn', {
-          value: this.midwayOIDC.clientIdSecret.secretArn,
-          description: 'Midway Client ID Secret ARN',
-          exportName: `${id}-MidwayClientIdSecretArn`
-        });
-      }
-
-      if (this.midwayOIDC.clientSecretSecret) {
-        new CfnOutput(this, 'MidwayClientSecretSecretArn', {
-          value: this.midwayOIDC.clientSecretSecret.secretArn,
-          description: 'Midway Client Secret Secret ARN',
-          exportName: `${id}-MidwayClientSecretSecretArn`
-        });
-      }
     }
 
     // Output SageMaker Canvas configuration (always present as it's mandatory infrastructure)

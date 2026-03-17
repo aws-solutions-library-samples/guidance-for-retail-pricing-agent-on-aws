@@ -31,29 +31,29 @@
         "CandidateSteps": [
           {
             "CandidateStepType": "AWS::SageMaker::ProcessingJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:processing-job/df-powe-dev-472235-db-1-a07fcdc05bf14acbb6b60280e90f2337abcf021",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:processing-job/df-powe-dev-472235-db-1-a07fcdc05bf14acbb6b60280e90f2337abcf021",
             "CandidateStepName": "df-powe-dev-472235-db-1-a07fcdc05bf14acbb6b60280e90f2337abcf021"
           },
           {
             "CandidateStepType": "AWS::SageMaker::TrainingJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-powe-dev-472235-dpp3-1-52f5962438614e339587b38734ba6263dd435",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:training-job/df-powe-dev-472235-dpp3-1-52f5962438614e339587b38734ba6263dd435",
             "CandidateStepName": "df-powe-dev-472235-dpp3-1-52f5962438614e339587b38734ba6263dd435"
           },
           {
             "CandidateStepType": "AWS::SageMaker::TransformJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:transform-job/df-powe-dev-472235-dpp3-rpb-1-511b6aa5dd164ea0a579d10a87b51c79b",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:transform-job/df-powe-dev-472235-dpp3-rpb-1-511b6aa5dd164ea0a579d10a87b51c79b",
             "CandidateStepName": "df-powe-dev-472235-dpp3-rpb-1-511b6aa5dd164ea0a579d10a87b51c79b"
           },
           {
             "CandidateStepType": "AWS::SageMaker::TrainingJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-powe-dev-472235LcnNBHQ9sfHPh6-009-14cfbe4c",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:training-job/df-powe-dev-472235LcnNBHQ9sfHPh6-009-14cfbe4c",
             "CandidateStepName": "df-powe-dev-472235LcnNBHQ9sfHPh6-009-14cfbe4c"
           }
         ],
         "CandidateStatus": "Completed",
         "InferenceContainers": [
           {
-            "Image": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
+            "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
             "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/powertools/df-powe-dev-472235/data-processor-models/df-powe-dev-472235-dpp3-1-52f5962438614e339587b38734ba6263dd435/output/model.tar.gz",
             "Environment": {
               "AUTOML_TRANSFORM_MODE": "feature-transform",
@@ -63,7 +63,7 @@
             }
           },
           {
-            "Image": "382416733822.dkr.ecr.us-east-1.amazonaws.com/linear-learner:inference-cpu",
+            "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/linear-learner:inference-cpu",
             "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/powertools/df-powe-dev-472235/tuning/df-powe-de-dpp3-ll/df-powe-dev-472235LcnNBHQ9sfHPh6-009-14cfbe4c/output/model.tar.gz",
             "Environment": {
               "MAX_CONTENT_LENGTH": "20971520",
@@ -133,29 +133,29 @@
         "CandidateSteps": [
           {
             "CandidateStepType": "AWS::SageMaker::ProcessingJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:processing-job/df-kitc-dev-169470-db-1-4543416ea4bc4064ae4a9a6e3a6819c5fcc9c31",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:processing-job/df-kitc-dev-169470-db-1-4543416ea4bc4064ae4a9a6e3a6819c5fcc9c31",
             "CandidateStepName": "df-kitc-dev-169470-db-1-4543416ea4bc4064ae4a9a6e3a6819c5fcc9c31"
           },
           {
             "CandidateStepType": "AWS::SageMaker::TrainingJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-kitc-dev-169470-dpp3-1-74ec86f5490c4d18bd57f0f2cc422debd8e77",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:training-job/df-kitc-dev-169470-dpp3-1-74ec86f5490c4d18bd57f0f2cc422debd8e77",
             "CandidateStepName": "df-kitc-dev-169470-dpp3-1-74ec86f5490c4d18bd57f0f2cc422debd8e77"
           },
           {
             "CandidateStepType": "AWS::SageMaker::TransformJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:transform-job/df-kitc-dev-169470-dpp3-rpb-1-2a8a8758753e44c4b836e706a3219cf9b",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:transform-job/df-kitc-dev-169470-dpp3-rpb-1-2a8a8758753e44c4b836e706a3219cf9b",
             "CandidateStepName": "df-kitc-dev-169470-dpp3-rpb-1-2a8a8758753e44c4b836e706a3219cf9b"
           },
           {
             "CandidateStepType": "AWS::SageMaker::TrainingJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-kitc-dev-169470MSmCtiTQjrxQLi-009-531d1569",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:training-job/df-kitc-dev-169470MSmCtiTQjrxQLi-009-531d1569",
             "CandidateStepName": "df-kitc-dev-169470MSmCtiTQjrxQLi-009-531d1569"
           }
         ],
         "CandidateStatus": "Completed",
         "InferenceContainers": [
           {
-            "Image": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
+            "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
             "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/kitchen/df-kitc-dev-169470/data-processor-models/df-kitc-dev-169470-dpp3-1-74ec86f5490c4d18bd57f0f2cc422debd8e77/output/model.tar.gz",
             "Environment": {
               "AUTOML_TRANSFORM_MODE": "feature-transform",
@@ -165,7 +165,7 @@
             }
           },
           {
-            "Image": "382416733822.dkr.ecr.us-east-1.amazonaws.com/linear-learner:inference-cpu",
+            "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/linear-learner:inference-cpu",
             "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/kitchen/df-kitc-dev-169470/tuning/df-kitc-de-dpp3-ll/df-kitc-dev-169470MSmCtiTQjrxQLi-009-531d1569/output/model.tar.gz",
             "Environment": {
               "MAX_CONTENT_LENGTH": "20971520",
@@ -235,29 +235,29 @@
         "CandidateSteps": [
           {
             "CandidateStepType": "AWS::SageMaker::ProcessingJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:processing-job/df-appa-dev-930370-db-1-b7250422602c4e52aea7888572e4bf62baf9036",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:processing-job/df-appa-dev-930370-db-1-b7250422602c4e52aea7888572e4bf62baf9036",
             "CandidateStepName": "df-appa-dev-930370-db-1-b7250422602c4e52aea7888572e4bf62baf9036"
           },
           {
             "CandidateStepType": "AWS::SageMaker::TrainingJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-appa-dev-930370-dpp5-1-4469440c31e44d1481294c14a96c4e5fb2c72",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:training-job/df-appa-dev-930370-dpp5-1-4469440c31e44d1481294c14a96c4e5fb2c72",
             "CandidateStepName": "df-appa-dev-930370-dpp5-1-4469440c31e44d1481294c14a96c4e5fb2c72"
           },
           {
             "CandidateStepType": "AWS::SageMaker::TransformJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:transform-job/df-appa-dev-930370-dpp5-rpb-1-68dd1e6317964fea8812d3d48e89a331b",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:transform-job/df-appa-dev-930370-dpp5-rpb-1-68dd1e6317964fea8812d3d48e89a331b",
             "CandidateStepName": "df-appa-dev-930370-dpp5-rpb-1-68dd1e6317964fea8812d3d48e89a331b"
           },
           {
             "CandidateStepType": "AWS::SageMaker::TrainingJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-appa-dev-930370pa1xOyNxz5cO7m-001-be2d8f4b",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:training-job/df-appa-dev-930370pa1xOyNxz5cO7m-001-be2d8f4b",
             "CandidateStepName": "df-appa-dev-930370pa1xOyNxz5cO7m-001-be2d8f4b"
           }
         ],
         "CandidateStatus": "Completed",
         "InferenceContainers": [
           {
-            "Image": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
+            "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
             "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/apparel/df-appa-dev-930370/data-processor-models/df-appa-dev-930370-dpp5-1-4469440c31e44d1481294c14a96c4e5fb2c72/output/model.tar.gz",
             "Environment": {
               "AUTOML_SPARSE_ENCODE_RECORDIO_PROTOBUF": "1",
@@ -268,7 +268,7 @@
             }
           },
           {
-            "Image": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:1.3-1-cpu-py3",
+            "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:1.3-1-cpu-py3",
             "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/apparel/df-appa-dev-930370/tuning/df-appa-de-dpp5-xgb/df-appa-dev-930370pa1xOyNxz5cO7m-001-be2d8f4b/output/model.tar.gz",
             "Environment": {
               "MAX_CONTENT_LENGTH": "20971520",
@@ -337,29 +337,29 @@
         "CandidateSteps": [
           {
             "CandidateStepType": "AWS::SageMaker::ProcessingJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:processing-job/df-foot-dev-624878-db-1-696ef9aa94ec4ad296792f61d064ae8bdce64e5",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:processing-job/df-foot-dev-624878-db-1-696ef9aa94ec4ad296792f61d064ae8bdce64e5",
             "CandidateStepName": "df-foot-dev-624878-db-1-696ef9aa94ec4ad296792f61d064ae8bdce64e5"
           },
           {
             "CandidateStepType": "AWS::SageMaker::TrainingJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-foot-dev-624878-dpp0-1-d65f4b0db28f4a659bd8fbb8e94a4d3bb1147",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:training-job/df-foot-dev-624878-dpp0-1-d65f4b0db28f4a659bd8fbb8e94a4d3bb1147",
             "CandidateStepName": "df-foot-dev-624878-dpp0-1-d65f4b0db28f4a659bd8fbb8e94a4d3bb1147"
           },
           {
             "CandidateStepType": "AWS::SageMaker::TransformJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:transform-job/df-foot-dev-624878-dpp0-csv-1-c9a72c029a614e49ab1a4794433586ef3",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:transform-job/df-foot-dev-624878-dpp0-csv-1-c9a72c029a614e49ab1a4794433586ef3",
             "CandidateStepName": "df-foot-dev-624878-dpp0-csv-1-c9a72c029a614e49ab1a4794433586ef3"
           },
           {
             "CandidateStepType": "AWS::SageMaker::TrainingJob",
-            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:607104513879:training-job/df-foot-dev-624878D2T6y1eKk0zdNt-003-b5026f4b",
+            "CandidateStepArn": "arn:aws:sagemaker:us-east-1:123456789012:training-job/df-foot-dev-624878D2T6y1eKk0zdNt-003-b5026f4b",
             "CandidateStepName": "df-foot-dev-624878D2T6y1eKk0zdNt-003-b5026f4b"
           }
         ],
         "CandidateStatus": "Completed",
         "InferenceContainers": [
           {
-            "Image": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
+            "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
             "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/footwear/df-foot-dev-624878/data-processor-models/df-foot-dev-624878-dpp0-1-d65f4b0db28f4a659bd8fbb8e94a4d3bb1147/output/model.tar.gz",
             "Environment": {
               "AUTOML_TRANSFORM_MODE": "feature-transform",
@@ -369,7 +369,7 @@
             }
           },
           {
-            "Image": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:1.3-1-cpu-py3",
+            "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:1.3-1-cpu-py3",
             "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/footwear/df-foot-dev-624878/tuning/df-foot-de-dpp0-xgb/df-foot-dev-624878D2T6y1eKk0zdNt-003-b5026f4b/output/model.tar.gz",
             "Environment": {
               "MAX_CONTENT_LENGTH": "20971520",

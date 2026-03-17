@@ -86,24 +86,6 @@
     "tracingEnabled": false
   },
   
-  "midwayOIDC": {
-    "enabled": false,
-    "domain": "",
-    "clientIdSecretName": "",
-    "clientSecretSecretName": "",
-    "scopes": [
-      "email",
-      "openid",
-      "profile"
-    ],
-    "callbackUrls": [
-      "http://localhost:3000/oauth/callback"
-    ],
-    "logoutUrls": [
-      "http://localhost:3000/login"
-    ]
-  },
-  
   "sageMakerCanvas": {
     "note": "SageMaker Canvas infrastructure is mandatory and will always be deployed. Bucket base names will have -{ACCOUNT_ID} appended. Final names written after CDK deployment.",
     "domainNamePrefix": "pricing-canvas",

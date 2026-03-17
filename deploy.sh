@@ -1,12 +1,20 @@
 #!/bin/bash
 set -e
 
+# Usage: ./deploy.sh [--email <email>]
+DEMO_EMAIL=""
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --email) DEMO_EMAIL="$2"; shift 2 ;;
+        *) echo "Unknown argument: $1"; exit 1 ;;
+    esac
+done
+
 # ============================================
 # CONFIGURATION - Edit these variables
 # ============================================
 AWS_REGION="us-east-1"
 ENVIRONMENT="local"
-EMAIL_ADDRESS="wwso-guidance-deployments-ignore@amazon.com"
 
 # ============================================
 # ENVIRONMENT SETUP
@@ -23,6 +31,25 @@ ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 echo "Account ID: $ACCOUNT_ID"
 echo "Region: $AWS_REGION"
 echo "Environment: $ENVIRONMENT"
+echo ""
+
+# ============================================
+# PROMPT FOR DEMO USER EMAIL
+# ============================================
+if [[ -n "$DEMO_EMAIL" ]]; then
+    if [[ ! "$DEMO_EMAIL" =~ ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ ]]; then
+        echo "Invalid email address provided via --email."
+        exit 1
+    fi
+else
+    while true; do
+        read -rp "Enter email address for the demo user account: " DEMO_EMAIL
+        if [[ "$DEMO_EMAIL" =~ ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ ]]; then
+            break
+        fi
+        echo "Invalid email address. Please try again."
+    done
+fi
 echo ""
 
 # ============================================
@@ -226,7 +253,6 @@ USER_POOL_ID=$(aws cloudformation describe-stacks \
     --output text 2>/dev/null || echo "")
 
 if [ -n "$USER_POOL_ID" ] && [ "$USER_POOL_ID" != "None" ]; then
-    DEMO_EMAIL="demo@example.com"
     DEMO_PASSWORD="Demo1234!"
 
     # Create user (suppress error if already exists)
@@ -308,6 +334,6 @@ fi
 echo ""
 echo "Next steps:"
 echo "  1. Open the App URL in your browser"
-echo "  2. Sign in with the demo account: demo@example.com / Demo1234!"
+echo "  2. Sign in with the demo account: $DEMO_EMAIL / Demo1234!"
 echo "  3. Browse products and initiate pricing analyses"
 echo ""

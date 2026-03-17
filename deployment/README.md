@@ -18,7 +18,7 @@ This system provides end-to-end pricing intelligence by combining:
 - **Backend**: AWS serverless architecture (Lambda, API Gateway, DynamoDB, S3)
 - **AI Agents**: Specialized pricing analysis agents with orchestration
 - **ML Infrastructure**: SageMaker Canvas for demand forecasting (mandatory)
-- **Authentication**: AWS Cognito with optional Midway OIDC integration
+- **Authentication**: AWS Cognito
 
 ## Prerequisites
 

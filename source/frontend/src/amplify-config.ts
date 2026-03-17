@@ -1,8 +1,7 @@
 /**
- * @fileoverview AWS Amplify configuration with Cognito User Pool and optional Midway OIDC.
- * 
- * Configures Amplify with Cognito User Pool for authentication and optional
- * Midway OIDC integration for Amazon employee SSO.
+ * @fileoverview AWS Amplify configuration with Cognito User Pool.
+ *
+ * Configures Amplify with Cognito User Pool for authentication.
  */
 
 import { Amplify, type ResourcesConfig } from 'aws-amplify';
@@ -34,11 +33,6 @@ interface EnvironmentConfig {
   userPoolId: string;
   userPoolWebClientId: string;
   identityPoolId?: string;
-  midwayOIDC?: {
-    enabled: boolean;
-    domain: string;
-    clientId: string;
-  };
   graphql?: {
     endpoint: string;
     apiKey?: string;
@@ -62,12 +56,7 @@ const getEnvironmentConfig = (): EnvironmentConfig => {
       graphql: extendedOutputs.api ? {
         endpoint: extendedOutputs.api.aws_appsync_graphqlEndpoint,
         apiKey: extendedOutputs.api.aws_appsync_apiKey
-      } : undefined,
-      midwayOIDC: {
-        enabled: import.meta.env.VITE_MIDWAY_OIDC_ENABLED === 'true',
-        domain: import.meta.env.VITE_MIDWAY_OIDC_DOMAIN || '',
-        clientId: import.meta.env.VITE_MIDWAY_OIDC_CLIENT_ID || ''
-      }
+      } : undefined
     };
   }
 
@@ -80,40 +69,13 @@ const getEnvironmentConfig = (): EnvironmentConfig => {
     graphql: {
       endpoint: import.meta.env.VITE_GRAPHQL_ENDPOINT || '',
       apiKey: import.meta.env.VITE_GRAPHQL_API_KEY
-    },
-    midwayOIDC: {
-      enabled: import.meta.env.VITE_MIDWAY_OIDC_ENABLED === 'true',
-      domain: import.meta.env.VITE_MIDWAY_OIDC_DOMAIN || '',
-      clientId: import.meta.env.VITE_MIDWAY_OIDC_CLIENT_ID || ''
     }
   };
 };
 
 /**
- * Build OAuth configuration for Midway OIDC integration.
- * 
- * @param config - Environment configuration
- * @returns OAuth configuration object or undefined
- */
-const buildOAuthConfig = (config: EnvironmentConfig) => {
-  if (!config.midwayOIDC?.enabled || !config.midwayOIDC.domain) {
-    return undefined;
-  }
-
-  const baseUrl = window.location.origin;
-  
-  return {
-    domain: config.midwayOIDC.domain,
-    scope: ['email', 'openid', 'profile'],
-    redirectSignIn: `${baseUrl}/oauth/callback`,
-    redirectSignOut: `${baseUrl}/login`,
-    responseType: 'code' as const
-  };
-};
-
-/**
  * Build complete Amplify configuration.
- * 
+ *
  * @param config - Environment configuration
  * @returns Complete Amplify configuration
  */
@@ -127,20 +89,6 @@ const buildAmplifyConfig = (config: EnvironmentConfig): ResourcesConfig => {
       }
     }
   };
-
-  // Add OAuth configuration if Midway OIDC is enabled
-  const oauthConfig = buildOAuthConfig(config);
-  if (oauthConfig && amplifyConfig.Auth?.Cognito) {
-    amplifyConfig.Auth.Cognito.loginWith = {
-      oauth: {
-        domain: oauthConfig.domain,
-        scopes: oauthConfig.scope,
-        redirectSignIn: [oauthConfig.redirectSignIn],
-        redirectSignOut: [oauthConfig.redirectSignOut],
-        responseType: 'code'
-      }
-    };
-  }
 
   // Add GraphQL API configuration if available
   if (config.graphql?.endpoint) {
@@ -158,8 +106,8 @@ const buildAmplifyConfig = (config: EnvironmentConfig): ResourcesConfig => {
 };
 
 /**
- * Configure AWS Amplify with Cognito User Pool and optional Midway OIDC.
- * 
+ * Configure AWS Amplify with Cognito User Pool.
+ *
  * This function should be called before rendering the React app to ensure
  * Amplify is properly configured for authentication.
  */
@@ -171,7 +119,6 @@ export const configureAmplify = (): void => {
     console.log('Configuring Amplify with Cognito User Pool...');
     console.log('Region:', envConfig.region);
     console.log('User Pool ID:', envConfig.userPoolId);
-    console.log('Midway OIDC Enabled:', envConfig.midwayOIDC?.enabled || false);
 
     // Validate required configuration
     if (!envConfig.userPoolId || !envConfig.userPoolWebClientId) {
@@ -182,14 +129,10 @@ export const configureAmplify = (): void => {
     Amplify.configure(amplifyConfig);
 
     console.log('Amplify configured successfully');
-    
+
     // Log configuration details (excluding sensitive data)
     if (envConfig.graphql?.endpoint) {
       console.log('GraphQL Endpoint:', envConfig.graphql.endpoint);
-    }
-    
-    if (envConfig.midwayOIDC?.enabled) {
-      console.log('Midway OIDC Domain:', envConfig.midwayOIDC.domain);
     }
 
   } catch (error) {
@@ -205,24 +148,13 @@ export const configureAmplify = (): void => {
  */
 export const getAmplifyConfigInfo = () => {
   const config = getEnvironmentConfig();
-  
+
   return {
     region: config.region,
     userPoolId: config.userPoolId,
     hasIdentityPool: !!config.identityPoolId,
-    midwayEnabled: config.midwayOIDC?.enabled || false,
     hasGraphQL: !!config.graphql?.endpoint
   };
-};
-
-/**
- * Check if Midway OIDC is enabled and properly configured.
- * 
- * @returns True if Midway OIDC is enabled and configured
- */
-export const isMidwayOIDCEnabled = (): boolean => {
-  const config = getEnvironmentConfig();
-  return !!(config.midwayOIDC?.enabled && config.midwayOIDC.domain && config.midwayOIDC.clientId);
 };
 
 // Export configuration for use in other modules

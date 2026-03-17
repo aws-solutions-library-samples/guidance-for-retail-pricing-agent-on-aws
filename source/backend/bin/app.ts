@@ -374,7 +374,6 @@ const backendStack = new ProductCatalogStack(app, backendStackName, {
     region
   },
   environment,
-  midwayOIDC: config.midwayOIDC,
   sageMakerCanvas: config.sageMakerCanvas,
   agentCore: config.agentCore,
   description: `Backend infrastructure for Retail Pricing Agent Orchestrator - ${environment} environment`,

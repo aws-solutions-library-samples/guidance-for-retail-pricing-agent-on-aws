@@ -37,8 +37,6 @@ export { UserProfile } from './UserProfile';
 export { AppLayout } from './AppLayout';
 export type { AppLayoutProps } from './AppLayout';
 
-export { OAuthCallback } from './OAuthCallback';
-
 export { AuthTransition } from './AuthTransition';
 export type { AuthTransitionProps } from './AuthTransition';
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document explains how the AWS Amplify configuration is set up for the Retail Pricing Agent Orchestrator frontend application, including Cognito User Pool authentication and optional Midway OIDC integration.
+This document explains how the AWS Amplify configuration is set up for the Retail Pricing Agent Orchestrator frontend application, including Cognito User Pool authentication.
 
 ## Configuration Files
 
@@ -10,7 +10,6 @@ This document explains how the AWS Amplify configuration is set up for the Retai
 
 The main configuration file that handles:
 - AWS Cognito User Pool setup
-- Optional Midway OIDC integration for Amazon employees
 - GraphQL API configuration
 - Environment-specific settings
 
@@ -42,11 +41,6 @@ VITE_IDENTITY_POOL_ID=us-west-2:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 # GraphQL API Configuration
 VITE_GRAPHQL_ENDPOINT=https://your-appsync-endpoint.appsync-api.us-west-2.amazonaws.com/graphql
 VITE_GRAPHQL_API_KEY=your-api-key-here
-
-# Midway OIDC Configuration (Optional - for Amazon employee SSO)
-VITE_MIDWAY_OIDC_ENABLED=false
-VITE_MIDWAY_OIDC_DOMAIN=your-midway-domain.auth.us-west-2.amazoncognito.com
-VITE_MIDWAY_OIDC_CLIENT_ID=your-midway-client-id
 ```
 
 ## Usage
@@ -71,15 +65,11 @@ try {
 You can verify the configuration programmatically:
 
 ```typescript
-import { getAmplifyConfigInfo, isMidwayOIDCEnabled } from './amplify-config';
+import { getAmplifyConfigInfo } from './amplify-config';
 
 // Get configuration information
 const configInfo = getAmplifyConfigInfo();
 console.log('Config:', configInfo);
-
-// Check if Midway OIDC is enabled
-const midwayEnabled = isMidwayOIDCEnabled();
-console.log('Midway OIDC:', midwayEnabled);
 ```
 
 ## Authentication Modes
@@ -91,18 +81,6 @@ Default authentication using AWS Cognito User Pools:
 - Password reset functionality
 - Multi-factor authentication (if enabled)
 - Session management
-
-### Midway OIDC Integration (Optional)
-
-For Amazon employees, the system can be configured to use Midway OIDC:
-- Single Sign-On (SSO) with Amazon credentials
-- Automatic user provisioning
-- Enhanced security policies
-
-To enable Midway OIDC:
-1. Set `VITE_MIDWAY_OIDC_ENABLED=true`
-2. Configure the Midway domain and client ID
-3. Ensure the Cognito User Pool is configured for OIDC federation
 
 ## Configuration Validation
 
@@ -123,7 +101,6 @@ Minimum required settings:
 - `identityPoolId`: For AWS service access with temporary credentials
 - `graphql.endpoint`: AppSync GraphQL API endpoint
 - `graphql.apiKey`: API key for GraphQL (if using API_KEY auth)
-- `midwayOIDC.*`: Midway OIDC settings for Amazon employee SSO
 
 ## Troubleshooting
 
@@ -136,14 +113,7 @@ Minimum required settings:
    - Check that `amplify_outputs.json` exists and contains auth configuration
    - Verify environment variables are set correctly
 
-2. **OIDC Configuration Issues**
-   ```
-   Midway OIDC enabled but domain/client ID missing
-   ```
-   - Ensure all Midway OIDC environment variables are set
-   - Verify the Cognito User Pool supports OIDC federation
-
-3. **GraphQL API Issues**
+2. **GraphQL API Issues**
    - Check that the GraphQL endpoint is accessible
    - Verify API key is valid (if using API_KEY authentication)
    - Ensure the region matches the API deployment region

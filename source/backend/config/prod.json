@@ -1,7 +1,7 @@
 {
   "environment": "prod",
   "aws": {
-    "account": "596434363265",
+    "account": "123456789012",
     "region": "us-east-1"
   },
   "apiGateway": {
@@ -77,30 +77,13 @@
     "metricsEnabled": false,
     "tracingEnabled": false
   },
-  "midwayOIDC": {
-    "enabled": false,
-    "domain": "",
-    "clientIdSecretName": "",
-    "clientSecretSecretName": "",
-    "scopes": [
-      "email",
-      "openid",
-      "profile"
-    ],
-    "callbackUrls": [
-      "http://localhost:3000/oauth/callback"
-    ],
-    "logoutUrls": [
-      "http://localhost:3000/login"
-    ]
-  },
   "sageMakerCanvas": {
     "note": "SageMaker Canvas infrastructure is mandatory and will always be deployed. Bucket base names will have -{ACCOUNT_ID} appended. Final names written after CDK deployment.",
     "domainNamePrefix": "pricing-canvas",
     "trainingDataBucketBase": "pricing-canvas-training-data",
-    "trainingDataBucket": "pricing-canvas-training-data-prod-596434363265",
+    "trainingDataBucket": "pricing-canvas-training-data-prod-123456789012",
     "modelOutputBucketBase": "pricing-canvas-model-outputs",
-    "modelOutputBucket": "pricing-canvas-model-outputs-prod-596434363265",
+    "modelOutputBucket": "pricing-canvas-model-outputs-prod-123456789012",
     "enableVpc": true,
     "vpcCidr": "10.2.0.0/16",
     "modelCategories": [
@@ -117,6 +100,6 @@
       "minAccuracy": 0.7,
       "maxModelAge": 90
     },
-    "autopilotExecutionRoleArn": "arn:aws:iam::596434363265:role/AmazonSageMaker-ExecutionRole-prod"
+    "autopilotExecutionRoleArn": "arn:aws:iam::123456789012:role/AmazonSageMaker-ExecutionRole-prod"
   }
 }

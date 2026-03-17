@@ -73,17 +73,6 @@ describe('LoginPage', () => {
       expect(forgotPasswordLink).toBeInTheDocument();
     });
 
-    it('should render Midway OIDC button when enabled', () => {
-      renderLoginPage({ midwayEnabled: true });
-
-      expect(screen.getByRole('button', { name: 'Sign in with Amazon' })).toBeInTheDocument();
-    });
-
-    it('should not render Midway OIDC button when disabled', () => {
-      renderLoginPage({ midwayEnabled: false });
-
-      expect(screen.queryByRole('button', { name: 'Sign in with Amazon' })).not.toBeInTheDocument();
-    });
   });
 
   describe('Form Validation', () => {

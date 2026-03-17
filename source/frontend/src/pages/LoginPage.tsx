@@ -2,8 +2,7 @@
  * @fileoverview Login page component for user authentication.
  * 
  * Provides email/password login form with CloudScape components,
- * forgot password functionality, optional Midway OIDC integration,
- * and proper error handling with loading states.
+ * forgot password functionality, and proper error handling with loading states.
  */
 
 import React, { useState, useEffect } from 'react';
@@ -21,7 +20,6 @@ import {
 } from '@cloudscape-design/components';
 import { AuthButton } from '../components/AuthButton';
 import { useAuth } from '../hooks/useAuth';
-import { isMidwayOIDCEnabled } from '../amplify-config';
 import type { AuthError } from '../types/auth-types';
 
 /**
@@ -40,8 +38,6 @@ interface LoginFormState {
 interface LoginPageProps {
   /** URL to redirect to after successful login */
   redirectUrl?: string;
-  /** Whether Midway OIDC integration is enabled */
-  midwayEnabled?: boolean;
 }
 
 /**
@@ -203,20 +199,15 @@ const validateFamilyName = (familyName: string): string => {
  * - Loading state with Spinner during authentication
  * - Error display using CloudScape Alert component
  * - Forgot password link navigation
- * - Optional Midway OIDC "Sign in with Amazon" button
  * - Redirect to original URL after successful login
  * - Form validation for email format and required fields
  */
-export const LoginPage: React.FC<LoginPageProps> = ({ 
-  redirectUrl,
-  midwayEnabled 
+export const LoginPage: React.FC<LoginPageProps> = ({
+  redirectUrl
 }) => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { signIn, signInWithRedirect, confirmSignInWithNewPassword, isLoading, error, clearError, isAuthenticated } = useAuth();
-
-  // Check if Midway OIDC is enabled (from props or configuration)
-  const isMidwayEnabled = midwayEnabled ?? isMidwayOIDCEnabled();
+  const { signIn, confirmSignInWithNewPassword, isLoading, error, clearError, isAuthenticated } = useAuth();
 
   // Form state
   const [formState, setFormState] = useState<LoginFormState>({
@@ -341,25 +332,6 @@ export const LoginPage: React.FC<LoginPageProps> = ({
    */
   const handleForgotPassword = () => {
     navigate('/forgot-password');
-  };
-
-  /**
-   * Handles Midway OIDC sign in with redirect to authorization endpoint.
-   */
-  const handleMidwaySignIn = async () => {
-    try {
-      console.log('Initiating Midway OIDC sign in...');
-      
-      // Clear any existing errors
-      clearError();
-      
-      // Redirect to Midway OIDC authorization endpoint
-      await signInWithRedirect({ provider: 'Midway' });
-      
-    } catch (authError) {
-      console.error('Midway OIDC sign in failed:', authError);
-      // Error will be handled by useAuth hook
-    }
   };
 
   /**
@@ -667,21 +639,6 @@ export const LoginPage: React.FC<LoginPageProps> = ({
                 >
                   Sign In
                 </AuthButton>
-                
-                {/* Midway OIDC button (optional) */}
-                {isMidwayEnabled && (
-                  <AuthButton
-                    variant="normal"
-                    onClick={handleMidwaySignIn}
-                    isLoading={isLoading}
-                    loadingText="Redirecting to Amazon..."
-                    iconName="external"
-                    enhanced={true}
-                    loadingAnimation="fade"
-                  >
-                    Sign in with Amazon
-                  </AuthButton>
-                )}
               </SpaceBetween>
             </SpaceBetween>
           </form>

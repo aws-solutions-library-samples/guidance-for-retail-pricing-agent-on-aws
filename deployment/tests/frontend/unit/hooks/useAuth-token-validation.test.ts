@@ -17,7 +17,6 @@ jest.mock('aws-amplify/auth', () => ({
   confirmResetPassword: jest.fn(),
   getCurrentUser: jest.fn(),
   fetchAuthSession: jest.fn(),
-  signInWithRedirect: jest.fn(),
   confirmSignIn: jest.fn()
 }));
 

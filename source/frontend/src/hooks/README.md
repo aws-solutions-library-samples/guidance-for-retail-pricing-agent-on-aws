@@ -17,7 +17,6 @@ The primary authentication hook that provides comprehensive authentication funct
 #### Features
 
 - Email/password authentication
-- Federated sign-in (Midway OIDC)
 - Password reset functionality
 - Automatic token refresh
 - Session persistence
@@ -78,7 +77,6 @@ interface UseAuthReturn {
   // Methods
   signIn: (email: string, password: string) => Promise<CognitoUser>;
   signOut: () => Promise<void>;
-  signInWithRedirect: (options: { provider: string }) => Promise<void>;
   forgotPassword: (email: string) => Promise<void>;
   forgotPasswordSubmit: (email: string, code: string, newPassword: string) => Promise<void>;
   currentAuthenticatedUser: (options?: { bypassCache?: boolean }) => Promise<CognitoUser>;
@@ -369,4 +367,3 @@ When updating authentication hooks:
 - [Authentication Components](../components/README.md#authentication-components)
 - [Authentication Types](../types/auth-types.ts)
 - [Token Security](../utils/README-token-security.md)
-- [Midway OIDC Integration](../../../docs/midway-oidc-integration.md)

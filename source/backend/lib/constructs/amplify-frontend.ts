@@ -122,10 +122,6 @@ export class AmplifyFrontendConstruct extends Construct {
         {
           name: 'VITE_LOG_LEVEL',
           value: environment === 'prod' ? 'info' : 'debug'
-        },
-        {
-          name: 'VITE_MIDWAY_OIDC_ENABLED',
-          value: 'false'
         }
       ],
       

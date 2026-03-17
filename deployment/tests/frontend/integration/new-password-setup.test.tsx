@@ -25,9 +25,7 @@ jest.mock('react-router-dom', () => ({
 }));
 
 // Mock Amplify configuration
-jest.mock('../../../src/frontend/src/amplify-config', () => ({
-  isMidwayOIDCEnabled: () => false
-}));
+jest.mock('../../../src/frontend/src/amplify-config', () => ({}));
 
 /**
  * Test wrapper component with required providers.
@@ -57,7 +55,6 @@ describe('New Password Setup Flow', () => {
       isInitialized: true,
       signIn: mockSignIn,
       signOut: jest.fn(),
-      signInWithRedirect: jest.fn(),
       forgotPassword: jest.fn(),
       forgotPasswordSubmit: jest.fn(),
       confirmSignInWithNewPassword: mockConfirmSignInWithNewPassword,
@@ -291,7 +288,6 @@ describe('New Password Setup Flow', () => {
         isInitialized: true,
         signIn: mockSignIn,
         signOut: jest.fn(),
-        signInWithRedirect: jest.fn(),
         forgotPassword: jest.fn(),
         forgotPasswordSubmit: jest.fn(),
         confirmSignInWithNewPassword: mockConfirmSignInWithNewPassword,

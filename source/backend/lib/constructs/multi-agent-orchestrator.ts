@@ -167,16 +167,6 @@ export class MultiAgentOrchestratorConstruct extends Construct {
       ]
     }));
 
-    // Grant Step Functions permissions
-    lambdaRole.addToPrincipalPolicy(new PolicyStatement({
-      actions: [
-        'states:StartExecution',
-        'states:DescribeExecution',
-        'states:GetExecutionHistory'
-      ],
-      resources: ['*']
-    }));
-
     /**
      * Create Lambda function for workflow initialization.
      * 
@@ -446,6 +436,21 @@ export class MultiAgentOrchestratorConstruct extends Construct {
     });
 
     this.stateMachineArn = this.stepFunctionsOrchestrator.stateMachineArn;
+
+    // Grant Step Functions permissions scoped to this account/region.
+    // Using string interpolation (not the stateMachine token) avoids a CDK
+    // circular dependency: lambdaRole → stateMachine → lambdaFunctions → lambdaRole.
+    lambdaRole.addToPrincipalPolicy(new PolicyStatement({
+      actions: [
+        'states:StartExecution',
+        'states:DescribeExecution',
+        'states:GetExecutionHistory'
+      ],
+      resources: [
+        `arn:aws:states:${region}:${account}:stateMachine:*`,
+        `arn:aws:states:${region}:${account}:execution:*:*`
+      ]
+    }));
 
     /**
      * Create Lambda function for GraphQL resolver.

@@ -19,7 +19,6 @@ import { AuthProvider } from '@/contexts';
 
 // Import pages (with code splitting for dashboard)
 import { HomePage, LoginPage, ForgotPasswordPage, ProfilePage, PricingDashboardListPage } from './pages';
-import { OAuthCallback } from '@/components/OAuthCallback';
 import { ProductSelector } from '@/components/ProductSelector';
 
 // Lazy load PricingDashboardPage for code splitting (Requirement 15.1)
@@ -220,16 +219,6 @@ const AuthenticatedRoutes: React.FC = () => {
                 <ForgotPasswordPage />
               </div>
             )
-          }
-        />
-
-        {/* OAuth callback route - handles Midway OIDC authentication callback */}
-        <Route
-          path="/oauth/callback"
-          element={
-            <div style={{ animation: 'fadeIn 0.3s ease-in-out' }}>
-              <OAuthCallback />
-            </div>
           }
         />
 

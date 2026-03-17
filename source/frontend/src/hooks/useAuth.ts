@@ -8,7 +8,7 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { useAuthenticator } from '@aws-amplify/ui-react';
-import { signIn, signOut, resetPassword, confirmResetPassword, getCurrentUser, fetchAuthSession, signInWithRedirect, confirmSignIn } from 'aws-amplify/auth';
+import { signIn, signOut, resetPassword, confirmResetPassword, getCurrentUser, fetchAuthSession, confirmSignIn } from 'aws-amplify/auth';
 import { useSessionPersistence } from './useSessionPersistence';
 import { useTokenRefresh } from './useTokenRefresh';
 import {
@@ -831,52 +831,6 @@ export const useAuth = (): UseAuthReturn => {
     }
   }, []);
 
-  /**
-   * Signs in with a federated identity provider (like Midway OIDC).
-   * 
-   * @param options - Sign in options including provider
-   * @returns Promise that resolves when redirect is initiated
-   */
-  const handleSignInWithRedirect = useCallback(async (options: { provider: string }): Promise<void> => {
-    setIsLoading(true);
-    setError(null);
-
-    try {
-      console.log('Initiating federated sign in with provider:', options.provider);
-
-      // Verify secure connection before authentication
-      if (!verifySecureConnection()) {
-        const error = new Error('Insecure connection detected. Authentication requires HTTPS.');
-        throw error;
-      }
-
-      // Initiate OAuth redirect flow
-      await signInWithRedirect({ provider: { custom: options.provider } });
-
-      // Note: This function will redirect the browser, so code after this won't execute
-      console.log('Redirecting to identity provider...');
-
-    } catch (err) {
-      console.error('Federated sign in error:', err);
-      const authError = mapAuthError(err);
-
-      // Log failed federated login attempt for security monitoring
-      logSecurityEvent(
-        SecurityEventType.FAILED_LOGIN_ATTEMPT,
-        {
-          provider: options.provider,
-          error: err instanceof Error ? err.message : 'Unknown error',
-          message: 'Federated sign in failed'
-        },
-        'MEDIUM'
-      );
-
-      setError(authError);
-      setIsLoading(false); // Only set loading to false on error, since success redirects
-      throw authError;
-    }
-  }, []);
-
   return {
     // State
     user: user || persistedUser,
@@ -888,7 +842,6 @@ export const useAuth = (): UseAuthReturn => {
     // Methods
     signIn: handleSignIn,
     signOut: handleSignOut,
-    signInWithRedirect: handleSignInWithRedirect,
     forgotPassword: handleForgotPassword,
     forgotPasswordSubmit: handleForgotPasswordSubmit,
     confirmSignInWithNewPassword: handleConfirmSignInWithNewPassword,

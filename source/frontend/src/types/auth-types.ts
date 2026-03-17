@@ -293,7 +293,7 @@ export interface AmplifyAuthMethods {
   
   /**
    * Gets current user credentials.
-   * 
+   *
    * @returns Promise resolving to AWS credentials
    */
   currentCredentials: () => Promise<{
@@ -302,14 +302,6 @@ export interface AmplifyAuthMethods {
     sessionToken: string;
     expiration: Date;
   }>;
-
-  /**
-   * Signs in with a federated identity provider.
-   * 
-   * @param options - Sign in options including provider
-   * @returns Promise that resolves when redirect is initiated
-   */
-  signInWithRedirect: (options: { provider: string }) => Promise<void>;
 
   /**
    * Confirms sign in with a new password and required user attributes (required for first-time login).
@@ -378,23 +370,6 @@ export interface AuthProviderProps {
   children: React.ReactNode;
   /** Initial auth state (for testing) */
   initialState?: Partial<AuthState>;
-}
-
-/**
- * Midway OIDC configuration interface.
- * Configuration for Midway OIDC integration.
- */
-export interface MidwayOIDCConfig {
-  /** Whether Midway OIDC is enabled */
-  enabled: boolean;
-  /** Midway client ID */
-  clientId?: string;
-  /** OIDC authorization endpoint */
-  authorizationEndpoint?: string;
-  /** OIDC token endpoint */
-  tokenEndpoint?: string;
-  /** OAuth scopes */
-  scopes?: string[];
 }
 
 /**

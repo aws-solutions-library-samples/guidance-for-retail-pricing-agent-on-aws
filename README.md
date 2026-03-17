@@ -309,7 +309,6 @@ Consider the following customizations to extend this Guidance for your use case:
 - Customize the Bedrock agent prompts in the multi-agent orchestrator construct to align with your specific pricing strategy.
 - Enable production monitoring by setting `monitoring.enabled: true` and providing an `alertEmail` in the configuration.
 - Integrate with your existing product information management (PIM) system by extending the AppSync resolvers.
-- Configure the optional Midway OIDC integration for enterprise SSO authentication.
 - Adjust SageMaker Canvas training schedules and performance thresholds for your data volume and accuracy requirements.
 - Extend the Step Functions workflow to include additional analysis agents (e.g., promotional pricing, bundle analysis).
 

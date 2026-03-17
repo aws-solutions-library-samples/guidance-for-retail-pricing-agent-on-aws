@@ -99,11 +99,6 @@ VITE_AWS_REGION=${config.aws?.region || 'us-east-1'}
 VITE_AWS_USER_POOL_ID=${config.cognito?.poolId || ''}
 VITE_AWS_USER_POOL_CLIENT_ID=${config.cognito?.poolClientId || ''}
 
-# Midway OIDC Configuration (Optional - for Amazon employee SSO)
-VITE_MIDWAY_OIDC_ENABLED=${config.midwayOIDC?.enabled || false}
-VITE_MIDWAY_OIDC_DOMAIN=${config.midwayOIDC?.domain || ''}
-VITE_MIDWAY_OIDC_CLIENT_ID=${config.midwayOIDC?.clientIdSecretName || ''}
-
 # Development Configuration
 VITE_NODE_ENV=${config.environment === 'prod' ? 'production' : 'development'}
 VITE_LOG_LEVEL=${config.monitoring?.logLevel?.toLowerCase() || 'debug'}
