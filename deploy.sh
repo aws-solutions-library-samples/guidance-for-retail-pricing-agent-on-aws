@@ -25,7 +25,7 @@ echo "One-Click Deploy: Retail Pricing Agent"
 echo "============================================"
 echo ""
 
-export AWS_REGION="us-east-1"
+export AWS_REGION
 export AWS_SDK_LOAD_CONFIG=1
 ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 
