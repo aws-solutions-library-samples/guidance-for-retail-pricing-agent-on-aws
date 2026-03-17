@@ -1,11 +1,13 @@
 #!/bin/bash
 set -e
 
-# Usage: ./deploy.sh [--email <email>]
+# Usage: ./deploy.sh [--email <email>] [--region <aws-region>]
 DEMO_EMAIL=""
+AWS_REGION="us-east-1"
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --email) DEMO_EMAIL="$2"; shift 2 ;;
+        --region) AWS_REGION="$2"; shift 2 ;;
         *) echo "Unknown argument: $1"; exit 1 ;;
     esac
 done
@@ -13,7 +15,6 @@ done
 # ============================================
 # CONFIGURATION - Edit these variables
 # ============================================
-AWS_REGION="us-east-1"
 ENVIRONMENT="local"
 
 # ============================================
