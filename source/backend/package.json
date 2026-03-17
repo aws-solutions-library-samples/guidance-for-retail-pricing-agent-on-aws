@@ -14,7 +14,6 @@
     "test:sagemaker": "bash scripts/testing/test-sagemaker-canvas.sh",
     "test:sagemaker:dev": "bash scripts/testing/test-sagemaker-canvas.sh --environment dev",
     "test:sagemaker:prod": "bash scripts/testing/test-sagemaker-canvas.sh --environment prod",
-
     "deploy:backend:local:dry-run": "bash scripts/deploy-complete.sh local --dry-run",
     "deploy:backend:local": "bash scripts/deploy-complete.sh local",
     "deploy:infra:only:local": "bash scripts/deploy-complete.sh local --skip-data",
@@ -24,14 +23,12 @@
     "deploy:sagemaker:only:local": "bash scripts/deploy-complete.sh local --sagemaker-only",
     "update:frontend:config:local": "node scripts/update-frontend-config.js local",
     "test:stack:outputs:local": "node scripts/test-stack-outputs.js local",
-
     "deploy:backend:dev": "bash scripts/deploy-complete.sh dev",
     "deploy:infra:only:dev": "bash scripts/deploy-complete.sh dev --skip-data",
     "deploy:data:only:dev": "bash scripts/deploy-complete.sh dev --data-only",
     "deploy:sagemaker:only:dev": "bash scripts/deploy-complete.sh dev --sagemaker-only",
     "update:frontend:config:dev": "node scripts/update-frontend-config.js dev",
     "test:stack:outputs:dev": "node scripts/test-stack-outputs.js dev",
-
     "deploy:backend:prod:dry-run": "bash scripts/deploy-complete.sh prod --dry-run",
     "deploy:backend:prod": "bash scripts/deploy-complete.sh prod",
     "deploy:infra:only:prod": "bash scripts/deploy-complete.sh prod --skip-data",
@@ -39,42 +36,33 @@
     "deploy:sagemaker:only:prod": "bash scripts/deploy-complete.sh prod --sagemaker-only",
     "update:frontend:config:prod": "node scripts/update-frontend-config.js prod",
     "test:stack:outputs:prod": "node scripts/test-stack-outputs.js prod",
-
     "verify:deployment": "bash scripts/verify-deployment.sh",
     "verify:deployment:local": "bash scripts/verify-deployment.sh local",
     "verify:deployment:dev": "bash scripts/verify-deployment.sh dev",
     "verify:deployment:prod": "bash scripts/verify-deployment.sh prod",
-
     "validate:config:local": "bash scripts/deploy-complete.sh local --validate-only",
     "validate:config:dev": "bash scripts/deploy-complete.sh dev --validate-only",
     "validate:config:prod": "bash scripts/deploy-complete.sh prod --validate-only",
-
     "fix:bucket:local": "bash scripts/fix-missing-bucket.sh local",
     "fix:bucket:dev": "bash scripts/fix-missing-bucket.sh dev",
     "fix:bucket:prod": "bash scripts/fix-missing-bucket.sh prod",
-
     "synth:local": "npx cdk synth --context environment=local",
     "synth:dev": "npx cdk synth --context environment=dev",
     "synth:prod": "npx cdk synth --context environment=prod",
     "synth": "npx cdk synth",
-
     "bootstrap:local": "bash scripts/bootstrap-cdk.sh local",
     "bootstrap:dev": "bash scripts/bootstrap-cdk.sh dev",
     "bootstrap:prod": "bash scripts/bootstrap-cdk.sh prod",
-
     "sagemaker:setup:local": "node scripts/sagemaker/setup-training-data-pipeline.js --environment local",
     "sagemaker:init:local": "node scripts/sagemaker/initialize-baseline-models.js --environment local",
     "sagemaker:validate:local": "node scripts/sagemaker/validate-sagemaker-canvas.js --environment local",
     "sagemaker:train:local": "bash scripts/sagemaker/quick-train-models.sh local",
-
     "sagemaker:setup:dev": "node scripts/sagemaker/setup-training-data-pipeline.js --environment dev",
     "sagemaker:init:dev": "node scripts/sagemaker/initialize-baseline-models.js --environment dev",
     "sagemaker:train:dev": "bash scripts/sagemaker/quick-train-models.sh dev",
-
-    "sagemaker:setup:prod": "node scripts/sagemaker/setup-training-data-pipeline.js --environment prod",    
+    "sagemaker:setup:prod": "node scripts/sagemaker/setup-training-data-pipeline.js --environment prod",
     "sagemaker:init:prod": "node scripts/sagemaker/initialize-baseline-models.js --environment prod",
     "sagemaker:train:prod": "bash scripts/sagemaker/quick-train-models.sh prod",
-
     "lint": "eslint . --ext .ts --max-warnings 0",
     "type-check": "tsc --noEmit"
   },
@@ -101,13 +89,16 @@
     "multi-agent-orchestrator": "^0.0.1",
     "uuid": "^13.0.0"
   },
+  "overrides": {
+    "fast-xml-parser": "^5.5.6"
+  },
   "devDependencies": {
     "@aws-sdk/client-appsync": "^3.946.0",
     "@types/aws-lambda": "^8.10.0",
     "@types/jest": "^29.0.0",
     "@types/node": "^20.19.21",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.1",
+    "@typescript-eslint/parser": "^8.57.1",
     "aws-cdk": "^2.100.0",
     "dotenv": "^16.0.0",
     "dotenv-cli": "^7.0.0",

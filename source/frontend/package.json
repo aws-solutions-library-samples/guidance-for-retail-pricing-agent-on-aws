@@ -11,21 +11,16 @@
     "test:integration": "jest --run --testPathPattern=integration",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "type-check": "tsc --noEmit",
-
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-
     "sync:frontend:local": "node scripts/sync-frontend-config.cjs local",
     "sync:frontend:dev": "node scripts/sync-frontend-config.cjs dev",
     "sync:frontend:prod": "node scripts/sync-frontend-config.cjs prod",
-
     "setup:amplify:local": "bash scripts/setup-amplify.sh local",
     "setup:amplify:dev": "bash scripts/setup-amplify.sh dev",
     "setup:amplify:prod": "bash scripts/setup-amplify.sh prod",
-
     "verify:amplify": "bash scripts/verify-amplify-setup.sh",
-
     "deploy:frontend:local": "bash scripts/deploy-to-amplify.sh local",
     "deploy:frontend:dev": "bash scripts/deploy-to-amplify.sh dev",
     "deploy:frontend:prod": "bash scripts/deploy-to-amplify.sh prod"
@@ -42,11 +37,14 @@
     "aws-amplify": "^6.0.0",
     "date-fns": "^4.1.0",
     "jotai": "^2.15.0",
-    "jspdf": "^3.0.3",
+    "jspdf": "^4.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.9.4",
     "react-window": "^2.2.3"
+  },
+  "overrides": {
+    "fast-xml-parser": "^5.5.6"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.0.0",
@@ -56,8 +54,8 @@
     "@types/react-dom": "^18.2.0",
     "@types/react-router-dom": "^5.3.3",
     "@types/react-window": "^1.8.8",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.1",
+    "@typescript-eslint/parser": "^8.57.1",
     "@vitejs/plugin-react": "^4.0.0",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -67,6 +65,6 @@
     "jest-environment-jsdom": "^29.7.0",
     "ts-jest": "^29.0.0",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "vite": "^6.4.1"
   }
 }
