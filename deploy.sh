@@ -1,11 +1,13 @@
 #!/bin/bash
 set -e
 
-# Usage: ./deploy.sh [--email <email>]
+# Usage: ./deploy.sh [--email <email>] [--region <aws-region>]
 DEMO_EMAIL=""
+AWS_REGION="us-east-1"
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --email) DEMO_EMAIL="$2"; shift 2 ;;
+        --region) AWS_REGION="$2"; shift 2 ;;
         *) echo "Unknown argument: $1"; exit 1 ;;
     esac
 done
@@ -13,7 +15,6 @@ done
 # ============================================
 # CONFIGURATION - Edit these variables
 # ============================================
-AWS_REGION="us-east-1"
 ENVIRONMENT="local"
 
 # ============================================
@@ -24,7 +25,7 @@ echo "One-Click Deploy: Retail Pricing Agent"
 echo "============================================"
 echo ""
 
-export AWS_REGION="us-east-1"
+export AWS_REGION
 export AWS_SDK_LOAD_CONFIG=1
 ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 
