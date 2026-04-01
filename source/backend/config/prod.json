@@ -48,9 +48,9 @@
     "codeBucket": "retail-pricing-agentcore-code",
     "note": "Actual bucket name will be: retail-pricing-agentcore-code-{ENVIRONMENT}-{ACCOUNT_ID}",
     "agents": {
-      "demandForecast": "demand_forecast-fZdpqD9X1k",
-      "competitiveAnalysis": "competitive_analysis-M07cqO36Uk",
-      "marginAnalysis": "margin_analysis-CdCV3MHUty"
+      "demandForecast": "",
+      "competitiveAnalysis": "",
+      "marginAnalysis": ""
     }
   },
   "appSync": {
@@ -81,9 +81,9 @@
     "note": "SageMaker Canvas infrastructure is mandatory and will always be deployed. Bucket base names will have -{ACCOUNT_ID} appended. Final names written after CDK deployment.",
     "domainNamePrefix": "pricing-canvas",
     "trainingDataBucketBase": "pricing-canvas-training-data",
-    "trainingDataBucket": "pricing-canvas-training-data-prod-123456789012",
+    "trainingDataBucket": "",
     "modelOutputBucketBase": "pricing-canvas-model-outputs",
-    "modelOutputBucket": "pricing-canvas-model-outputs-prod-123456789012",
+    "modelOutputBucket": "",
     "enableVpc": true,
     "vpcCidr": "10.2.0.0/16",
     "modelCategories": [
@@ -100,6 +100,6 @@
       "minAccuracy": 0.7,
       "maxModelAge": 90
     },
-    "autopilotExecutionRoleArn": "arn:aws:iam::123456789012:role/AmazonSageMaker-ExecutionRole-prod"
+    "autopilotExecutionRoleArn": ""
   }
 }

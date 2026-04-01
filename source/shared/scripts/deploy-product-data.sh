@@ -8,7 +8,7 @@ set -e
 # Configuration
 ENVIRONMENT=${1:-dev}
 AWS_REGION=${2:-us-east-1}
-AWS_ACCOUNT=${3:-607104513879}
+AWS_ACCOUNT=${3:-123456789012}
 
 # Stack name
 STACK_NAME="ProductCatalogStack-${ENVIRONMENT}"

@@ -2,7 +2,7 @@
   "environment": "dev",
   
   "aws": {
-    "account": "607104513879",
+    "account": "",
     "region": "us-east-1"
   },
   

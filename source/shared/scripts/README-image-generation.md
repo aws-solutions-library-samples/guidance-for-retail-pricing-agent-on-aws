@@ -19,16 +19,16 @@ node generate-product-images.js [environment] [region] [account] [--force]
 **Parameters:**
 - `environment`: Target environment (dev/prod) - default: dev
 - `region`: AWS region - default: us-east-1  
-- `account`: AWS account ID - default: 607104513879
+- `account`: AWS account ID - default: 123456789012
 - `--force`: Force regenerate existing images
 
 **Examples:**
 ```bash
 # Generate images for dev environment
-node generate-product-images.js dev us-east-1 607104513879
+node generate-product-images.js dev us-east-1 123456789012
 
 # Force regenerate all images
-node generate-product-images.js dev us-east-1 607104513879 --force
+node generate-product-images.js dev us-east-1 123456789012 --force
 
 # Generate for production
 node generate-product-images.js prod us-east-1 987654321098
@@ -40,13 +40,13 @@ The deployment script automatically includes image generation:
 
 ```bash
 # Deploy with image generation (default)
-./deploy-product-data.sh dev us-east-1 607104513879
+./deploy-product-data.sh dev us-east-1 123456789012
 
 # Skip image generation
-./deploy-product-data.sh dev us-east-1 607104513879 --skip-images
+./deploy-product-data.sh dev us-east-1 123456789012 --skip-images
 
 # Force regenerate all images
-./deploy-product-data.sh dev us-east-1 607104513879 --force-images
+./deploy-product-data.sh dev us-east-1 123456789012 --force-images
 ```
 
 ## How It Works

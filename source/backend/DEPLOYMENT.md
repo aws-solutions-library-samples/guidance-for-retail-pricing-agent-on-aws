@@ -17,7 +17,7 @@
    AWS_SESSION_TOKEN=... (if using temporary credentials)
    
    # Account and Region
-   CDK_DEFAULT_ACCOUNT=221645205538
+   CDK_DEFAULT_ACCOUNT=123456789012
    CDK_DEFAULT_REGION=us-west-2
    ```
 
@@ -49,7 +49,7 @@
 ```bash
 npm run deploy:dev:explicit
 # or
-cdk deploy --context environment=dev --context account=221645205538 --context region=us-west-2
+cdk deploy --context environment=dev --context account=123456789012 --context region=us-west-2
 ```
 
 ## Deployment Commands
@@ -128,13 +128,13 @@ Your AWS credentials need the following permissions:
 1. **Get temporary credentials** from your AWS administrator
 2. **Copy `.env.example` to `.env`** and add your credentials
 3. **Never commit `.env`** to version control (it's in .gitignore)
-4. **Use the same account ID** (221645205538) for consistency
+4. **Use the same account ID** (123456789012) for consistency
 
 ### For AWS Administrators
 
 1. **Create IAM users** with deployment permissions
 2. **Generate temporary credentials** for team members
-3. **Share the account ID** (221645205538) and region (us-west-2)
+3. **Share the account ID** (123456789012) and region (us-west-2)
 4. **Rotate credentials** regularly for security
 
 ## Environment Configuration

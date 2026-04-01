@@ -173,7 +173,7 @@ aws sts get-caller-identity --query Account --output text
 
 **Bucket Naming Convention:**
 - **Base name:** `retail-pricing-data-local` (from config)
-- **Actual bucket:** `retail-pricing-data-local-221645205538` (account ID appended by CDK)
+- **Actual bucket:** `retail-pricing-data-local-123456789012` (account ID appended by CDK)
 - **Why:** S3 bucket names must be globally unique across ALL AWS accounts. Appending the account ID guarantees uniqueness without requiring manual configuration.
 
 **Local Development Notes:**
@@ -238,7 +238,7 @@ aws sts get-caller-identity --query Account --output text
 
 **Bucket Naming Convention:**
 - **Base name:** `retail-pricing-agentcore-code-local` (from config)
-- **Actual bucket:** `retail-pricing-agentcore-code-local-221645205538` (account ID appended)
+- **Actual bucket:** `retail-pricing-agentcore-code-local-123456789012` (account ID appended)
 - **Why:** Ensures global uniqueness without manual configuration
 
 **Local Development Notes:**

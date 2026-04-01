@@ -23,7 +23,7 @@ The product catalog deployment process has been updated to populate both S3 and 
 ```bash
 # Deploy everything: infrastructure + data
 cd src/shared/scripts
-bash deploy-complete.sh dev us-east-1 607104513879
+bash deploy-complete.sh dev us-east-1 123456789012
 ```
 
 ### Infrastructure Only
@@ -37,21 +37,21 @@ npm run deploy:infrastructure
 ```bash
 # Deploy just the product data (requires infrastructure to exist)
 cd src/shared/scripts
-bash deploy-product-data.sh dev us-east-1 607104513879
+bash deploy-product-data.sh dev us-east-1 123456789012
 ```
 
 ### DynamoDB Only
 ```bash
 # Load just the DynamoDB data (requires table to exist)
 cd src/shared/scripts
-node load-products-to-dynamodb.js dev us-east-1 607104513879
+node load-products-to-dynamodb.js dev us-east-1 123456789012
 ```
 
 ## Verification
 
 ### Check S3 Data
 ```bash
-aws s3 ls s3://product-catalog-assets-dev-607104513879/products/ --recursive
+aws s3 ls s3://product-catalog-assets-dev-123456789012/products/ --recursive
 ```
 
 ### Check DynamoDB Data

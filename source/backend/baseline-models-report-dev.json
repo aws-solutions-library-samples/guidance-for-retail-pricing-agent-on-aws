@@ -54,7 +54,7 @@
         "InferenceContainers": [
           {
             "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
-            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/powertools/df-powe-dev-472235/data-processor-models/df-powe-dev-472235-dpp3-1-52f5962438614e339587b38734ba6263dd435/output/model.tar.gz",
+            "ModelDataUrl": "s3://pricing-canvas-model-outputs-dev-123456789012/models/powertools/df-powe-dev-472235/data-processor-models/df-powe-dev-472235-dpp3-1-52f5962438614e339587b38734ba6263dd435/output/model.tar.gz",
             "Environment": {
               "AUTOML_TRANSFORM_MODE": "feature-transform",
               "SAGEMAKER_DEFAULT_INVOCATIONS_ACCEPT": "application/x-recordio-protobuf",
@@ -64,7 +64,7 @@
           },
           {
             "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/linear-learner:inference-cpu",
-            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/powertools/df-powe-dev-472235/tuning/df-powe-de-dpp3-ll/df-powe-dev-472235LcnNBHQ9sfHPh6-009-14cfbe4c/output/model.tar.gz",
+            "ModelDataUrl": "s3://pricing-canvas-model-outputs-dev-123456789012/models/powertools/df-powe-dev-472235/tuning/df-powe-de-dpp3-ll/df-powe-dev-472235LcnNBHQ9sfHPh6-009-14cfbe4c/output/model.tar.gz",
             "Environment": {
               "MAX_CONTENT_LENGTH": "20971520",
               "ML_APPLICATION": "linear_learner",
@@ -77,8 +77,8 @@
         "LastModifiedTime": "2025-12-04T21:11:07.384Z",
         "CandidateProperties": {
           "CandidateArtifactLocations": {
-            "Explainability": "s3://pricing-canvas-dev-model-outputs-dev/models/powertools/df-powe-dev-472235/documentation/explainability/output",
-            "ModelInsights": "s3://pricing-canvas-dev-model-outputs-dev/models/powertools/df-powe-dev-472235/documentation/model_monitor/output"
+            "Explainability": "s3://pricing-canvas-model-outputs-dev-123456789012/models/powertools/df-powe-dev-472235/documentation/explainability/output",
+            "ModelInsights": "s3://pricing-canvas-model-outputs-dev-123456789012/models/powertools/df-powe-dev-472235/documentation/model_monitor/output"
           },
           "CandidateMetrics": [
             {
@@ -156,7 +156,7 @@
         "InferenceContainers": [
           {
             "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
-            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/kitchen/df-kitc-dev-169470/data-processor-models/df-kitc-dev-169470-dpp3-1-74ec86f5490c4d18bd57f0f2cc422debd8e77/output/model.tar.gz",
+            "ModelDataUrl": "s3://pricing-canvas-model-outputs-dev-123456789012/models/kitchen/df-kitc-dev-169470/data-processor-models/df-kitc-dev-169470-dpp3-1-74ec86f5490c4d18bd57f0f2cc422debd8e77/output/model.tar.gz",
             "Environment": {
               "AUTOML_TRANSFORM_MODE": "feature-transform",
               "SAGEMAKER_DEFAULT_INVOCATIONS_ACCEPT": "application/x-recordio-protobuf",
@@ -166,7 +166,7 @@
           },
           {
             "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/linear-learner:inference-cpu",
-            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/kitchen/df-kitc-dev-169470/tuning/df-kitc-de-dpp3-ll/df-kitc-dev-169470MSmCtiTQjrxQLi-009-531d1569/output/model.tar.gz",
+            "ModelDataUrl": "s3://pricing-canvas-model-outputs-dev-123456789012/models/kitchen/df-kitc-dev-169470/tuning/df-kitc-de-dpp3-ll/df-kitc-dev-169470MSmCtiTQjrxQLi-009-531d1569/output/model.tar.gz",
             "Environment": {
               "MAX_CONTENT_LENGTH": "20971520",
               "ML_APPLICATION": "linear_learner",
@@ -179,8 +179,8 @@
         "LastModifiedTime": "2025-12-04T21:38:18.115Z",
         "CandidateProperties": {
           "CandidateArtifactLocations": {
-            "Explainability": "s3://pricing-canvas-dev-model-outputs-dev/models/kitchen/df-kitc-dev-169470/documentation/explainability/output",
-            "ModelInsights": "s3://pricing-canvas-dev-model-outputs-dev/models/kitchen/df-kitc-dev-169470/documentation/model_monitor/output"
+            "Explainability": "s3://pricing-canvas-model-outputs-dev-123456789012/models/kitchen/df-kitc-dev-169470/documentation/explainability/output",
+            "ModelInsights": "s3://pricing-canvas-model-outputs-dev-123456789012/models/kitchen/df-kitc-dev-169470/documentation/model_monitor/output"
           },
           "CandidateMetrics": [
             {
@@ -258,7 +258,7 @@
         "InferenceContainers": [
           {
             "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
-            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/apparel/df-appa-dev-930370/data-processor-models/df-appa-dev-930370-dpp5-1-4469440c31e44d1481294c14a96c4e5fb2c72/output/model.tar.gz",
+            "ModelDataUrl": "s3://pricing-canvas-model-outputs-dev-123456789012/models/apparel/df-appa-dev-930370/data-processor-models/df-appa-dev-930370-dpp5-1-4469440c31e44d1481294c14a96c4e5fb2c72/output/model.tar.gz",
             "Environment": {
               "AUTOML_SPARSE_ENCODE_RECORDIO_PROTOBUF": "1",
               "AUTOML_TRANSFORM_MODE": "feature-transform",
@@ -269,7 +269,7 @@
           },
           {
             "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:1.3-1-cpu-py3",
-            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/apparel/df-appa-dev-930370/tuning/df-appa-de-dpp5-xgb/df-appa-dev-930370pa1xOyNxz5cO7m-001-be2d8f4b/output/model.tar.gz",
+            "ModelDataUrl": "s3://pricing-canvas-model-outputs-dev-123456789012/models/apparel/df-appa-dev-930370/tuning/df-appa-de-dpp5-xgb/df-appa-dev-930370pa1xOyNxz5cO7m-001-be2d8f4b/output/model.tar.gz",
             "Environment": {
               "MAX_CONTENT_LENGTH": "20971520",
               "SAGEMAKER_DEFAULT_INVOCATIONS_ACCEPT": "text/csv"
@@ -281,8 +281,8 @@
         "LastModifiedTime": "2025-12-04T22:08:11.271Z",
         "CandidateProperties": {
           "CandidateArtifactLocations": {
-            "Explainability": "s3://pricing-canvas-dev-model-outputs-dev/models/apparel/df-appa-dev-930370/documentation/explainability/output",
-            "ModelInsights": "s3://pricing-canvas-dev-model-outputs-dev/models/apparel/df-appa-dev-930370/documentation/model_monitor/output"
+            "Explainability": "s3://pricing-canvas-model-outputs-dev-123456789012/models/apparel/df-appa-dev-930370/documentation/explainability/output",
+            "ModelInsights": "s3://pricing-canvas-model-outputs-dev-123456789012/models/apparel/df-appa-dev-930370/documentation/model_monitor/output"
           },
           "CandidateMetrics": [
             {
@@ -360,7 +360,7 @@
         "InferenceContainers": [
           {
             "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sagemaker-sklearn-automl:2.5-1-cpu-py3",
-            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/footwear/df-foot-dev-624878/data-processor-models/df-foot-dev-624878-dpp0-1-d65f4b0db28f4a659bd8fbb8e94a4d3bb1147/output/model.tar.gz",
+            "ModelDataUrl": "s3://pricing-canvas-model-outputs-dev-123456789012/models/footwear/df-foot-dev-624878/data-processor-models/df-foot-dev-624878-dpp0-1-d65f4b0db28f4a659bd8fbb8e94a4d3bb1147/output/model.tar.gz",
             "Environment": {
               "AUTOML_TRANSFORM_MODE": "feature-transform",
               "SAGEMAKER_DEFAULT_INVOCATIONS_ACCEPT": "application/x-recordio-protobuf",
@@ -370,7 +370,7 @@
           },
           {
             "Image": "<ECR_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:1.3-1-cpu-py3",
-            "ModelDataUrl": "s3://pricing-canvas-dev-model-outputs-dev/models/footwear/df-foot-dev-624878/tuning/df-foot-de-dpp0-xgb/df-foot-dev-624878D2T6y1eKk0zdNt-003-b5026f4b/output/model.tar.gz",
+            "ModelDataUrl": "s3://pricing-canvas-model-outputs-dev-123456789012/models/footwear/df-foot-dev-624878/tuning/df-foot-de-dpp0-xgb/df-foot-dev-624878D2T6y1eKk0zdNt-003-b5026f4b/output/model.tar.gz",
             "Environment": {
               "MAX_CONTENT_LENGTH": "20971520",
               "SAGEMAKER_DEFAULT_INVOCATIONS_ACCEPT": "text/csv"
@@ -382,8 +382,8 @@
         "LastModifiedTime": "2025-12-04T22:36:06.798Z",
         "CandidateProperties": {
           "CandidateArtifactLocations": {
-            "Explainability": "s3://pricing-canvas-dev-model-outputs-dev/models/footwear/df-foot-dev-624878/documentation/explainability/output",
-            "ModelInsights": "s3://pricing-canvas-dev-model-outputs-dev/models/footwear/df-foot-dev-624878/documentation/model_monitor/output"
+            "Explainability": "s3://pricing-canvas-model-outputs-dev-123456789012/models/footwear/df-foot-dev-624878/documentation/explainability/output",
+            "ModelInsights": "s3://pricing-canvas-model-outputs-dev-123456789012/models/footwear/df-foot-dev-624878/documentation/model_monitor/output"
           },
           "CandidateMetrics": [
             {

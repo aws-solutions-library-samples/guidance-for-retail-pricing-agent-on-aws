@@ -54,7 +54,7 @@ This creates:
 ### 2. Image Generation with CloudFront URLs
 ```bash
 cd src/shared/scripts
-./deploy-product-data.sh dev us-east-1 607104513879
+./deploy-product-data.sh dev us-east-1 123456789012
 ```
 
 The script automatically:
@@ -67,7 +67,7 @@ The script automatically:
 
 ### S3 Storage Path
 ```
-s3://product-catalog-assets-dev-607104513879/products/images/
+s3://product-catalog-assets-dev-123456789012/products/images/
 ├── powertools/
 │   ├── DEWALT-DRILLS-DCD771C2.jpg
 │   └── ...
@@ -94,7 +94,7 @@ The CDK stack provides these outputs for integration:
 
 ### 1. Test Image Existence
 ```bash
-node test-s3-check.js us-east-1 607104513879 dev
+node test-s3-check.js us-east-1 123456789012 dev
 ```
 
 ### 2. Test Image Generation
