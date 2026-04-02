@@ -376,7 +376,7 @@ const backendStack = new ProductCatalogStack(app, backendStackName, {
   environment,
   sageMakerCanvas: config.sageMakerCanvas,
   agentCore: config.agentCore,
-  description: `Backend infrastructure for Retail Pricing Agent Orchestrator - ${environment} environment`,
+  description: `Solution ID (SO9679) - Backend infrastructure for Retail Pricing Agent Orchestrator - ${environment} environment`,
   stackName: backendStackName
 });
 
@@ -388,7 +388,7 @@ const frontendStack = new FrontendHostingStack(app, frontendStackName, {
   },
   environment,
   stackName: frontendStackName,
-  description: `Frontend hosting infrastructure for Retail Pricing Agent Orchestrator - ${environment} environment`,
+  description: `Solution ID (SO9679) - Frontend hosting infrastructure for Retail Pricing Agent Orchestrator - ${environment} environment`,
   
   // Pass backend outputs to frontend
   userPool: backendStack.userPool,
