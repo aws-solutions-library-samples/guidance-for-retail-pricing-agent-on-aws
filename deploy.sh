@@ -131,9 +131,7 @@ CDK_BOOTSTRAP_STACK=$(aws cloudformation describe-stacks --region $AWS_REGION --
 
 if [ -z "$CDK_BOOTSTRAP_STACK" ] || [ "$CDK_BOOTSTRAP_STACK" == "None" ]; then
     echo "CDK bootstrap not found. Running cdk bootstrap..."
-    cd source/backend
     npx cdk bootstrap aws://$ACCOUNT_ID/$AWS_REGION --context environment=$ENVIRONMENT
-    cd ../..
 
     if [ $? -ne 0 ]; then
         echo "CDK bootstrap failed."
