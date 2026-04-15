@@ -193,6 +193,23 @@ cd ../..
 echo ""
 
 # ============================================
+# RE-DEPLOY AGENTCORE AGENTS TO UPDATE APPSYNC ENDPOINT
+# ============================================
+echo "Updating AgentCore agents with Appsync Endpoint..."
+
+cd source/backend
+bash scripts/deploy-complete.sh $ENVIRONMENT --skip-cdk --skip-data --skip-sagemaker --skip-frontend
+
+if [ $? -ne 0 ]; then
+    echo "AgentCore update failed."
+    exit 1
+fi
+
+echo "AgentCore agents updated."
+cd ../..
+echo ""
+
+# ============================================
 # DEPLOY PRODUCT DATA
 # ============================================
 echo "Step 8: Deploying product data to S3..."
@@ -260,6 +277,7 @@ if [ -n "$USER_POOL_ID" ] && [ "$USER_POOL_ID" != "None" ]; then
         --username "demo-user" \
         --user-attributes Name=email,Value="$DEMO_EMAIL" Name=email_verified,Value=true Name=given_name,Value=Demo Name=family_name,Value=User \
         --message-action SUPPRESS \
+        --no-cli-pager \
         --region $AWS_REGION 2>/dev/null && echo "✓ Demo user created" || echo "✓ Demo user already exists"
 
     # Set permanent password
