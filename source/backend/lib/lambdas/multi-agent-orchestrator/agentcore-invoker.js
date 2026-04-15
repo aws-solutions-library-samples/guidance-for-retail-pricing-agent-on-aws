@@ -101,13 +101,7 @@ async function invokeAgentCoreAgent(params) {
     // const agentRuntimeArn = `arn:aws:bedrock-agentcore:${region}:${account}:runtime/${agentCoreId}/runtime-endpoint/DEFAULT`;
     const agentRuntimeArn = `arn:aws:bedrock-agentcore:${region}:${account}:runtime/${agentCoreId}`;
     
-    console.log(`[AgentCore Invoker] Constructed ARN for ${agentName}`, {
-      agentCoreId,
-      agentRuntimeArn,
-      region,
-      account,
-      sessionId
-    });
+    console.log(`[AgentCore Invoker] Constructed ARN for ${agentName}`);
     
     // Invoke AgentCore agent using BedrockAgentCoreClient
     // Per AWS documentation: use agentRuntimeArn, runtimeSessionId, and payload (as Buffer)
@@ -117,11 +111,7 @@ async function invokeAgentCoreAgent(params) {
       payload: Buffer.from(inputText)
     });
     
-    console.log(`[AgentCore Invoker] Sending InvokeAgentRuntimeCommand`, {
-      agentRuntimeArn: agentRuntimeArn,
-      runtimeSessionId: sessionId,
-      payloadSize: Buffer.from(inputText).length
-    });
+    console.log(`[AgentCore Invoker] Sending InvokeAgentRuntimeCommand`);
     
     const response = await agentCoreClient.send(command);
     
