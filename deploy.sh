@@ -131,9 +131,7 @@ CDK_BOOTSTRAP_STACK=$(aws cloudformation describe-stacks --region $AWS_REGION --
 
 if [ -z "$CDK_BOOTSTRAP_STACK" ] || [ "$CDK_BOOTSTRAP_STACK" == "None" ]; then
     echo "CDK bootstrap not found. Running cdk bootstrap..."
-    cd source/backend
     npx cdk bootstrap aws://$ACCOUNT_ID/$AWS_REGION --context environment=$ENVIRONMENT
-    cd ../..
 
     if [ $? -ne 0 ]; then
         echo "CDK bootstrap failed."
@@ -191,6 +189,23 @@ echo "Step 7: Updating configuration with stack outputs..."
 node scripts/update-frontend-config.js $ENVIRONMENT $AWS_REGION
 
 echo "Configuration updated with stack outputs."
+cd ../..
+echo ""
+
+# ============================================
+# RE-DEPLOY AGENTCORE AGENTS TO UPDATE APPSYNC ENDPOINT
+# ============================================
+echo "Updating AgentCore agents with Appsync Endpoint..."
+
+cd source/backend
+bash scripts/deploy-complete.sh $ENVIRONMENT --skip-cdk --skip-data --skip-sagemaker --skip-frontend
+
+if [ $? -ne 0 ]; then
+    echo "AgentCore update failed."
+    exit 1
+fi
+
+echo "AgentCore agents updated."
 cd ../..
 echo ""
 
@@ -262,6 +277,7 @@ if [ -n "$USER_POOL_ID" ] && [ "$USER_POOL_ID" != "None" ]; then
         --username "demo-user" \
         --user-attributes Name=email,Value="$DEMO_EMAIL" Name=email_verified,Value=true Name=given_name,Value=Demo Name=family_name,Value=User \
         --message-action SUPPRESS \
+        --no-cli-pager \
         --region $AWS_REGION 2>/dev/null && echo "✓ Demo user created" || echo "✓ Demo user already exists"
 
     # Set permanent password
